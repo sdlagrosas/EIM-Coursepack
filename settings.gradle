@@ -1,0 +1,2 @@
+rootProject.name = "EIM_Coursepack"
+include ':app'
