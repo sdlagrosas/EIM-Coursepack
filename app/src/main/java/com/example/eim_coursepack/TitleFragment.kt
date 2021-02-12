@@ -19,6 +19,7 @@ class TitleFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
             R.layout.fragment_title,container,false)
 
+
         binding.startButton.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_titleFragment_to_mainMenuFragment)
         }

@@ -9,5 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="skyblue">#FFA2ECEF</color>
 
+    <color name="test_color">#33000000</color>
+
+
 
 </resources>
