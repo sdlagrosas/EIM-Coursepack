@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.eim_coursepack.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.eim_coursepack.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenuFragment_to_unit1Fragment"
+            app:destination="@id/unit1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit1Fragment"
+        android:name="com.example.eim_coursepack.Unit1Fragment"
+        android:label="fragment_unit1"
+        tools:layout="@layout/fragment_unit1" >
+        <action
+            android:id="@+id/action_unit1Fragment_to_unit1Lesson1"
+            app:destination="@id/unit1Lesson1" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit1Lesson1"
+        android:name="com.example.eim_coursepack.Unit1Lesson1"
+        android:label="fragment_unit1_lesson1"
+        tools:layout="@layout/fragment_unit1_lesson1" />
+</navigation>
