@@ -18,9 +18,15 @@ class Unit1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentUnit1Binding>(inflater,R.layout.fragment_unit1,container,false)
+
         binding.unit1Lesson1Button.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_unit1Fragment_to_unit1Lesson1)
         }
+
+        binding.unit1Quiz1MCButton.setOnClickListener{ view : View ->
+            view.findNavController().navigate(R.id.action_unit1Fragment_to_unit1Quiz1MCFragment)
+        }
+
         return binding.root
     }
 

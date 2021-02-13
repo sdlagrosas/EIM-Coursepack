@@ -28,9 +28,31 @@
         <action
             android:id="@+id/action_unit1Fragment_to_unit1Lesson1"
             app:destination="@id/unit1Lesson1" />
+        <action
+            android:id="@+id/action_unit1Fragment_to_unit1Quiz1MCFragment"
+            app:destination="@id/unit1Quiz1MCFragment" />
     </fragment>
     <fragment
         android:id="@+id/unit1Lesson1"
         android:name="com.example.eim_coursepack.Unit1Lesson1"
         tools:layout="@layout/fragment_unit1_lesson1" />
+    <fragment
+        android:id="@+id/unit1Quiz1MCFragment"
+        android:name="com.example.eim_coursepack.Unit1Quiz1MCFragment"
+        tools:layout="@layout/fragment_unit1_quiz1_m_c">
+        <action
+            android:id="@+id/action_unit1Quiz1MCFragment_to_unit1Quiz1IdentificationFragment"
+            app:destination="@id/unit1Quiz1IdentificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit1Quiz1IdentificationFragment"
+        android:name="com.example.eim_coursepack.Unit1Quiz1IdentificationFragment"
+        tools:layout="@layout/fragment_unit1_quiz1_identification" >
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+    </fragment>
 </navigation>

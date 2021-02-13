@@ -8,4 +8,5 @@
     <string name="main_menu">UNITS</string>
     <string name="teachername">By: (Insert name)</string>
     <string name="contentdescription">To insert an image for design</string>
+    <string name="submit_button">Submit</string>
 </resources>
