@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.example.eim_coursepack.databinding.FragmentUnit2Binding
 
 
 class Unit2Fragment : Fragment() {
@@ -13,8 +15,14 @@ class Unit2Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_unit2, container, false)
+        val binding = DataBindingUtil.inflate<FragmentUnit2Binding>(
+            inflater,
+            R.layout.fragment_unit2,
+            container,
+            false
+        )
+
+        return binding.root
     }
 
 }
