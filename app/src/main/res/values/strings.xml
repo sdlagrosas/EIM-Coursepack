@@ -9,4 +9,6 @@
     <string name="teachername">By: (Insert name)</string>
     <string name="contentdescription">To insert an image for design</string>
     <string name="submit_button">Submit</string>
+    <string name="take_quiz">Take Quiz</string>
+    <string name="preference_key">EIM_Coursepack_SharedPrefs</string>
 </resources>

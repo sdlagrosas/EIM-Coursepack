@@ -1,5 +1,6 @@
 package com.example.eim_coursepack
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,7 +36,7 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
     private val numQuestions = questions.size
-    private val score = 0
+    private var score = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,6 +45,13 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding : FragmentUnit1Quiz1IdentificationBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_unit1_quiz1_identification, container, false)
+
+        val args = Unit1Quiz1IdentificationFragmentArgs.fromBundle(requireArguments())
+
+        val sharedPref = this.activity?.getSharedPreferences(getString(R.string.preference_key),
+            Context.MODE_PRIVATE)
+
+        score = args.numCorrect
 
         initQuestions()
 
@@ -55,21 +63,29 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
         { view : View ->
             if (answerText.isNotEmpty()) {
                 if (answerText.toString() in currentQuestion.answers) {
-                    score.plus(1)
+                    score++
 
-                    // for checking only (delete)
+                    // for checking only (remove this)
                     Toast.makeText(context, "Correct!", Toast.LENGTH_SHORT).show()
                 }
 
                 questionIndex++
                 // Advance to the next question
-
                 if (questionIndex < numQuestions) {
                     currentQuestion = questions[questionIndex]
                     setQuestion()
                     binding.invalidateAll()
                     answerText.clear()
                 } else {
+
+                    Toast.makeText(context, "SAVED! Score : $score", Toast.LENGTH_SHORT).show()
+
+                    // save score in preferences
+                    with(sharedPref?.edit()) {
+                        this?.putInt("quiz1_score",score)
+                        this?.apply()
+                    }
+
                     // move to eval score fragment
                 }
 

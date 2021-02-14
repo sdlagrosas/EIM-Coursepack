@@ -31,7 +31,7 @@ class Unit1Quiz1MCFragment : Fragment() {
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
     private val numQuestions = questions.size
-    private val score = 0
+    private var score = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,6 +40,7 @@ class Unit1Quiz1MCFragment : Fragment() {
         // Inflate the layout for this fragment
 
         val binding : FragmentUnit1Quiz1MCBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_unit1_quiz1_m_c, container, false)
+
 
         // Initialize questions and set the first question
         initQuestions()
@@ -61,8 +62,8 @@ class Unit1Quiz1MCFragment : Fragment() {
                 // The first answer in the original question is always the correct one, so if our
                 // answer matches, we have the correct answer.
                 if (answers[answerIndex] == currentQuestion.answers[0]) {
-                     // Add score here
-                    score.plus(1)
+                    // Add score here
+                    score++
                 }
 
                 questionIndex++
@@ -73,7 +74,10 @@ class Unit1Quiz1MCFragment : Fragment() {
                     setQuestion()
                     binding.invalidateAll()
                 } else {
-                    view.findNavController().navigate(R.id.action_unit1Quiz1MCFragment_to_unit1Quiz1IdentificationFragment)
+                    view.findNavController().navigate(
+                        Unit1Quiz1MCFragmentDirections
+                            .actionUnit1Quiz1MCFragmentToUnit1Quiz1IdentificationFragment(
+                            numQuestions,score))
                 }
             } else {
                 Toast.makeText(context, "Choose your answer", Toast.LENGTH_SHORT).show()

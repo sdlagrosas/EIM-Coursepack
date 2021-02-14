@@ -23,10 +23,6 @@ class Unit1Fragment : Fragment() {
             view.findNavController().navigate(R.id.action_unit1Fragment_to_unit1Lesson1)
         }
 
-        binding.unit1Quiz1MCButton.setOnClickListener{ view : View ->
-            view.findNavController().navigate(R.id.action_unit1Fragment_to_unit1Quiz1MCFragment)
-        }
-
         return binding.root
     }
 

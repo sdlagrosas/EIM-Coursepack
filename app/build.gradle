@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
 }
 
+// Adding the apply plugin statement for safeargs
+apply plugin: 'androidx.navigation.safeargs'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"

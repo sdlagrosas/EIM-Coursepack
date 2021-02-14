@@ -23,18 +23,20 @@
 
             <TextView
                 android:id="@+id/questionText"
+                style="@style/HeadText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/question_horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
                 android:layout_marginEnd="@dimen/question_horizontal_margin"
-                android:layout_marginBottom="@dimen/vertical_margin"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="sans-serif"
                 android:text="@{quiz.currentQuestion.text}"
                 android:textSize="@dimen/question_text_size"
                 android:textStyle="bold"
                 android:typeface="normal"
+                app:layout_constraintBottom_toTopOf="@+id/questionRadioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:text="Question?" />
 
@@ -93,13 +95,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/question_horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
+                android:layout_marginTop="64dp"
                 android:layout_marginEnd="@dimen/question_horizontal_margin"
                 android:text="@string/submit_button"
                 android:textSize="@dimen/button_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+
+            <ImageView
+                android:id="@+id/quiz1Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="An image in quiz fragment"
+                app:layout_constraintBottom_toTopOf="@+id/questionText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
