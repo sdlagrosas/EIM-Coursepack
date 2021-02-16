@@ -110,7 +110,6 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
         // randomize the answers into a copy of the array
         answers = currentQuestion.answers.toMutableList()
         // and shuffle them
-        answers.shuffle()
 //        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_android_trivia_question, questionIndex + 1, numQuestions)
     }
 

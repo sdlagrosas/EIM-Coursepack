@@ -22,12 +22,6 @@ class Unit1Lesson1 : Fragment() {
         val binding : FragmentUnit1Lesson1Binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_unit1_lesson1, container, false)
 
-        val sharedPref = this.activity?.getSharedPreferences(getString(R.string.preference_key), Context.MODE_PRIVATE)
-
-        val score = sharedPref?.getInt("quiz1_score",0)
-
-        Toast.makeText(context, "Quiz1 Score : $score",Toast.LENGTH_LONG).show()
-
         binding.quiz1Button.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_unit1Lesson1_to_unit1Quiz1MCFragment)
         }
