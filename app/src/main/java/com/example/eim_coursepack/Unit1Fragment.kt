@@ -22,6 +22,12 @@ class Unit1Fragment : Fragment() {
         binding.unit1Lesson1Button.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_unit1Fragment_to_unit1Lesson1)
         }
+        binding.unit1Lesson2Button.setOnClickListener { view : View ->
+            view.findNavController().navigate(R.id.action_unit1Fragment_to_unit1Lesson2)
+        }
+        binding.unit1Lesson3Button.setOnClickListener { view : View ->
+            view.findNavController().navigate(R.id.action_unit1Fragment_to_unit1Lesson3)
+        }
 
         return binding.root
     }

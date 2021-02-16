@@ -2,7 +2,6 @@ package com.example.eim_coursepack
 
 import android.content.Context
 import android.os.Bundle
-import android.view.ContextMenu
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -27,8 +26,10 @@ class Unit1Lesson1 : Fragment() {
 
         val score = sharedPref?.getInt("quiz1_score",0)
 
+        Toast.makeText(context, "Quiz1 Score : $score",Toast.LENGTH_LONG).show()
+
         binding.quiz1Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(Unit1Lesson1Directions.actionUnit1Lesson1ToUnit1Quiz1MCFragment())
+            view.findNavController().navigate(R.id.action_unit1Lesson1_to_unit1Quiz1MCFragment)
         }
 
         return binding.root

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Unit4Fragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/skyblue">
+
+      <ImageButton
+          android:id="@+id/unit4Lesson1Button"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginStart="@dimen/StartMargin"
+          android:layout_marginLeft="@dimen/StartMargin"
+          android:layout_marginTop="@dimen/TopMargin"
+          android:contentDescription="@string/contentdescription"
+          android:src="@android:drawable/btn_star_big_on"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/unit4TitleView" />
+
+      <TextView
+          android:id="@+id/Unit4text"
+          style="@style/HeadText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="100dp"
+          android:text="@string/unit_4"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/unit4TitleView"
+          style="@style/subHeadText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/unit_4_title"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/Unit4text" />
+
+      <ImageButton
+          android:id="@+id/unit4Lesson2Button"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginStart="@dimen/StartMargin"
+          android:layout_marginLeft="@dimen/StartMargin"
+          android:layout_marginTop="@dimen/TopMargin"
+          android:contentDescription="@string/contentdescription"
+          android:src="@android:drawable/btn_star_big_on"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/unit4Lesson1Button" />
+
+      <ImageButton
+          android:id="@+id/unit4Lesson3Button"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginStart="@dimen/StartMargin"
+          android:layout_marginLeft="@dimen/StartMargin"
+          android:layout_marginTop="@dimen/TopMargin"
+          android:contentDescription="@string/contentdescription"
+          android:src="@android:drawable/btn_star_big_on"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/unit4Lesson2Button" />
+
+      <TextView
+          android:id="@+id/lesson1title"
+          style="@style/regulartext"
+          android:layout_width="180dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginLeft="20dp"
+          android:text="@string/lesson_4.1_title"
+          app:layout_constraintBottom_toBottomOf="@+id/unit4Lesson1Button"
+          app:layout_constraintStart_toEndOf="@+id/unit4Lesson1Button"
+          app:layout_constraintTop_toTopOf="@+id/unit4Lesson1Button" />
+
+      <TextView
+          android:id="@+id/lesson2title"
+          style="@style/regulartext"
+          android:layout_width="165dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginLeft="20dp"
+          android:text="@string/lesson_4.2_title"
+          app:layout_constraintBottom_toBottomOf="@+id/unit4Lesson2Button"
+          app:layout_constraintStart_toEndOf="@+id/unit4Lesson2Button"
+          app:layout_constraintTop_toTopOf="@+id/unit4Lesson2Button" />
+
+      <TextView
+          android:id="@+id/lesson3title"
+          style="@style/regulartext"
+          android:layout_width="180dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginLeft="20dp"
+          android:text="@string/lesson_4.3_title"
+          app:layout_constraintBottom_toBottomOf="@+id/unit4Lesson3Button"
+          app:layout_constraintStart_toEndOf="@+id/unit4Lesson3Button"
+          app:layout_constraintTop_toTopOf="@+id/unit4Lesson3Button" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

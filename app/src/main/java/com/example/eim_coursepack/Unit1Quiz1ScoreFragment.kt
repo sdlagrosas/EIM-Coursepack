@@ -29,7 +29,7 @@ class Unit1Quiz1ScoreFragment : Fragment() {
 
         binding.returnButton.setOnClickListener { view : View ->
             view.findNavController().navigate(
-                Unit1Quiz1ScoreFragmentDirections.actionUni1Quiz1ScoreFragmentToUnit1Lesson1()
+                Unit1Quiz1ScoreFragmentDirections.actionUni1Quiz1ScoreFragmentToUnit1Fragment()
             )
         }
 

@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">EIM Coursepack</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="start">Start</string>
     <string name="title1">EIM</string>
@@ -8,9 +7,59 @@
     <string name="main_menu">UNITS</string>
     <string name="teachername">By: (Insert name)</string>
     <string name="contentdescription">To insert an image for design</string>
+
     <string name="submit_button">Submit</string>
     <string name="take_quiz">Take Quiz</string>
     <string name="preference_key">EIM_Coursepack_SharedPrefs</string>
     <string name="return_button">Return</string>
     <string name="your_score_is">Your Score is</string>
+
+
+    <string name="unit_1">UNIT I</string>
+    <string name="unit_1_title">Fundamentals  of Electricity</string>
+    <string name="unit_1_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_1.1_title">Basic Concept and Principles of Electricity</string>
+    <string name="lesson_1.2_title">Sources of Energy</string>
+    <string name="lesson_1.3_title">Relationship of Current,Voltage and Resistance</string>
+
+
+    <string name="unit_2">UNIT II</string>
+    <string name="unit_2_title">Using of Tools, Equipment \n and Paraphernalia</string>
+    <string name="unit_2_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_2.1_title">Electrical Tools</string>
+    <string name="lesson_2.2_title">Electrical Materials</string>
+    <string name="lesson_2.3_title">Splices and Joints</string>
+    <string name="lesson_2.4_title">Different Types of Forms</string>
+
+    <string name="unit_3">UNIT III</string>
+    <string name="unit_3_title">Mensuration and Calculation</string>
+    <string name="unit_3_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_3.1_title">English and Metric System of Measurement</string>
+    <string name="lesson_3.2_title">Unit Conversion</string>
+    <string name="lesson_3.3_title">Ohm\'s Law</string>
+    <string name="lesson_3.4_title">Multi tester</string>
+
+    <string name="unit_4">UNIT IV</string>
+    <string name="unit_4_title">Technical Drawings and Plans </string>
+    <string name="unit_4_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_4.1_title">Basic Electrical Symbols </string>
+    <string name="lesson_4.2_title">Electrical Diagrams</string>
+    <string name="lesson_4.3_title">Electrical Floor Plan </string>
+
+    <string name="unit_5">UNIT V</string>
+    <string name="unit_5_title">Maintaining Tools, Equipment and Paraphernalia </string>
+    <string name="unit_5_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_5.1_title">Checking Condition of Tools,Equipment and Paraphernalia </string>
+    <string name="lesson_5.2_title">Basic Maintenance of Tools,Equipment and Paraphernalia</string>
+    <string name="lesson_5.3_title">Storage of Tools, Equipment and Paraphernalia </string>
+
+    <string name="unit_6">UNIT VI</string>
+    <string name="unit_6_title">Practice Occupational Health and Safety Procedure  </string>
+    <string name="unit_6_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_6.1_title">Hazards and Risks </string>
+    <string name="lesson_6.2_title">Control Hazards and Risk </string>
+    <string name="lesson_6.3_title">Personal Protective Device </string>
+    <string name="lesson_6.4_title">Housekeeping  </string>
+
+
 </resources>
