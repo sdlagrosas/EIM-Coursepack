@@ -15,11 +15,11 @@
             android:layout_height="90dp"
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
-            android:layout_marginTop="@dimen/SmallTopMargin"
+            android:layout_marginTop="@dimen/TopMargin"
             android:contentDescription="@string/contentdescription"
             android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Unit2Objective" />
+            app:layout_constraintTop_toBottomOf="@+id/unit2TitleView" />
 
         <TextView
             android:id="@+id/Unit2text"
@@ -41,19 +41,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Unit2text" />
-
-        <TextView
-            android:id="@+id/Unit2Objective"
-            style="@style/regulartext"
-            android:layout_width="303dp"
-            android:layout_height="71dp"
-            android:layout_marginTop="10dp"
-            android:background="#FAFAFA"
-            android:padding="5dp"
-            android:text="@string/unit_1_objectives"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unit2TitleView" />
 
         <ImageButton
             android:id="@+id/unit2Lesson2Button"
@@ -83,7 +70,7 @@
             android:id="@+id/lesson1title"
             style="@style/regulartext"
             android:layout_width="180dp"
-            android:layout_height="90dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:text="@string/lesson_2.1_title"
@@ -95,7 +82,7 @@
             android:id="@+id/lesson2title"
             style="@style/regulartext"
             android:layout_width="180dp"
-            android:layout_height="90dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:text="@string/lesson_2.2_title"
@@ -107,7 +94,7 @@
             android:id="@+id/lesson3title"
             style="@style/regulartext"
             android:layout_width="180dp"
-            android:layout_height="90dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:text="@string/lesson_2.3_title"
@@ -132,7 +119,7 @@
             android:id="@+id/lesson4title"
             style="@style/regulartext"
             android:layout_width="180dp"
-            android:layout_height="90dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:text="@string/lesson_2.4_title"

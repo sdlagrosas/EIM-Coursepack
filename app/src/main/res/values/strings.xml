@@ -25,5 +25,20 @@
     <string name="lesson_2.3_title">Splices and Joints</string>
     <string name="lesson_2.4_title">Different Types of Forms</string>
 
+    <string name="unit_3">UNIT III</string>
+    <string name="unit_3_title">Mensuration and Calculation</string>
+    <string name="unit_3_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_3.1_title">English and Metric System of Measurement</string>
+    <string name="lesson_3.2_title">Unit Conversion</string>
+    <string name="lesson_3.3_title">Ohm\'s Law</string>
+    <string name="lesson_3.4_title">Multi tester</string>
+
+    <string name="unit_4">UNIT IV</string>
+    <string name="unit_4_title">Technical Drawings and Plans </string>
+    <string name="unit_4_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_4.1_title">Basic Electrical Symbols </string>
+    <string name="lesson_4.2_title">Electrical Diagrams</string>
+    <string name="lesson_4.3_title">Electrical Floor Plan </string>
+
 
 </resources>
