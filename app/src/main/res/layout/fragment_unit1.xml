@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Unit1Fragment">
@@ -9,17 +9,111 @@
         android:layout_height="match_parent"
         android:background="@color/skyblue">
 
-
-        <ImageView
+        <ImageButton
             android:id="@+id/unit1Lesson1Button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="@dimen/StartMargin"
+            android:layout_marginLeft="@dimen/StartMargin"
+            android:layout_marginTop="@dimen/TopMargin"
             android:contentDescription="@string/contentdescription"
             android:src="@android:drawable/btn_star_big_on"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UnitObjective" />
+
+        <TextView
+            android:id="@+id/Unit1text"
+            style="@style/HeadText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/unit_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/unitTitleView"
+            style="@style/subHeadText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unit_1_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Unit1text" />
+
+        <TextView
+            android:id="@+id/UnitObjective"
+            style="@style/regulartext"
+            android:layout_width="303dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="10dp"
+            android:background="#FAFAFA"
+            android:padding="5dp"
+            android:text="@string/unit_1_objectives"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unitTitleView" />
+
+        <ImageButton
+            android:id="@+id/unit1Lesson2Button"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="@dimen/StartMargin"
+            android:layout_marginLeft="@dimen/StartMargin"
+            android:layout_marginTop="@dimen/TopMargin"
+            android:contentDescription="@string/contentdescription"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unit1Lesson1Button" />
+
+        <ImageButton
+            android:id="@+id/unit1Lesson3Button"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="@dimen/StartMargin"
+            android:layout_marginLeft="@dimen/StartMargin"
+            android:layout_marginTop="@dimen/TopMargin"
+            android:contentDescription="@string/contentdescription"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unit1Lesson2Button" />
+
+        <TextView
+            android:id="@+id/lesson1title"
+            style="@style/regulartext"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/lesson_1.1_title"
+            app:layout_constraintBottom_toBottomOf="@+id/unit1Lesson1Button"
+            app:layout_constraintStart_toEndOf="@+id/unit1Lesson1Button"
+            app:layout_constraintTop_toTopOf="@+id/unit1Lesson1Button" />
+
+        <TextView
+            android:id="@+id/lesson2title"
+            style="@style/regulartext"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/lesson_1.2_title"
+            app:layout_constraintBottom_toBottomOf="@+id/unit1Lesson2Button"
+            app:layout_constraintStart_toEndOf="@+id/unit1Lesson2Button"
+            app:layout_constraintTop_toTopOf="@+id/unit1Lesson2Button" />
+
+        <TextView
+            android:id="@+id/lesson3title"
+            style="@style/regulartext"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/lesson_1.3_title"
+            app:layout_constraintBottom_toBottomOf="@+id/unit1Lesson3Button"
+            app:layout_constraintStart_toEndOf="@+id/unit1Lesson3Button"
+            app:layout_constraintTop_toTopOf="@+id/unit1Lesson3Button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
