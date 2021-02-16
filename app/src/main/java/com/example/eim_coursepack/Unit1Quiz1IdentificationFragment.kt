@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit1Quiz1IdentificationBinding
+import java.util.*
 
 
 class Unit1Quiz1IdentificationFragment : Fragment() {
@@ -24,18 +26,18 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
         ),
         Unit1Quiz1MCFragment.Question(
             text = "What is the base class for layouts?",
-            answers = listOf("ViewGroup", "viewgroup")
+            answers = listOf("viewgroup")
         ),
         Unit1Quiz1MCFragment.Question(
             text = "What layout do you use for complex screens?",
-            answers = listOf("ConstraintLayout", "constraintlayout")
+            answers = listOf("constraintlayout")
         )
     )
 
     lateinit var currentQuestion: Unit1Quiz1MCFragment.Question
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
-    private val numQuestions = questions.size
+    private var numQuestions = questions.size
     private var score = 0
 
     override fun onCreateView(
@@ -47,6 +49,7 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
             inflater, R.layout.fragment_unit1_quiz1_identification, container, false)
 
         val args = Unit1Quiz1IdentificationFragmentArgs.fromBundle(requireArguments())
+
 
         val sharedPref = this.activity?.getSharedPreferences(getString(R.string.preference_key),
             Context.MODE_PRIVATE)
@@ -62,11 +65,8 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
         binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view : View ->
             if (answerText.isNotEmpty()) {
-                if (answerText.toString() in currentQuestion.answers) {
+                if (answerText.toString().toLowerCase() in currentQuestion.answers) {
                     score++
-
-                    // for checking only (remove this)
-                    Toast.makeText(context, "Correct!", Toast.LENGTH_SHORT).show()
                 }
 
                 questionIndex++
@@ -77,20 +77,22 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
                     binding.invalidateAll()
                     answerText.clear()
                 } else {
-
-                    Toast.makeText(context, "SAVED! Score : $score", Toast.LENGTH_SHORT).show()
-
                     // save score in preferences
                     with(sharedPref?.edit()) {
                         this?.putInt("quiz1_score",score)
                         this?.apply()
                     }
 
-                    // move to eval score fragment
+                    // Add up the number of questions from multiple choice
+                    numQuestions += args.numQuestions
+
+                    view.findNavController().
+                    navigate(Unit1Quiz1IdentificationFragmentDirections.
+                    actionUnit1Quiz1IdentificationFragmentToUni1Quiz1ScoreFragment(numQuestions, score))
                 }
 
             } else {
-                Toast.makeText(context,"Type your answer",Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"Enter your answer",Toast.LENGTH_SHORT).show()
             }
         }
 

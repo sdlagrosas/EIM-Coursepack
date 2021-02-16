@@ -11,4 +11,6 @@
     <string name="submit_button">Submit</string>
     <string name="take_quiz">Take Quiz</string>
     <string name="preference_key">EIM_Coursepack_SharedPrefs</string>
+    <string name="return_button">Return</string>
+    <string name="your_score_is">Your Score is</string>
 </resources>

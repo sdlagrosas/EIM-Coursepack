@@ -27,8 +27,6 @@ class Unit1Lesson1 : Fragment() {
 
         val score = sharedPref?.getInt("quiz1_score",0)
 
-        Toast.makeText(context, "Quiz1 Score : $score",Toast.LENGTH_LONG).show()
-
         binding.quiz1Button.setOnClickListener { view : View ->
             view.findNavController().navigate(Unit1Lesson1Directions.actionUnit1Lesson1ToUnit1Quiz1MCFragment())
         }
