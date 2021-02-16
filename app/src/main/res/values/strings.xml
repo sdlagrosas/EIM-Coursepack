@@ -40,5 +40,19 @@
     <string name="lesson_4.2_title">Electrical Diagrams</string>
     <string name="lesson_4.3_title">Electrical Floor Plan </string>
 
+    <string name="unit_5">UNIT V</string>
+    <string name="unit_5_title">Maintaining Tools, Equipment and Paraphernalia </string>
+    <string name="unit_5_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_5.1_title">Checking Condition of Tools,Equipment and Paraphernalia </string>
+    <string name="lesson_5.2_title">Basic Maintenance of Tools,Equipment and Paraphernalia</string>
+    <string name="lesson_5.3_title">Storage of Tools, Equipment and Paraphernalia </string>
+
+    <string name="unit_6">UNIT VI</string>
+    <string name="unit_6_title">Practice Occupational Health and Safety Procedure  </string>
+    <string name="unit_6_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
+    <string name="lesson_6.1_title">Hazards and Risks </string>
+    <string name="lesson_6.2_title">Control Hazards and Risk </string>
+    <string name="lesson_6.3_title">Personal Protective Device </string>
+    <string name="lesson_6.4_title">Housekeeping  </string>
 
 </resources>
