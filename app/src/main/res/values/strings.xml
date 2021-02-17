@@ -1,5 +1,4 @@
 <resources>
-
     <string name="app_name">EIM Coursepack</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="start">Start</string>
@@ -8,6 +7,13 @@
     <string name="main_menu">UNITS</string>
     <string name="teachername">By: (Insert name)</string>
     <string name="contentdescription">To insert an image for design</string>
+
+    <string name="submit_button">Submit</string>
+    <string name="take_quiz">Take Quiz</string>
+    <string name="preference_key">EIM_Coursepack_SharedPrefs</string>
+    <string name="return_button">Return</string>
+    <string name="your_score_is">Your Score is</string>
+
 
     <string name="unit_1">UNIT I</string>
     <string name="unit_1_title">Fundamentals  of Electricity</string>
@@ -54,5 +60,6 @@
     <string name="lesson_6.2_title">Control Hazards and Risk </string>
     <string name="lesson_6.3_title">Personal Protective Device </string>
     <string name="lesson_6.4_title">Housekeeping  </string>
+
 
 </resources>
