@@ -16,8 +16,9 @@
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
             android:layout_marginTop="@dimen/TopMargin"
-            android:background="@drawable/ic_folderimage"
+            android:background="#F6675E"
             android:contentDescription="@string/contentdescription"
+            android:src="@drawable/ic_icon__2_"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unitTitleView" />
 
@@ -49,8 +50,9 @@
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
             android:layout_marginTop="@dimen/TopMargin"
-            android:background="@drawable/ic_icon"
+            android:background="#F6675E"
             android:contentDescription="@string/contentdescription"
+            android:src="@drawable/ic_icon__2_"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit1Lesson1Button" />
 
@@ -61,8 +63,9 @@
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
             android:layout_marginTop="@dimen/TopMargin"
+            android:background="#F6675E"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_icon__2_"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit1Lesson2Button" />
 

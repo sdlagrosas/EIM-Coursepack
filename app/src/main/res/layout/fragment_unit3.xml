@@ -17,8 +17,9 @@
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
             android:layout_marginTop="@dimen/TopMargin"
+            android:background="#A2C2EA"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_icon__2_"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit3TitleView" />
 
@@ -50,8 +51,9 @@
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
             android:layout_marginTop="@dimen/SmallTopMargin"
+            android:background="#A2C2EA"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_icon__2_"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit3Lesson1Button" />
 
@@ -62,8 +64,9 @@
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
             android:layout_marginTop="@dimen/SmallTopMargin"
+            android:background="#A2C2EA"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_icon__2_"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit3Lesson2Button" />
 
@@ -111,8 +114,9 @@
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
             android:layout_marginTop="@dimen/SmallTopMargin"
+            android:background="#A2C2EA"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_icon__2_"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit3Lesson3Button" />
 
