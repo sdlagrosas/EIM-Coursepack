@@ -23,13 +23,13 @@
 
         <ImageButton
             android:id="@+id/unit1Button"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="@dimen/StartMargin"
-            android:layout_marginLeft="@dimen/StartMargin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
             android:layout_marginTop="@dimen/TopMargin"
+            android:background="@drawable/ic_cube_notes"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintEnd_toStartOf="@+id/unit2Button"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,25 +37,25 @@
 
         <ImageButton
             android:id="@+id/unit2Button"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/ic_icon__10_"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mainMenuText" />
 
         <ImageButton
             android:id="@+id/unit3Button"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="@dimen/StartMargin"
-            android:layout_marginLeft="@dimen/StartMargin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
             android:layout_marginTop="@dimen/TopMargin"
+            android:background="@drawable/ic_icon__11_"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintEnd_toStartOf="@+id/unit4Button"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,25 +63,25 @@
 
         <ImageButton
             android:id="@+id/unit4Button"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="@dimen/TopMargin"
-            android:layout_marginEnd="@dimen/StartMargin"
-            android:layout_marginRight="@dimen/StartMargin"
+            android:layout_marginEnd="75dp"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/ic_icon__9_"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit2Button" />
 
         <ImageButton
             android:id="@+id/unit5Button"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="@dimen/StartMargin"
-            android:layout_marginLeft="@dimen/StartMargin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
             android:layout_marginTop="@dimen/TopMargin"
+            android:background="@drawable/ic_icon__6_"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintEnd_toStartOf="@+id/unit6Button"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,15 +89,109 @@
 
         <ImageButton
             android:id="@+id/unit6Button"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="@dimen/TopMargin"
-            android:layout_marginEnd="@dimen/StartMargin"
-            android:layout_marginRight="@dimen/StartMargin"
+            android:layout_marginEnd="75dp"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/ic_icon__7_"
             android:contentDescription="@string/contentdescription"
-            android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit4Button" />
+
+        <TextView
+            android:id="@+id/roman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roman1"
+            app:layout_constraintBottom_toBottomOf="@+id/unit1Button"
+            app:layout_constraintEnd_toStartOf="@+id/unit1Button"
+            app:layout_constraintTop_toTopOf="@+id/unit1Button"
+            app:layout_constraintVertical_bias="1.0"
+            style="@style/romanstyle" />
+
+        <TextView
+            android:id="@+id/roman2"
+            style="@style/romanstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roman2"
+            app:layout_constraintBottom_toBottomOf="@+id/unit2Button"
+            app:layout_constraintEnd_toStartOf="@+id/unit2Button"
+            app:layout_constraintTop_toTopOf="@+id/unit2Button"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/roman3"
+            style="@style/romanstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roman3"
+            app:layout_constraintBottom_toBottomOf="@+id/unit3Button"
+            app:layout_constraintEnd_toStartOf="@+id/unit3Button"
+            app:layout_constraintTop_toTopOf="@+id/unit3Button"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/roman4"
+            style="@style/romanstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roman4"
+            app:layout_constraintBottom_toBottomOf="@+id/unit4Button"
+            app:layout_constraintEnd_toStartOf="@+id/unit4Button"
+            app:layout_constraintTop_toTopOf="@+id/unit4Button"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/roman5"
+            style="@style/romanstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roman5"
+            app:layout_constraintBottom_toBottomOf="@+id/unit5Button"
+            app:layout_constraintEnd_toStartOf="@+id/unit5Button"
+            app:layout_constraintTop_toTopOf="@+id/unit5Button"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/roman6"
+            style="@style/romanstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roman6"
+            app:layout_constraintBottom_toBottomOf="@+id/unit6Button"
+            app:layout_constraintEnd_toStartOf="@+id/unit6Button"
+            app:layout_constraintTop_toTopOf="@+id/unit6Button"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/progressImage"
+            android:layout_width="72dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:contentDescription="@string/contentdescription"
+            android:src="@drawable/ic__529053658"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unit5Button" />
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/regulartext"
+            android:layout_width="176dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginRight="75dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:shadowColor="@color/white"
+            android:text="@string/progress"
+            app:layout_constraintBottom_toBottomOf="@+id/progressImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/progressImage"
+            app:layout_constraintTop_toTopOf="@+id/progressImage" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
