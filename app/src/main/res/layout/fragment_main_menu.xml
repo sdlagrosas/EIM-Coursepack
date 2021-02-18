@@ -15,7 +15,7 @@
             style="@style/HeadText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:text="@string/main_menu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,6 +28,8 @@
             android:layout_marginStart="75dp"
             android:layout_marginLeft="75dp"
             android:layout_marginTop="@dimen/TopMargin"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/ic_cube_notes"
             android:contentDescription="@string/contentdescription"
             app:layout_constraintEnd_toStartOf="@+id/unit2Button"
@@ -54,6 +56,8 @@
             android:layout_marginStart="75dp"
             android:layout_marginLeft="75dp"
             android:layout_marginTop="@dimen/TopMargin"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/ic_icon__11_"
             android:contentDescription="@string/contentdescription"
             app:layout_constraintEnd_toStartOf="@+id/unit4Button"
@@ -80,6 +84,8 @@
             android:layout_marginStart="75dp"
             android:layout_marginLeft="75dp"
             android:layout_marginTop="@dimen/TopMargin"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/ic_icon__6_"
             android:contentDescription="@string/contentdescription"
             app:layout_constraintEnd_toStartOf="@+id/unit6Button"
@@ -117,7 +123,7 @@
             android:layout_height="wrap_content"
             android:text="@string/roman2"
             app:layout_constraintBottom_toBottomOf="@+id/unit2Button"
-            app:layout_constraintEnd_toStartOf="@+id/unit2Button"
+            app:layout_constraintStart_toEndOf="@+id/unit2Button"
             app:layout_constraintTop_toTopOf="@+id/unit2Button"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -139,7 +145,7 @@
             android:layout_height="wrap_content"
             android:text="@string/roman4"
             app:layout_constraintBottom_toBottomOf="@+id/unit4Button"
-            app:layout_constraintEnd_toStartOf="@+id/unit4Button"
+            app:layout_constraintStart_toEndOf="@+id/unit4Button"
             app:layout_constraintTop_toTopOf="@+id/unit4Button"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -161,7 +167,7 @@
             android:layout_height="wrap_content"
             android:text="@string/roman6"
             app:layout_constraintBottom_toBottomOf="@+id/unit6Button"
-            app:layout_constraintEnd_toStartOf="@+id/unit6Button"
+            app:layout_constraintStart_toEndOf="@+id/unit6Button"
             app:layout_constraintTop_toTopOf="@+id/unit6Button"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -171,9 +177,9 @@
             android:layout_height="58dp"
             android:layout_marginStart="75dp"
             android:layout_marginLeft="75dp"
+            android:layout_marginTop="40dp"
             android:contentDescription="@string/contentdescription"
             android:src="@drawable/ic__529053658"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unit5Button" />
 
