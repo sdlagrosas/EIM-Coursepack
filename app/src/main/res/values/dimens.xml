@@ -15,8 +15,9 @@
     <dimen name="smallIcons">70dp</dimen>
     <dimen name="Lesson_title_main_menu">180dp</dimen>
     <dimen name="Lesson_title_content_proper">230dp</dimen>
-    <dimen name="smallpadding">2dp</dimen>
-    <dimen name="smallMargin_lessonContent">10dp</dimen>
+    <dimen name="smallpadding">3dp</dimen>
+    <dimen name="smallMargin_lessonContent">16dp</dimen>
+
 
 
 
