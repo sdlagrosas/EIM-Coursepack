@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/SmallTopMargin"
             android:text="@string/main_menu"
+            app:layout_constraintBottom_toTopOf="@+id/guideline1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,14 +28,14 @@
             android:layout_height="@dimen/largeWH"
             android:layout_marginStart="@dimen/StartMargin_mainmenu"
             android:layout_marginLeft="@dimen/StartMargin_mainmenu"
-            android:layout_marginTop="@dimen/TopMargin"
             android:layout_marginEnd="@dimen/StartMargin_mainmenu"
             android:layout_marginRight="@dimen/StartMargin_mainmenu"
             android:background="@drawable/ic_cube_notes"
             android:contentDescription="@string/contentdescription"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="@+id/mainMenuText"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mainMenuText" />
+            app:layout_constraintTop_toTopOf="@+id/guideline1" />
 
         <ImageButton
             android:id="@+id/unit2Button"
@@ -42,14 +43,14 @@
             android:layout_height="@dimen/largeWH"
             android:layout_marginStart="@dimen/StartMargin_mainmenu"
             android:layout_marginLeft="@dimen/StartMargin_mainmenu"
-            android:layout_marginTop="40dp"
             android:layout_marginEnd="@dimen/StartMargin_mainmenu"
             android:layout_marginRight="@dimen/StartMargin_mainmenu"
             android:background="@drawable/ic_icon__10_"
             android:contentDescription="@string/contentdescription"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/mainMenuText"
-            app:layout_constraintTop_toBottomOf="@+id/mainMenuText" />
+            app:layout_constraintTop_toTopOf="@+id/guideline1" />
 
         <ImageButton
             android:id="@+id/unit3Button"
@@ -57,14 +58,14 @@
             android:layout_height="@dimen/largeWH"
             android:layout_marginStart="@dimen/StartMargin_mainmenu"
             android:layout_marginLeft="@dimen/StartMargin_mainmenu"
-            android:layout_marginTop="@dimen/TopMargin"
             android:layout_marginEnd="@dimen/StartMargin_mainmenu"
             android:layout_marginRight="@dimen/StartMargin_mainmenu"
             android:background="@drawable/ic_icon__11_"
             android:contentDescription="@string/contentdescription"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintEnd_toEndOf="@+id/mainMenuText"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unit1Button" />
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <ImageButton
             android:id="@+id/unit4Button"
@@ -72,14 +73,14 @@
             android:layout_height="@dimen/largeWH"
             android:layout_marginStart="@dimen/StartMargin_mainmenu"
             android:layout_marginLeft="@dimen/StartMargin_mainmenu"
-            android:layout_marginTop="@dimen/TopMargin"
             android:layout_marginEnd="@dimen/StartMargin_mainmenu"
             android:layout_marginRight="@dimen/StartMargin_mainmenu"
             android:background="@drawable/ic_icon__9_"
             android:contentDescription="@string/contentdescription"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/mainMenuText"
-            app:layout_constraintTop_toBottomOf="@+id/unit2Button" />
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <ImageButton
             android:id="@+id/unit5Button"
@@ -87,14 +88,14 @@
             android:layout_height="@dimen/largeWH"
             android:layout_marginStart="@dimen/StartMargin_mainmenu"
             android:layout_marginLeft="@dimen/StartMargin_mainmenu"
-            android:layout_marginTop="@dimen/TopMargin"
             android:layout_marginEnd="@dimen/StartMargin_mainmenu"
             android:layout_marginRight="@dimen/StartMargin_mainmenu"
             android:background="@drawable/ic_icon__6_"
             android:contentDescription="@string/contentdescription"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
             app:layout_constraintEnd_toEndOf="@+id/mainMenuText"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unit3Button" />
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
         <ImageButton
             android:id="@+id/unit6Button"
@@ -102,25 +103,26 @@
             android:layout_height="@dimen/largeWH"
             android:layout_marginStart="@dimen/StartMargin_mainmenu"
             android:layout_marginLeft="@dimen/StartMargin_mainmenu"
-            android:layout_marginTop="@dimen/TopMargin"
             android:layout_marginEnd="@dimen/StartMargin_mainmenu"
             android:layout_marginRight="@dimen/StartMargin_mainmenu"
             android:background="@drawable/ic_icon__7_"
             android:contentDescription="@string/contentdescription"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/mainMenuText"
-            app:layout_constraintTop_toBottomOf="@+id/unit4Button" />
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            app:layout_constraintVertical_bias="0.523" />
 
         <TextView
             android:id="@+id/roman"
+            style="@style/romanstyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/roman1"
             app:layout_constraintBottom_toBottomOf="@+id/unit1Button"
             app:layout_constraintEnd_toStartOf="@+id/unit1Button"
             app:layout_constraintTop_toTopOf="@+id/unit1Button"
-            app:layout_constraintVertical_bias="1.0"
-            style="@style/romanstyle" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/roman2"
@@ -183,13 +185,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/StartMargin_mainmenu"
             android:layout_marginLeft="@dimen/StartMargin_mainmenu"
-            android:layout_marginTop="@dimen/TopMargin"
-            android:layout_marginBottom="@dimen/SmallTopMargin"
             android:contentDescription="@string/contentdescription"
             android:src="@drawable/ic__529053658"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unit5Button" />
+            app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
         <TextView
             android:id="@+id/textView7"
@@ -206,6 +206,54 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/progressImage"
             app:layout_constraintTop_toTopOf="@+id/progressImage" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1"
+            app:layout_constraintGuide_begin="20dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
