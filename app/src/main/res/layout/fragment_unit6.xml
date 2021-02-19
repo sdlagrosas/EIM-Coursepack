@@ -11,23 +11,25 @@
 
         <ImageButton
             android:id="@+id/unit6Lesson1Button"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="@dimen/smallIcons"
+            android:layout_height="@dimen/smallIcons"
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
-            android:layout_marginTop="@dimen/TopMargin"
+            android:layout_marginTop="@dimen/zeromargin"
+            android:layout_marginBottom="@dimen/zeromargin"
             android:background="#F1A2A2"
             android:contentDescription="@string/contentdescription"
             android:src="@drawable/ic_icon__2_"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unit6TitleView" />
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
         <TextView
             android:id="@+id/Unit6text"
             style="@style/HeadText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/SmallTopMargin"
             android:text="@string/unit_6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,29 +47,33 @@
 
         <ImageButton
             android:id="@+id/unit6Lesson2Button"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="@dimen/smallIcons"
+            android:layout_height="@dimen/smallIcons"
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
-            android:layout_marginTop="@dimen/SmallTopMargin"
+            android:layout_marginTop="@dimen/zeromargin"
+            android:layout_marginBottom="@dimen/zeromargin"
             android:background="#F1A2A2"
             android:contentDescription="@string/contentdescription"
             android:src="@drawable/ic_icon__2_"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unit6Lesson1Button" />
+            app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
         <ImageButton
             android:id="@+id/unit6Lesson3Button"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="@dimen/smallIcons"
+            android:layout_height="@dimen/smallIcons"
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
-            android:layout_marginTop="@dimen/SmallTopMargin"
+            android:layout_marginTop="@dimen/zeromargin"
+            android:layout_marginBottom="@dimen/zeromargin"
             android:background="#F1A2A2"
             android:contentDescription="@string/contentdescription"
             android:src="@drawable/ic_icon__2_"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unit6Lesson2Button" />
+            app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
         <TextView
             android:id="@+id/lesson1title"
@@ -108,16 +114,18 @@
 
         <ImageButton
             android:id="@+id/unit6Lesson4Button"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="@dimen/smallIcons"
+            android:layout_height="@dimen/smallIcons"
             android:layout_marginStart="@dimen/StartMargin"
             android:layout_marginLeft="@dimen/StartMargin"
-            android:layout_marginTop="@dimen/SmallTopMargin"
+            android:layout_marginTop="@dimen/zeromargin"
+            android:layout_marginBottom="@dimen/zeromargin"
             android:background="#F1A2A2"
             android:contentDescription="@string/contentdescription"
             android:src="@drawable/ic_icon__2_"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unit6Lesson3Button" />
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
         <TextView
             android:id="@+id/lesson4title"
@@ -130,6 +138,46 @@
             app:layout_constraintBottom_toBottomOf="@+id/unit6Lesson4Button"
             app:layout_constraintStart_toEndOf="@+id/unit6Lesson4Button"
             app:layout_constraintTop_toTopOf="@+id/unit6Lesson4Button" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80"
+            app:layout_constraintGuide_begin="20dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

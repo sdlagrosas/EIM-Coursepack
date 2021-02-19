@@ -11,6 +11,8 @@
     <dimen name="progressW">176dp</dimen>
     <dimen name="progressH">56dp</dimen>
     <dimen name="zeromargin">0dp</dimen>
+    <dimen name="icon_text_margin">20dp</dimen>
+    <dimen name="smallIcons">70dp</dimen>
 
 
 
