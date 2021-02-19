@@ -21,6 +21,43 @@
     <string name="lesson_1.1_title">Basic Concept and Principles of Electricity</string>
     <string name="lesson_1.2_title">Sources of Energy</string>
     <string name="lesson_1.3_title">Relationship of Current,Voltage and Resistance</string>
+    <string name="Lesson1.1">Lesson 1.1</string>
+    <string name="Content01">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
+        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
+        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
+        turpis egestas maecenas \n\n
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
+        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
+        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
+        turpis egestas maecenas \n\n
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
+        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
+        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
+        turpis egestas maecenas \n\n
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
+        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
+        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
+        turpis egestas maecenas \n\n
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
+        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
+        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
+        turpis egestas maecenas \n\n
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
+        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
+        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
+        turpis egestas maecenas \n\n.</string>
 
 
     <string name="unit_2">UNIT II</string>
@@ -60,6 +97,7 @@
     <string name="lesson_6.2_title">Control Hazards and Risk </string>
     <string name="lesson_6.3_title">Personal Protective Device </string>
     <string name="lesson_6.4_title">Housekeeping  </string>
+
     <string name="roman1">I</string>
     <string name="roman2">II</string>
     <string name="roman3">III</string>
@@ -67,6 +105,13 @@
     <string name="roman5">V</string>
     <string name="roman6">VI</string>
     <string name="progress">Check Progress</string>
+
+
+
+
+
+
+
 
 
 </resources>

@@ -22,9 +22,9 @@ class Unit1Lesson1 : Fragment() {
         val binding : FragmentUnit1Lesson1Binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_unit1_lesson1, container, false)
 
-        binding.quiz1Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_unit1Lesson1_to_unit1Quiz1MCFragment)
-        }
+//        binding.quiz1Button.setOnClickListener { view : View ->
+//            view.findNavController().navigate(R.id.action_unit1Lesson1_to_unit1Quiz1MCFragment)
+//        }
 
         return binding.root
     }

@@ -31,4 +31,41 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">34sp</item>
     </style>
+
+    <!--Use this style for Lesson Titles in fragment_unitX_lessonX example Basic Concepts and Principles of Electricity-->
+    <style name="LessonTitle_contentproper" parent="subHeadText">
+        <item name="android:layout_width">@dimen/Lesson_title_content_proper</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/TopMargin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!--Use this style for Lesson numbers in fragment_unitX_lessonX example Lesson 1.1-->
+    <style name="lessonNumber" parent="regulartext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/SmallTopMargin</item>
+        <item name="android:layout_marginLeft">@dimen/SmallTopMargin</item>
+        <item name="android:layout_marginTop">@dimen/SmallTopMargin</item>
+        <item name="android:background">#052743</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--Use this style for Lesson Content text in fragment_unitX_lessonX example The electricity is the movement of.... etc.-->
+    <style name="Content" parent="regulartext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/smallMargin_lessonContent</item>
+    </style>
+    <!--Use this style as the linearlayout format for fragment_unitX_lessonX example Lesson 1.1-->
+    <style name="linearlayout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/smallMargin_lessonContent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/smallpadding</item>
+    </style>
 </resources>
