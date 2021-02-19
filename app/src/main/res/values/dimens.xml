@@ -10,6 +10,8 @@
     <dimen name="smallWH">90dp</dimen>
     <dimen name="progressW">176dp</dimen>
     <dimen name="progressH">56dp</dimen>
+    <dimen name="zeromargin">0dp</dimen>
+
 
 
 
