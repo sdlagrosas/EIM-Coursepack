@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.EIM_Coursepack" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/skyblue</item>
-        <item name="colorPrimaryDark">@color/skyblue</item>
-        <item name="colorAccent">@color/skyblue</item>
+        <item name="colorPrimary">#A2ECEF</item>
+        <item name="colorPrimaryDark">#A2ECEF</item>
+        <item name="colorAccent">@color/black</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>

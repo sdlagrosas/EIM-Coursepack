@@ -23,13 +23,19 @@
                 <TextView
                     android:id="@+id/textView2"
                     style="@style/LessonTitle_contentproper"
-
                     android:text="@string/lesson_1.1_title" />
 
                 <TextView
                     android:id="@+id/textView3"
                     style="@style/Content"
                     android:text="@string/Content01" />
+
+                <Button
+                    android:id="@+id/quizButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/take_quiz"
+                    android:textSize="@dimen/button_text_size" />
             </LinearLayout>
         </ScrollView>
 

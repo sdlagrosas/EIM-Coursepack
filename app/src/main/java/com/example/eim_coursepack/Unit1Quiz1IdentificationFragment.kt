@@ -17,25 +17,34 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
 
     data class Question(
         val text: String,
-        val answers: List<String>)
+        val answers: String
+        )
 
-    private val questions: MutableList<Unit1Quiz1MCFragment.Question> = mutableListOf(
-        Unit1Quiz1MCFragment.Question(
-            text = "What is Android Jetpack?",
-            answers = listOf("tools", "tool", "documentation", "library", "libraries")
+    private val questions: MutableList<Question> = mutableListOf(
+        Question(
+            text = "1. It contains the positive and neutral charged of an atom.",
+            answers = "nucleus"
         ),
-        Unit1Quiz1MCFragment.Question(
-            text = "What is the base class for layouts?",
-            answers = listOf("viewgroup")
+        Question(
+            text = "2. This refers to the attraction between the nucleus and the electron.",
+            answers = "electrostatic force"
         ),
-        Unit1Quiz1MCFragment.Question(
-            text = "What layout do you use for complex screens?",
-            answers = listOf("constraintlayout")
+        Question(
+            text = "3. The particle which has equal charged to electron",
+            answers = "proton"
+        ),
+        Question(
+            text = "4. Particle which found in the outer orbit of an atom.",
+            answers = "electron"
+        ),
+        Question(
+            text = "5. Particle of an atom without electrical charge.",
+            answers = "neutron"
         )
     )
 
-    lateinit var currentQuestion: Unit1Quiz1MCFragment.Question
-    lateinit var answers: MutableList<String>
+    lateinit var currentQuestion: Question
+    lateinit var answers: String
     private var questionIndex = 0
     private var numQuestions = questions.size
     private var score = 0
@@ -60,9 +69,9 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
 
         binding.quiz = this
 
-        val answerText = binding.answerText.text
+        val answerText = binding.answerText1.text
 
-        binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
+        binding.button1.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view : View ->
             if (answerText.isNotEmpty()) {
                 if (answerText.toString().toLowerCase() in currentQuestion.answers) {
@@ -108,7 +117,7 @@ class Unit1Quiz1IdentificationFragment : Fragment() {
     private fun setQuestion() {
         currentQuestion = questions[questionIndex]
         // randomize the answers into a copy of the array
-        answers = currentQuestion.answers.toMutableList()
+        answers = currentQuestion.answers
         // and shuffle them
 //        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_android_trivia_question, questionIndex + 1, numQuestions)
     }

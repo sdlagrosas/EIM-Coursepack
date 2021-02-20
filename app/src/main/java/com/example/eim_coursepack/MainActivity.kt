@@ -15,12 +15,13 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
-        supportActionBar?.setElevation(0F)
+        supportActionBar?.elevation = 0F
+
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         val navController = this.findNavController(R.id.navHostFragment)
 
         NavigationUI.setupActionBarWithNavController(this,navController)
-
 
     }
 
