@@ -87,14 +87,15 @@
                     android:layout_margin="@dimen/smallMargin_lessonContent"
                     android:contentDescription="@string/contentdescription"
                     tools:src="@tools:sample/avatars" />
+
                 <ImageView
                     android:id="@+id/imageView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/smallMargin_lessonContent"
                     android:contentDescription="@string/contentdescription"
-                    tools:src="@tools:sample/avatars" />
+                    tools:src="@drawable/sample" />
                 <TextView
                     android:id="@+id/Content8"
                     style="@style/Content"
