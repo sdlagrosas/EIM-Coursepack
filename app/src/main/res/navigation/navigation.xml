@@ -56,8 +56,8 @@
         android:name="com.example.eim_coursepack.Unit1Quiz1MCFragment"
         tools:layout="@layout/fragment_unit1_quiz1_m_c">
         <action
-            android:id="@+id/action_unit1Quiz1MCFragment_to_unit1Quiz1IdentificationFragment"
-            app:destination="@id/unit1Quiz1IdentificationFragment" />
+            android:id="@+id/action_unit1Quiz1MCFragment_to_uni1Quiz1ScoreFragment"
+            app:destination="@id/uni1Quiz1ScoreFragment" />
     </fragment>
     <fragment
         android:id="@+id/unit1Quiz1IdentificationFragment"
@@ -278,8 +278,7 @@
     <fragment
         android:id="@+id/unit1Lesson1"
         android:name="com.example.eim_coursepack.Unit1Lesson1"
-        android:label="fragment_unit1_lesson1"
-        tools:layout="@layout/fragment_unit1_lesson1" >
+        tools:layout="@layout/fragment_unit1_lesson1">
         <action
             android:id="@+id/action_unit1Lesson1_to_unit1Quiz1MCFragment"
             app:destination="@id/unit1Quiz1MCFragment" />

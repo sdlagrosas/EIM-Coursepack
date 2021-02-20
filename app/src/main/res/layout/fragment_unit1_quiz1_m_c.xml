@@ -14,6 +14,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#A2ECEF"
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,22 +24,24 @@
 
             <TextView
                 android:id="@+id/questionText"
-                style="@style/HeadText"
-                android:layout_width="0dp"
+                style="@style/subHeadText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/question_horizontal_margin"
-                android:layout_marginEnd="@dimen/question_horizontal_margin"
-                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="24dp"
                 android:fontFamily="sans-serif"
+                android:gravity="center"
                 android:text="@{quiz.currentQuestion.text}"
                 android:textSize="@dimen/question_text_size"
                 android:textStyle="bold"
                 android:typeface="normal"
                 app:layout_constraintBottom_toTopOf="@+id/questionRadioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="Question?" />
+                tools:text="Because?" />
 
             <RadioGroup
                 android:id="@+id/questionRadioGroup"
@@ -58,10 +61,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
-                    android:checked="true"
                     android:text="@{quiz.answers[0]}"
                     android:textSize="@dimen/answer_text_size"
-                    tools:text="Choice 1" />
+                    tools:text="Edi don't" />
 
                 <RadioButton
                     android:id="@+id/secondChoiceRadioButton"
@@ -91,17 +93,15 @@
             </RadioGroup>
 
             <Button
-                android:id="@+id/submitButton"
+                android:id="@+id/nextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/question_horizontal_margin"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="@dimen/question_horizontal_margin"
-                android:text="@string/submit_button"
+                android:layout_marginTop="16dp"
+                android:text="@string/Next"
                 android:textSize="@dimen/button_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                app:layout_constraintTop_toBottomOf="@+id/answerText" />
 
             <ImageView
                 android:id="@+id/quiz1Image"
@@ -110,12 +110,53 @@
 
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:contentDescription="An image in quiz fragment"
+                android:contentDescription="@string/an_image_in_quiz_fragment"
                 app:layout_constraintBottom_toTopOf="@+id/questionText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/avatars" />
+
+            <EditText
+                android:id="@+id/answerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:ems="10"
+                android:hint="@string/type_your_answer_here"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/nextButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/back"
+                android:textSize="@dimen/button_text_size"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/nextButton"
+                app:layout_constraintEnd_toStartOf="@+id/nextButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nextButton" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/submit_button"
+                android:textSize="@dimen/button_text_size"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nextButton" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
