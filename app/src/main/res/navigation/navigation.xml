@@ -170,7 +170,11 @@
         android:id="@+id/unit1Lesson2"
         android:name="com.example.eim_coursepack.Unit1Lesson2"
         android:label="fragment_unit1_lesson2"
-        tools:layout="@layout/fragment_unit1_lesson2" />
+        tools:layout="@layout/fragment_unit1_lesson2" >
+        <action
+            android:id="@+id/action_unit1Lesson2_to_unit1Quiz2Fragment"
+            app:destination="@id/unit1Quiz2Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/unit2Lesson1"
         android:name="com.example.eim_coursepack.Unit2Lesson1"
@@ -268,6 +272,30 @@
         <action
             android:id="@+id/action_unit1Lesson1_to_unit1Quiz1MCFragment"
             app:destination="@id/unit1Quiz1MCFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit1Quiz2Fragment"
+        android:name="com.example.eim_coursepack.Unit1Quiz2Fragment"
+        android:label="fragment_unit1_quiz2"
+        tools:layout="@layout/fragment_unit1_quiz2" >
+        <action
+            android:id="@+id/action_unit1Quiz2Fragment_to_unit1Quiz2ScoreFragment"
+            app:destination="@id/unit1Quiz2ScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit1Quiz2ScoreFragment"
+        android:name="com.example.eim_coursepack.Unit1Quiz2ScoreFragment"
+        android:label="fragment_unit1_quiz2_score"
+        tools:layout="@layout/fragment_unit1_quiz2_score" >
+        <action
+            android:id="@+id/action_unit1Quiz2ScoreFragment_to_unit1Fragment"
+            app:destination="@id/unit1Fragment" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
     </fragment>
 
 </navigation>
