@@ -60,21 +60,6 @@
             app:destination="@id/uni1Quiz1ScoreFragment" />
     </fragment>
     <fragment
-        android:id="@+id/unit1Quiz1IdentificationFragment"
-        android:name="com.example.eim_coursepack.Unit1Quiz1IdentificationFragment"
-        tools:layout="@layout/fragment_unit1_quiz1_identification" >
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="numCorrect"
-            app:argType="integer" />
-        <action
-            android:id="@+id/action_unit1Quiz1IdentificationFragment_to_uni1Quiz1ScoreFragment"
-            app:destination="@id/uni1Quiz1ScoreFragment"
-            app:popUpTo="@id/unit1Lesson1" />
-    </fragment>
-    <fragment
         android:id="@+id/uni1Quiz1ScoreFragment"
         android:name="com.example.eim_coursepack.Unit1Quiz1ScoreFragment"
         android:label="fragment_uni1_quiz1_score"

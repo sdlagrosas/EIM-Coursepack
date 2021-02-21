@@ -1,6 +1,5 @@
 package com.example.eim_coursepack
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,9 +10,9 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit1Quiz1MCBinding
+import com.example.eim_coursepack.databinding.FragmentUnit1Quiz2Binding
 
-
-class Unit1Quiz1MCFragment : Fragment() {
+class Unit1Quiz2Fragment : Fragment() {
 
     private lateinit var binding : FragmentUnit1Quiz1MCBinding
 
@@ -111,6 +110,7 @@ class Unit1Quiz1MCFragment : Fragment() {
             isCorrect = false,
             enteredAns = ""
         )
+
     )
 
     lateinit var currentMulChoQuestion: MulChoQuestion
@@ -122,14 +122,13 @@ class Unit1Quiz1MCFragment : Fragment() {
     private val numQuestions = mulChoQuestions.size + idenQuestions.size
     private var score = 0
 
-    @SuppressLint("CommitPrefEdits")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_unit1_quiz1_m_c, container, false)
+        val binding : FragmentUnit1Quiz2Binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_unit1_quiz2, container, false)
 
         // SharedPreference Object (for storing data locally)
         val sharedPref = this.activity?.getSharedPreferences(
@@ -194,7 +193,7 @@ class Unit1Quiz1MCFragment : Fragment() {
                 currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
                 binding.answerText.text.clear()
                 setIdenQuestion()
-        }
+            }
 
             // Reset fields
             binding.invalidateAll()
@@ -310,7 +309,7 @@ class Unit1Quiz1MCFragment : Fragment() {
                 binding.invalidateAll()
 
 
-            // Prompt user to select an answer
+                // Prompt user to select an answer
             } else {
                 Toast.makeText(context, "Choose your answer", Toast.LENGTH_SHORT).show()
             }
@@ -387,10 +386,11 @@ class Unit1Quiz1MCFragment : Fragment() {
         currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
 
         questionText = currentIdenQuestion.text
+        // randomize the answers into a copy of the array
         answers = currentMulChoQuestion.answers.toMutableList()
+        // and shuffle them
 
         enteredAns = currentIdenQuestion.enteredAns
     }
-
 
 }
