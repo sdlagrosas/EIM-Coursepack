@@ -29,7 +29,7 @@
                 <TextView
                     android:id="@+id/Content1"
                     style="@style/Content"
-                    android:justificationMode="inter_word"
+
                     android:text="@string/Content01" />
 
                 <TextView
@@ -61,7 +61,7 @@
                     style="@style/Content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:justificationMode="inter_word"
+
                     android:text="@string/Content05" />
 
                 <TextView
@@ -76,7 +76,7 @@
                     style="@style/Content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:justificationMode="inter_word"
+
                     android:text="@string/Content07" />
 
                 <ImageView
@@ -93,7 +93,7 @@
                     style="@style/Content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:justificationMode="inter_word"
+
                     android:text="@string/Content08L" />
 
                 <ImageView
@@ -110,7 +110,7 @@
                     style="@style/Content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:justificationMode="inter_word"
+
                     android:text="@string/Content8.5L" />
 
 
@@ -126,7 +126,7 @@
                     style="@style/Content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:justificationMode="inter_word"
+
                     android:text="@string/Content09L" />
 
                 <ImageView
