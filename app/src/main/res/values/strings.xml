@@ -7,6 +7,12 @@
     <string name="main_menu">UNITS</string>
     <string name="teachername">By: (Insert name)</string>
     <string name="contentdescription">To insert an image for design</string>
+    <string name="Next">Next</string>
+    <string name="an_image_in_quiz_fragment">an image in quiz fragment</string>
+    <string name="type_your_answer_here">Type your answer here</string>
+    <string name="back">Back</string>
+
+
 
     <string name="submit_button">Submit</string>
     <string name="take_quiz">Take Quiz</string>
@@ -45,7 +51,10 @@ Atoms may have more than one orbiting electron, but each atom contains only one 
     <string name="Content08L">\n\tThe attraction between the nucleus and Electron is called electrostatic force, which holds the electron in an orbit.
         Bodies that attract each other in this special electrostatic way are described as charged object.
         The electron carries the Nucleus negative charge (-), while the nucleus carries the positive charge (+).\n\n
-    \tThe structure of neutrons in the atoms showing the position of its proton, electron, nucleus and neutron is shown below. </string>
+     </string>
+
+    <string name="Content8.5L">\tThe positive charge of the nucleus is due to the particles called protons which are found inside the nucleus and have a positive charge equal to the electron’s negative charge\n\n
+    The structure of neutrons in the atoms showing the position of its proton, electron, nucleus and neutron is shown below.\n</string>
     <string name="Content09L">\n\n<b>Law of Electrostatics</b>\n\n
 \tThe protons and electrons attract each other inside the atom.  It has been known that by nature, unlike charges
         (like the positive protons and negative electrons) attract each other while like charges repel each other; meaning,

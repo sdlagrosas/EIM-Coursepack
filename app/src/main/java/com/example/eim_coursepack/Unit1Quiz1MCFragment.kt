@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit1Quiz1MCBinding
+import java.util.*
 
 
 class Unit1Quiz1MCFragment : Fragment() {
@@ -150,6 +151,7 @@ class Unit1Quiz1MCFragment : Fragment() {
 
             setQuestion()
 
+
             // Reset fields
             currentQuestion.isCorrect = false
             binding.invalidateAll()
@@ -183,7 +185,7 @@ class Unit1Quiz1MCFragment : Fragment() {
         { view : View ->
             // Check last question
             val answerText = binding.answerText.text.toString()
-            if (answerText.toLowerCase().trim() in currentQuestion.answers) {
+            if (answerText.toLowerCase(Locale.ROOT).trim() in currentQuestion.answers) {
                 currentQuestion.isCorrect = true
             }
 
@@ -262,7 +264,7 @@ class Unit1Quiz1MCFragment : Fragment() {
             val answerText = binding.answerText.text
 
             if (answerText.isNotEmpty()) {
-                if (answerText.toString().toLowerCase().trim() in currentQuestion.answers) {
+                if (answerText.toString().toLowerCase(Locale.ROOT).trim() in currentQuestion.answers) {
                     currentQuestion.isCorrect = true
                 }
 

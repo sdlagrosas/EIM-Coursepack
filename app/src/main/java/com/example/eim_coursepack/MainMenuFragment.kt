@@ -17,6 +17,7 @@ class MainMenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         val binding = DataBindingUtil.inflate<FragmentMainMenuBinding>(inflater,R.layout.fragment_main_menu,container,false)
 
         binding.unit1Button.setOnClickListener { view : View ->

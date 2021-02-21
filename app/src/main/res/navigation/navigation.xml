@@ -87,10 +87,11 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_uni1Quiz1ScoreFragment_to_unit1Fragment"
-            app:destination="@id/unit1Fragment" />
+            app:destination="@id/unit1Fragment"
+            app:popUpTo="@id/unit1Fragment"
+            app:popUpToInclusive="true" />
     </fragment>
-=======
-        tools:layout="@layout/fragment_unit1_lesson1" />
+
     <fragment
         android:id="@+id/unit2Fragment"
         android:name="com.example.eim_coursepack.Unit2Fragment"
@@ -283,5 +284,5 @@
             android:id="@+id/action_unit1Lesson1_to_unit1Quiz1MCFragment"
             app:destination="@id/unit1Quiz1MCFragment" />
     </fragment>
-    >>>>>>> a366c0b5207d3721320fd819d9c0616628cfc2b0
+
 </navigation>

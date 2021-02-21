@@ -81,21 +81,13 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/largeWH"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/smallMargin_lessonContent"
                     android:contentDescription="@string/contentdescription"
-                    tools:src="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_unit1_lesson1_1_tama" />
 
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="@dimen/smallMargin_lessonContent"
-                    android:contentDescription="@string/contentdescription"
-                    tools:src="@drawable/sample" />
                 <TextView
                     android:id="@+id/Content8"
                     style="@style/Content"
@@ -103,22 +95,31 @@
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:text="@string/Content08L" />
+
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/largeWH"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/smallMargin_lessonContent"
                     android:contentDescription="@string/contentdescription"
-                    tools:src="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/ic_unit1_lesson1_3" />
+
+                <TextView
+                    android:id="@+id/Content8.5"
+                    style="@style/Content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/Content8.5L" />
+
+
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="@dimen/smallMargin_lessonContent"
+                    android:layout_width="@dimen/vertical_images"
+                    android:layout_height="@dimen/vertical_images"
                     android:contentDescription="@string/contentdescription"
-                    tools:src="@tools:sample/avatars" />
+                    android:src="@drawable/ic_unit1_lesson1_7" />
 
                 <TextView
                     android:id="@+id/Content9"
@@ -127,22 +128,23 @@
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:text="@string/Content09L" />
+
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/vertical_images"
+                    android:layout_height="@dimen/vertical_images"
                     android:layout_gravity="center"
                     android:layout_margin="@dimen/smallMargin_lessonContent"
                     android:contentDescription="@string/contentdescription"
-                    tools:src="@tools:sample/avatars" />
-                <ImageView
-                    android:id="@+id/imageView5"
+                    app:srcCompat="@drawable/ic_unit1_lesson1_6" />
+
+                <Button
+                    android:id="@+id/quizButton"
+                    style="@style/allbuttons"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="@dimen/smallMargin_lessonContent"
-                    android:contentDescription="@string/contentdescription"
-                    tools:src="@tools:sample/avatars" />
+                    android:layout_margin="@dimen/SmallTopMargin"
+                    android:text="@string/take_quiz" />
 
             </LinearLayout>
         </ScrollView>
