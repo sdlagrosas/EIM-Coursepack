@@ -2,96 +2,126 @@ package com.example.eim_coursepack
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit1Quiz1MCBinding
-import java.util.*
 
 
 class Unit1Quiz1MCFragment : Fragment() {
 
     private lateinit var binding : FragmentUnit1Quiz1MCBinding
 
-    private val questions: MutableList<Question> = mutableListOf(
-        Question(text = "1. The same electrical charge ___________ each other.",
-            answers = listOf("repel", "attracts", "destroy", "neutralize"),
-            isCorrect = false),
-        Question(text = "2. It is neither positively nor negatively charged.",
-            answers = listOf("neutron", "electron in motion", "electrostatic force", "atom"),
-            isCorrect = false),
-        Question(text = "3. It is the equal number of electron and proton in an atom.",
-            answers = listOf("neutral", "positive", "negative", "none of the choices"),
-            isCorrect = false),
-        Question(text = "4. The electron theory states that all matter is made of ________________.",
-            answers = listOf("electron", "neutron", "atom", "molecules"),
-            isCorrect = false),
-        Question(text = "5. It is the smallest particle of molecule.",
-            answers = listOf("atom", "ion", "proton", "electron"),
-            isCorrect = false),
-        Question(text = "6. What is found at the center body of an atom?",
-            answers = listOf("nucleus", "atom", "proton", "electron"),
-            isCorrect = false),
-        Question(text = "7. How will you prove that electricity is a matter?",
-            answers = listOf(
+    private val mulChoQuestions: MutableList<MulChoQuestion> = mutableListOf(
+        MulChoQuestion(text = "1. The same electrical charge ___________ each other.",
+            answers = mutableListOf("repel", "attracts", "destroy", "neutralize"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1),
+        MulChoQuestion(text = "2. It is neither positively nor negatively charged.",
+            answers = mutableListOf("neutron", "electron in motion", "electrostatic force", "atom"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1),
+        MulChoQuestion(text = "3. It is the equal number of electron and proton in an atom.",
+            answers = mutableListOf("neutral", "positive", "negative", "none of the choices"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1),
+        MulChoQuestion(text = "4. The electron theory states that all matter is made of ________________.",
+            answers = mutableListOf("electron", "neutron", "atom", "molecules"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1),
+        MulChoQuestion(text = "5. It is the smallest particle of molecule.",
+            answers = mutableListOf("atom", "ion", "proton", "electron"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1),
+        MulChoQuestion(text = "6. What is found at the center body of an atom?",
+            answers = mutableListOf("nucleus", "atom", "proton", "electron"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1),
+        MulChoQuestion(text = "7. How will you prove that electricity is a matter?",
+            answers = mutableListOf(
                 "It occupies space",
                 "It is not seen by the naked eye",
                 "It travels along insulator materials",
                 "It has weight"),
-            isCorrect = false
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1
         ),
-        Question(text = "8. Movement of electrons from one atom to another atom is ______.",
-            answers = listOf("electricity", "resistance", "flow", "voltage"),
-            isCorrect = false),
-        Question(text = "9. The flow of electrons in a material is _____.",
-            answers = listOf("electric current", "resistance", "circuit", "voltage"),
-            isCorrect = false),
-        Question(text = "10. How do you describe the electrostatic force in an atom?",
-            answers = listOf(
+        MulChoQuestion(text = "8. Movement of electrons from one atom to another atom is ______.",
+            answers = mutableListOf("electricity", "resistance", "flow", "voltage"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1),
+        MulChoQuestion(text = "9. The flow of electrons in a material is _____.",
+            answers = mutableListOf("electric current", "resistance", "circuit", "voltage"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1),
+        MulChoQuestion(text = "10. How do you describe the electrostatic force in an atom?",
+            answers = mutableListOf(
                 "When attraction occurs between nucleus and electron",
                 "When the proton and electron contracts",
                 "When proton and electron attracts inside the atom",
                 "When separation occurs between the nucleus and proton"),
-            isCorrect = false
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1
         ),
-        Question(
-            text = "11. It contains the positive and neutral charged of an atom.",
-            answers = listOf("nucleus"),
-            isCorrect = false
-        ),
-        Question(
-            text = "12. This refers to the attraction between the nucleus and the electron.",
-            answers = listOf("electrostatic force"),
-            isCorrect = false
-        ),
-        Question(
-            text = "13. The particle which has equal charged to electron",
-            answers = listOf("proton"),
-            isCorrect = false
-        ),
-        Question(
-            text = "14. Particle which found in the outer orbit of an atom.",
-            answers = listOf("electron"),
-            isCorrect = false
-        ),
-        Question(
-            text = "15. Particle of an atom without electrical charge.",
-            answers = listOf("neutron"),
-            isCorrect = false
-        )
+//
     )
 
-    lateinit var currentQuestion: Question
+    private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
+        IdenQuestion(
+            text = "11. It contains the positive and neutral charged of an atom.",
+            answers = mutableListOf("nucleus"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "12. This refers to the attraction between the nucleus and the electron.",
+            answers = mutableListOf("electrostatic force"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "13. The particle which has equal charged to electron",
+            answers = mutableListOf("proton"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "14. Particle which found in the outer orbit of an atom.",
+            answers = mutableListOf("electron"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "15. Particle of an atom without electrical charge.",
+            answers = mutableListOf("neutron"),
+            isCorrect = false,
+            enteredAns = ""
+        )
+
+    )
+
+    lateinit var currentMulChoQuestion: MulChoQuestion
+    lateinit var currentIdenQuestion: IdenQuestion
     lateinit var answers: MutableList<String>
+    lateinit var questionText : String
+    lateinit var enteredAns : String
     private var questionIndex = 0
-    private val numQuestions = questions.size
+    private val numQuestions = mulChoQuestions.size + idenQuestions.size
     private var score = 0
 
     @SuppressLint("CommitPrefEdits")
@@ -142,21 +172,34 @@ class Unit1Quiz1MCFragment : Fragment() {
         // Set the onClickListener for the backButton
         binding.backButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view: View ->
-            // reset score in current question
-            currentQuestion.isCorrect = false
 
-            // move to previous question
-            questionIndex--
-            currentQuestion = questions[questionIndex]
+            // Save answer in multiple choice
+            if (questionIndex in 0 until 11) {
+                when (binding.questionRadioGroup.checkedRadioButtonId) {
+                    R.id.firstChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 0
+                    R.id.secondChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 1
+                    R.id.thirdChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 2
+                    R.id.fourthChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 3
+                }
+                // move to previous question
+                questionIndex--
+                currentMulChoQuestion = mulChoQuestions[questionIndex]
+                binding.questionRadioGroup.clearCheck()
 
-            setQuestion()
+                setMulChoQuestion()
 
+            } else if (questionIndex in 11 until numQuestions) {
+                currentIdenQuestion.enteredAns = binding.answerText.text.toString()
+
+                // move to previous question
+                questionIndex--
+                currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
+                binding.answerText.text.clear()
+                setIdenQuestion()
+        }
 
             // Reset fields
-            currentQuestion.isCorrect = false
             binding.invalidateAll()
-            binding.questionRadioGroup.clearCheck()
-            binding.answerText.text.clear()
 
             // Change to multiple choice if on questions 1-10
             if (questionIndex < 10) {
@@ -185,19 +228,25 @@ class Unit1Quiz1MCFragment : Fragment() {
         { view : View ->
             // Check last question
             val answerText = binding.answerText.text.toString()
-            if (answerText.toLowerCase(Locale.ROOT).trim() in currentQuestion.answers) {
-                currentQuestion.isCorrect = true
-            }
+            currentMulChoQuestion.isCorrect = answerText.toLowerCase().trim() in currentIdenQuestion.answers
 
             // To make sure button only works once
             if (score == 0) {
 
                 // Count each correct answer
-                questions.forEach {
+                mulChoQuestions.forEach {
                     if (it.isCorrect){
                         score++
                     }
                 }
+
+                idenQuestions.forEach {
+                    if (it.isCorrect){
+                        score++
+                    }
+                }
+
+                Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
 
                 // Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
@@ -223,7 +272,7 @@ class Unit1Quiz1MCFragment : Fragment() {
     private fun handleQuizProper() {
 
         // Multiple choice questions 1-10
-        if (questionIndex < 10) {
+        if (questionIndex in 0 until 10) {
 
             val checkedId = binding.questionRadioGroup.checkedRadioButtonId
 
@@ -238,19 +287,30 @@ class Unit1Quiz1MCFragment : Fragment() {
 
                 // The first answer in the original question is always the correct one, so if our
                 // answer matches, we have the correct answer.
-                if (answers[answerIndex] == currentQuestion.answers[0]) {
-                    currentQuestion.isCorrect = true
+                currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
+
+                if (currentMulChoQuestion.isCorrect) {
+                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
                 }
+
+                currentMulChoQuestion.clickedIdx = answerIndex
+                binding.questionRadioGroup.clearCheck()
+
 
                 // Advance to the next question
                 questionIndex++
-                currentQuestion = questions[questionIndex]
-                setQuestion()
-                binding.invalidateAll()
-                binding.questionRadioGroup.clearCheck()
 
-                // Show back button
-                binding.backButton.visibility = View.VISIBLE
+
+                if (questionIndex in 0 until 10) {
+                    currentMulChoQuestion = mulChoQuestions[questionIndex]
+                    setMulChoQuestion()
+
+                } else if (questionIndex in 10 until numQuestions) {
+
+                    currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
+                    setIdenQuestion()
+                }
+                binding.invalidateAll()
 
 
             // Prompt user to select an answer
@@ -264,14 +324,19 @@ class Unit1Quiz1MCFragment : Fragment() {
             val answerText = binding.answerText.text
 
             if (answerText.isNotEmpty()) {
-                if (answerText.toString().toLowerCase(Locale.ROOT).trim() in currentQuestion.answers) {
-                    currentQuestion.isCorrect = true
+                currentIdenQuestion.isCorrect = answerText
+                    .toString().toLowerCase().trim() in currentIdenQuestion.answers
+
+                if (currentIdenQuestion.isCorrect) {
+                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
                 }
+
+                currentIdenQuestion.enteredAns = answerText.toString()
 
                 // Advance to the next question
                 questionIndex++
-                currentQuestion = questions[questionIndex]
-                setQuestion()
+                currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
+                setIdenQuestion()
 
                 // reset fields
                 binding.invalidateAll()
@@ -290,16 +355,50 @@ class Unit1Quiz1MCFragment : Fragment() {
     // Initialize the questions and set the first question
     private fun initQuestions() {
         questionIndex = 0
-        setQuestion()
+
+        mulChoQuestions.forEach {
+            val correct = it.answers[0]
+
+            it.answers.shuffle()
+
+            it.correctIdx = it.answers.indexOf(correct)
+        }
+
+        enteredAns = ""
+
+        setMulChoQuestion()
     }
 
-    private fun setQuestion() {
-        currentQuestion = questions[questionIndex]
+    private fun setMulChoQuestion() {
+        currentMulChoQuestion = mulChoQuestions[questionIndex]
+
+        questionText = currentMulChoQuestion.text
         // randomize the answers into a copy of the array
-        answers = currentQuestion.answers.toMutableList()
+        answers = currentMulChoQuestion.answers.toMutableList()
+
+
+        when (currentMulChoQuestion.clickedIdx) {
+            0 -> binding.firstChoiceRadioButton.isChecked = true
+            1 -> binding.secondChoiceRadioButton.isChecked = true
+            2 -> binding.thirdChoiceRadioButton.isChecked = true
+            3 -> binding.fourthChoiceRadioButton.isChecked = true
+        }
+
+    }
+
+    private fun setIdenQuestion() {
+        currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
+
+        questionText = currentIdenQuestion.text
+        // randomize the answers into a copy of the array
+        answers = currentMulChoQuestion.answers.toMutableList()
         // and shuffle them
-        answers.shuffle()
-//        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_android_trivia_question, questionIndex + 1, numQuestions)
+
+        enteredAns = currentIdenQuestion.enteredAns
+
+
+
+
     }
 
 
