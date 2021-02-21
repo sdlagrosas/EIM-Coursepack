@@ -7,6 +7,12 @@
     <string name="main_menu">UNITS</string>
     <string name="teachername">By: (Insert name)</string>
     <string name="contentdescription">To insert an image for design</string>
+    <string name="Next">Next</string>
+    <string name="an_image_in_quiz_fragment">an image in quiz fragment</string>
+    <string name="type_your_answer_here">Type your answer here</string>
+    <string name="back">Back</string>
+
+
 
     <string name="submit_button">Submit</string>
     <string name="take_quiz">Take Quiz</string>
@@ -18,46 +24,45 @@
     <string name="unit_1">UNIT I</string>
     <string name="unit_1_title">Fundamentals  of Electricity</string>
     <string name="unit_1_objectives">Objectives: .. tackles about the fundamentals of electricity ..</string>
-    <string name="lesson_1.1_title">Basic Concept and Principles of Electricity</string>
+    <string name="lesson_1.1_title">Principles and Theories of Electrons</string>
     <string name="lesson_1.2_title">Sources of Energy</string>
     <string name="lesson_1.3_title">Relationship of Current,Voltage and Resistance</string>
     <string name="Lesson1.1">Lesson 1.1</string>
-    <string name="Content01">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
-        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
-        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
-        turpis egestas maecenas \n\n
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
-        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
-        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
-        turpis egestas maecenas \n\n
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
-        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
-        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
-        turpis egestas maecenas \n\n
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
-        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
-        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
-        turpis egestas maecenas \n\n
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
-        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
-        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
-        turpis egestas maecenas \n\n
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Donec enim diam vulputate ut. Odio aenean sed adipiscing diam donec
-        adipiscing tristique. Ac tortor vitae purus faucibus ornare suspendisse
-        sed nisi lacus. Quam viverra orci sagittis eu volutpat odio. Fames ac
-        turpis egestas maecenas \n\n.</string>
+    <string name="Content01">\n\t\tElectricity is a property of the basic particle of matter which, like an atom, consists of proton, electron and neutron.
+        The <b>electron</b> is the negatively charged particle of an atom which is sometimes referred to as the negatively charge of electricity.
+        On the other hand, the <b>proton</b> is the positively charged particle of an atom which is sometimes referred to as the
+        positively charge of electricity that weighs about 1850 times as much as the electron.
+        The <b>neutron</b> is the particle which is not electrically charged and weighs slightly more than proton. </string>
+    <string name="Content02">\nMolecular theory\n </string>
+    <string name="Content03">\t1. All matters are made up of molecules.\n
+        \t2. All molecules are made up of atoms.\n
+        \t3. All the atoms contain neutron, electrons and protons.\n
+        \t4. The entire neutron is neutral, hence, neither positively nor negatively charged.\n
+        \t5. The electron of an atom of any substance could be transferred to another atom.
+</string>
+    <string name="Content04">\nThe electron theory\n </string>
+    <string name="Content05">\t\tThe electron theory states that all matter is made up of electricity.  Matter is anything which has weight, occupies space is made up of molecules, of which millions of different kinds.  The molecules in turn, are made up of atoms of which are the smallest units of the several elements and of a limited number.  All atoms believed to be composed of electrons, which are minute particle of negative electricity normally held in place in each atom by positively charged particles called nucleus.  Thus, the electron, which are interlocked in the atoms, are constantly revealing at great speeds in orbits around positive nuclei.  In a normal atom, the amount of negative electricity of the electrons is exactly neutralized by an equal amount of opposite or positive electricity of the nucleus.  Thus, a normal atom exhibits no external sign of electrification.
+
+</string>
+    <string name="Content06">\nStructure of an atom\n </string>
+    <string name="Content07">\tAll atoms consist of two basic parts: a body at the center of the atom called the nucleus, orbiting around the nucleus.
+Atoms may have more than one orbiting electron, but each atom contains only one nucleus.
+ </string>
+    <string name="Content08L">\n\tThe attraction between the nucleus and Electron is called electrostatic force, which holds the electron in an orbit.
+        Bodies that attract each other in this special electrostatic way are described as charged object.
+        The electron carries the Nucleus negative charge (-), while the nucleus carries the positive charge (+).\n\n
+     </string>
+
+    <string name="Content8.5L">\tThe positive charge of the nucleus is due to the particles called protons which are found inside the nucleus and have a positive charge equal to the electron’s negative charge\n\n
+    The structure of neutrons in the atoms showing the position of its proton, electron, nucleus and neutron is shown below.\n</string>
+    <string name="Content09L">\n\n<b>Law of Electrostatics</b>\n\n
+\tThe protons and electrons attract each other inside the atom.  It has been known that by nature, unlike charges
+        (like the positive protons and negative electrons) attract each other while like charges repel each other; meaning,
+        electrons and protons repel each other’s protons.\n </string>
+    <string name="Content10">\nStructure of an atom\n </string>
+    <string name="Content11">\nStructure of an atom\n </string>
+    <string name="Content12">\nStructure of an atom\n </string>
+    <string name="Content13">\nStructure of an atom\n </string>
 
 
     <string name="unit_2">UNIT II</string>
@@ -105,10 +110,6 @@
     <string name="roman5">V</string>
     <string name="roman6">VI</string>
     <string name="progress">Check Progress</string>
-    <string name="back">Back</string>
-    <string name="Next">Next</string>
-    <string name="an_image_in_quiz_fragment">An image in quiz fragment</string>
-    <string name="type_your_answer_here">Type your answer here</string>
 
 
 </resources>

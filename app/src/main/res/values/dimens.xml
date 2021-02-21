@@ -17,6 +17,7 @@
     <dimen name="Lesson_title_content_proper">230dp</dimen>
     <dimen name="smallpadding">3dp</dimen>
     <dimen name="smallMargin_lessonContent">16dp</dimen>
+    <dimen name="vertical_images">200dp</dimen>
 
 
 

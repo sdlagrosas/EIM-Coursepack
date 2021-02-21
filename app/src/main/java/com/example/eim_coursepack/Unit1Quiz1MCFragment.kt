@@ -198,9 +198,6 @@ class Unit1Quiz1MCFragment : Fragment() {
                 setIdenQuestion()
         }
 
-
-
-
             // Reset fields
             binding.invalidateAll()
 
@@ -231,9 +228,7 @@ class Unit1Quiz1MCFragment : Fragment() {
         { view : View ->
             // Check last question
             val answerText = binding.answerText.text.toString()
-            if (answerText.toLowerCase().trim() in currentMulChoQuestion.answers) {
-                currentMulChoQuestion.isCorrect = true
-            }
+            currentMulChoQuestion.isCorrect = answerText.toLowerCase().trim() in currentIdenQuestion.answers
 
             // To make sure button only works once
             if (score == 0) {
@@ -250,6 +245,8 @@ class Unit1Quiz1MCFragment : Fragment() {
                         score++
                     }
                 }
+
+                Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
 
                 // Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
@@ -290,10 +287,13 @@ class Unit1Quiz1MCFragment : Fragment() {
 
                 // The first answer in the original question is always the correct one, so if our
                 // answer matches, we have the correct answer.
-                currentMulChoQuestion.isCorrect = answers[answerIndex] == currentMulChoQuestion.answers[0]
+                currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
+
+                if (currentMulChoQuestion.isCorrect) {
+                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
+                }
 
                 currentMulChoQuestion.clickedIdx = answerIndex
-                Toast.makeText(context, "clicked index: $answerIndex", Toast.LENGTH_SHORT).show()
                 binding.questionRadioGroup.clearCheck()
 
 
@@ -326,6 +326,10 @@ class Unit1Quiz1MCFragment : Fragment() {
             if (answerText.isNotEmpty()) {
                 currentIdenQuestion.isCorrect = answerText
                     .toString().toLowerCase().trim() in currentIdenQuestion.answers
+
+                if (currentIdenQuestion.isCorrect) {
+                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 
@@ -392,7 +396,6 @@ class Unit1Quiz1MCFragment : Fragment() {
 
         enteredAns = currentIdenQuestion.enteredAns
 
-        Toast.makeText(context, "clicked index: ${currentMulChoQuestion.clickedIdx}", Toast.LENGTH_SHORT).show()
 
 
 
