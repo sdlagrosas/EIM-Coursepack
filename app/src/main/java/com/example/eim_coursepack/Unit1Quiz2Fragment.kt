@@ -374,7 +374,7 @@ class Unit1Quiz2Fragment : Fragment() {
 
         questionText = currentMulChoQuestion.text
         // randomize the answers into a copy of the array
-        answers = currentMulChoQuestion.answers.toMutableList()
+        answers = currentMulChoQuestion.answers
 
 
         when (currentMulChoQuestion.clickedIdx) {
@@ -391,8 +391,6 @@ class Unit1Quiz2Fragment : Fragment() {
 
         questionText = currentIdenQuestion.text
         // randomize the answers into a copy of the array
-        answers = currentMulChoQuestion.answers.toMutableList()
-        // and shuffle them
 
         enteredAns = currentIdenQuestion.enteredAns
     }

@@ -107,6 +107,13 @@
                     android:layout_margin="@dimen/smallMargin_lessonContent"
                     android:contentDescription="@string/contentdescription"
                     app:srcCompat="@drawable/ic_unit1_lesson3_6" />
+
+                <Button
+                    android:id="@+id/quiz3Button"
+                    style="@style/allbuttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/take_quiz" />
             </LinearLayout>
         </ScrollView>
 

@@ -165,7 +165,11 @@
         android:id="@+id/unit1Lesson3"
         android:name="com.example.eim_coursepack.Unit1Lesson3"
         android:label="fragment_unit1_lesson3"
-        tools:layout="@layout/fragment_unit1_lesson3" />
+        tools:layout="@layout/fragment_unit1_lesson3" >
+        <action
+            android:id="@+id/action_unit1Lesson3_to_unit1Quiz3Fragment"
+            app:destination="@id/unit1Quiz3Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/unit1Lesson2"
         android:name="com.example.eim_coursepack.Unit1Lesson2"
@@ -297,5 +301,10 @@
             android:name="numCorrect"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/unit1Quiz3Fragment"
+        android:name="com.example.eim_coursepack.Unit1Quiz3Fragment"
+        android:label="fragment_unit1_quiz3"
+        tools:layout="@layout/fragment_unit1_quiz3" />
 
 </navigation>
