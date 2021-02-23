@@ -44,6 +44,75 @@ class Unit1Quiz3Fragment : Fragment() {
             answers = mutableListOf("fossil fuel", "fossil fuels"),
             isCorrect = false,
             enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "6. It is the energy that comes from the sun.",
+            answers = mutableListOf("solar", "solar energy"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "7. It is the energy that involves water.",
+            answers = mutableListOf("tidal", "tidal energy", "hydroelectric", "hydroelectric power", "hydroelectric energy"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "8. It is the energy that comes from the inner core of the earth",
+            answers = mutableListOf("geothermal", "geothermal energy"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "9. It is the result from the splitting or fission of atomic nuclei.",
+            answers = mutableListOf("nuclear", "nuclear energy"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "10. It is the energy formed from the remains of plant and animals which lived thousands of years ago.",
+            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            isCorrect = false,
+            enteredAns = ""
+        )
+
+    )
+
+    private val mulChoQuestion : MutableList<MulChoQuestion> = mutableListOf(
+        MulChoQuestion(
+            text = "11. It is the energy that comes from the sun.",
+            answers = mutableListOf("solar", "solar energy"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1
+        ),
+        MulChoQuestion(
+            text = "12. It is the energy that involves water.",
+            answers = mutableListOf("tidal", "tidal energy", "hydroelectric", "hydroelectric power", "hydroelectric energy"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1
+        ),
+        MulChoQuestion(
+            text = "13. It is the energy that comes from the inner core of the earth",
+            answers = mutableListOf("geothermal", "geothermal energy"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1
+        ),
+        MulChoQuestion(
+            text = "14. It is the result from the splitting or fission of atomic nuclei.",
+            answers = mutableListOf("nuclear", "nuclear energy"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1
+        ),
+        MulChoQuestion(
+            text = "15. It is the energy formed from the remains of plant and animals which lived thousands of years ago.",
+            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = -1
         )
 
     )
@@ -53,6 +122,7 @@ class Unit1Quiz3Fragment : Fragment() {
     lateinit var questionText : String
     lateinit var answers : MutableList<String>
     lateinit var enteredAns : String
+    private val numQuestions = idenQuestions.size
 
 
     override fun onCreateView(
@@ -73,6 +143,16 @@ class Unit1Quiz3Fragment : Fragment() {
         // Set the onClickListener for the nextButton
         binding.nextButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view: View ->
+            handleQuizLogic(binding)
+
+            if (questionIndex > 0) {
+                binding.backButton.visibility = View.VISIBLE
+            }
+
+            if (questionIndex == numQuestions-1) {
+                binding.nextButton.visibility = View.INVISIBLE
+                binding.submitButton.visibility = View.VISIBLE
+            }
 
         }
 
@@ -80,6 +160,31 @@ class Unit1Quiz3Fragment : Fragment() {
         binding.backButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view: View ->
 
+            // Identification 1-10
+            if (questionIndex < 10) {
+                val answerText = binding.answerText.text
+
+                currentIdenQuestion.enteredAns = answerText.toString()
+
+                questionIndex--
+
+                currentIdenQuestion = idenQuestions[questionIndex]
+                answerText.clear()
+
+                setIdenQuestion(binding)
+            }
+
+            binding.invalidateAll()
+
+            if (questionIndex == numQuestions-2) {
+                binding.submitButton.visibility = View.GONE
+                binding.nextButton.visibility = View.VISIBLE
+            }
+
+            // Hide back button on 1st question
+            if (questionIndex == 0) {
+                binding.backButton.visibility = View.INVISIBLE
+            }
 
         }
 
@@ -92,6 +197,37 @@ class Unit1Quiz3Fragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    private fun handleQuizLogic(binding: FragmentUnit1Quiz3Binding) {
+        if (questionIndex < 10) {
+            val answerText = binding.answerText.text
+
+            if (answerText.isNotEmpty()) {
+                currentIdenQuestion.isCorrect = answerText
+                    .toString().toLowerCase().replace("\\s+".toRegex(),"") in currentIdenQuestion.answers
+
+                // For checking only
+                if (currentIdenQuestion.isCorrect) {
+                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+                }
+
+                currentIdenQuestion.enteredAns = answerText.toString()
+
+                // Advance to the next question
+                questionIndex++
+                currentIdenQuestion = idenQuestions[questionIndex]
+                setIdenQuestion(binding)
+
+                // reset fields
+                binding.invalidateAll()
+                answerText.clear()
+
+
+            } else {
+                Toast.makeText(context,"Enter your answer",Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun initQuestions(binding: FragmentUnit1Quiz3Binding) {
