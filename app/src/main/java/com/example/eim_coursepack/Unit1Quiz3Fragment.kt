@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import com.example.eim_coursepack.databinding.FragmentUnit1Quiz2Binding
 import com.example.eim_coursepack.databinding.FragmentUnit1Quiz3Binding
 
 
@@ -45,6 +48,13 @@ class Unit1Quiz3Fragment : Fragment() {
 
     )
 
+    private lateinit var currentIdenQuestion : IdenQuestion
+    private var questionIndex = 0
+    lateinit var questionText : String
+    lateinit var answers : MutableList<String>
+    lateinit var enteredAns : String
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,7 +64,53 @@ class Unit1Quiz3Fragment : Fragment() {
             inflater, R.layout.fragment_unit1_quiz3, container, false
         )
 
+        // Initialize questions and set the first question
+        initQuestions(binding)
+
+        // Attach quiz variable from quiz 1 layout
+        binding.quiz = this
+
+        // Set the onClickListener for the nextButton
+        binding.nextButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
+        { view: View ->
+
+        }
+
+        // Set the onClickListener for the backButton
+        binding.backButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
+        { view: View ->
+
+
+        }
+
+        // Set the onClickListener for the submitButton
+        binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
+        { view : View ->
+
+
+
+        }
+
         return binding.root
     }
+
+    private fun initQuestions(binding: FragmentUnit1Quiz3Binding) {
+        questionIndex = 0
+
+        setIdenQuestion(binding)
+    }
+
+
+    private fun setIdenQuestion(binding: FragmentUnit1Quiz3Binding) {
+        currentIdenQuestion = idenQuestions[questionIndex]
+
+        questionText = currentIdenQuestion.text
+
+        answers = currentIdenQuestion.answers
+
+        enteredAns = currentIdenQuestion.enteredAns
+
+    }
+
 
 }
