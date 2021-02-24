@@ -17,15 +17,7 @@ class Unit5Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentUnit5Binding>(inflater,R.layout.fragment_unit5,container,false)
-        binding.unit5Lesson1Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_unit5Fragment_to_unit5Lesson1)
-        }
-        binding.unit5Lesson2Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_unit5Fragment_to_unit5Lesson2)
-        }
-        binding.unit5Lesson3Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_unit5Fragment_to_unit5Lesson3)
-        }
+
         return binding.root
     }
 

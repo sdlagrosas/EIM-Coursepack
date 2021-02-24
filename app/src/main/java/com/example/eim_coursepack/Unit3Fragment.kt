@@ -16,18 +16,7 @@ class Unit3Fragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentUnit3Binding>(inflater,R.layout.fragment_unit3,container,false)
 
-        binding.unit3Lesson1Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_unit3Fragment_to_unit3Lesson1)
-        }
-        binding.unit3Lesson2Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_unit3Fragment_to_unit3Lesson2)
-        }
-        binding.unit3Lesson3Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_unit3Fragment_to_unit3Lesson3)
-        }
-        binding.unit3Lesson4Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_unit3Fragment_to_unit3Lesson4)
-        }
+
 
         return binding.root
     }
