@@ -56,25 +56,8 @@
         android:name="com.example.eim_coursepack.Unit1Quiz1MCFragment"
         tools:layout="@layout/fragment_unit1_quiz1_m_c">
         <action
-            android:id="@+id/action_unit1Quiz1MCFragment_to_uni1Quiz1ScoreFragment"
-            app:destination="@id/uni1Quiz1ScoreFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/uni1Quiz1ScoreFragment"
-        android:name="com.example.eim_coursepack.Unit1Quiz1ScoreFragment"
-        android:label="fragment_uni1_quiz1_score"
-        tools:layout="@layout/fragment_unit1_quiz1_score" >
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="numCorrect"
-            app:argType="integer" />
-        <action
-            android:id="@+id/action_uni1Quiz1ScoreFragment_to_unit1Fragment"
-            app:destination="@id/unit1Fragment"
-            app:popUpTo="@id/unit1Fragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_unit1Quiz1MCFragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
     </fragment>
 
     <fragment
@@ -183,7 +166,11 @@
         android:id="@+id/unit2Lesson1"
         android:name="com.example.eim_coursepack.Unit2Lesson1"
         android:label="fragment_unit2_lesson1"
-        tools:layout="@layout/fragment_unit2_lesson1" />
+        tools:layout="@layout/fragment_unit2_lesson1" >
+        <action
+            android:id="@+id/action_unit2Lesson1_to_unit2Quiz1Fragment"
+            app:destination="@id/unit2Quiz1Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/unit2Lesson2"
         android:name="com.example.eim_coursepack.Unit2Lesson2"
@@ -283,28 +270,41 @@
         android:label="fragment_unit1_quiz2"
         tools:layout="@layout/fragment_unit1_quiz2" >
         <action
-            android:id="@+id/action_unit1Quiz2Fragment_to_unit1Quiz2ScoreFragment"
-            app:destination="@id/unit1Quiz2ScoreFragment" />
+            android:id="@+id/action_unit1Quiz2Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
     </fragment>
     <fragment
-        android:id="@+id/unit1Quiz2ScoreFragment"
-        android:name="com.example.eim_coursepack.Unit1Quiz2ScoreFragment"
-        android:label="fragment_unit1_quiz2_score"
-        tools:layout="@layout/fragment_unit1_quiz2_score" >
+        android:id="@+id/unit1Quiz3Fragment"
+        android:name="com.example.eim_coursepack.Unit1Quiz3Fragment"
+        android:label="fragment_unit1_quiz3"
+        tools:layout="@layout/fragment_unit1_quiz3" >
         <action
-            android:id="@+id/action_unit1Quiz2ScoreFragment_to_unit1Fragment"
-            app:destination="@id/unit1Fragment" />
+            android:id="@+id/action_unit1Quiz3Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizScoreFragment"
+        android:name="com.example.eim_coursepack.QuizScoreFragment"
+        android:label="fragment_quiz_score"
+        tools:layout="@layout/fragment_quiz_score" >
         <argument
             android:name="numQuestions"
             app:argType="integer" />
         <argument
             android:name="numCorrect"
             app:argType="integer" />
+        <argument
+            android:name="quizTitle"
+            app:argType="string" />
     </fragment>
     <fragment
-        android:id="@+id/unit1Quiz3Fragment"
-        android:name="com.example.eim_coursepack.Unit1Quiz3Fragment"
-        android:label="fragment_unit1_quiz3"
-        tools:layout="@layout/fragment_unit1_quiz3" />
+        android:id="@+id/unit2Quiz1Fragment"
+        android:name="com.example.eim_coursepack.Unit2Quiz1Fragment"
+        android:label="fragment_unit2_quiz1"
+        tools:layout="@layout/fragment_unit2_quiz1" >
+        <action
+            android:id="@+id/action_unit2Quiz1Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
 
 </navigation>
