@@ -41,8 +41,15 @@
         android:name="com.example.eim_coursepack.Unit1Fragment"
         tools:layout="@layout/fragment_unit1">
         <action
-            android:id="@+id/action_unit1Fragment_to_unit1Lesson1"
-            app:destination="@id/unit1Lesson1" />
+            android:id="@+id/action_unit1Fragment_to_allLessonFragment"
+            app:destination="@id/allLessonFragment"
+            app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_unit1Fragment_to_allLessonFragment2"
+            app:destination="@id/allLessonFragment" />
+        <action
+            android:id="@+id/action_unit1Fragment_to_allLessonFragment3"
+            app:destination="@id/allLessonFragment" />
     </fragment>
 
     <fragment
@@ -127,6 +134,15 @@
         <argument
             android:name="numCorrect"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/allLessonFragment"
+        android:name="com.example.eim_coursepack.AllLessonFragment"
+        android:label="AllLessonFragment"
+        tools:layout="@layout/fragment_all_lesson">
+        <argument
+            android:name="lessonFlag"
+            app:argType="string" />
     </fragment>
 
 </navigation>
