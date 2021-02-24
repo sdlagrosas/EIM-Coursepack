@@ -261,10 +261,6 @@ class Unit1Quiz3Fragment : Fragment() {
                 currentIdenQuestion.isCorrect = answerText
                     .toString().toLowerCase().replace("\\s+".toRegex(),"") in currentIdenQuestion.answers
 
-                // For checking only
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
-                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 
@@ -305,9 +301,7 @@ class Unit1Quiz3Fragment : Fragment() {
                 // answer matches, we have the correct answer.
                 currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
 
-                if (currentMulChoQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
-                }
+
 
                 currentMulChoQuestion.clickedIdx = answerIndex
                 binding.questionRadioGroup.clearCheck()
