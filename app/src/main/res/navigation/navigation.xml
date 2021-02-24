@@ -41,14 +41,15 @@
         android:name="com.example.eim_coursepack.Unit1Fragment"
         tools:layout="@layout/fragment_unit1">
         <action
-            android:id="@+id/action_unit1Fragment_to_unit1Lesson2"
-            app:destination="@id/unit1Lesson2" />
+            android:id="@+id/action_unit1Fragment_to_allLessonFragment"
+            app:destination="@id/allLessonFragment"
+            app:launchSingleTop="false" />
         <action
-            android:id="@+id/action_unit1Fragment_to_unit1Lesson3"
-            app:destination="@id/unit1Lesson3" />
+            android:id="@+id/action_unit1Fragment_to_allLessonFragment2"
+            app:destination="@id/allLessonFragment" />
         <action
-            android:id="@+id/action_unit1Fragment_to_unit1Lesson1"
-            app:destination="@id/unit1Lesson1" />
+            android:id="@+id/action_unit1Fragment_to_allLessonFragment3"
+            app:destination="@id/allLessonFragment" />
     </fragment>
 
     <fragment
@@ -81,194 +82,27 @@
         android:id="@+id/unit2Fragment"
         android:name="com.example.eim_coursepack.Unit2Fragment"
         android:label="fragment_unit2"
-        tools:layout="@layout/fragment_unit2" >
-        <action
-            android:id="@+id/action_unit2Fragment_to_unit2Lesson3"
-            app:destination="@id/unit2Lesson3" />
-        <action
-            android:id="@+id/action_unit2Fragment_to_unit2Lesson1"
-            app:destination="@id/unit2Lesson1" />
-        <action
-            android:id="@+id/action_unit2Fragment_to_unit2Lesson2"
-            app:destination="@id/unit2Lesson2" />
-        <action
-            android:id="@+id/action_unit2Fragment_to_unit2Lesson4"
-            app:destination="@id/unit2Lesson4" />
-    </fragment>
+        tools:layout="@layout/fragment_unit2" />
     <fragment
         android:id="@+id/unit3Fragment"
         android:name="com.example.eim_coursepack.Unit3Fragment"
         android:label="fragment_unit3"
-        tools:layout="@layout/fragment_unit3" >
-        <action
-            android:id="@+id/action_unit3Fragment_to_unit3Lesson1"
-            app:destination="@id/unit3Lesson1" />
-        <action
-            android:id="@+id/action_unit3Fragment_to_unit3Lesson2"
-            app:destination="@id/unit3Lesson2" />
-        <action
-            android:id="@+id/action_unit3Fragment_to_unit3Lesson3"
-            app:destination="@id/unit3Lesson3" />
-        <action
-            android:id="@+id/action_unit3Fragment_to_unit3Lesson4"
-            app:destination="@id/unit3Lesson4" />
-    </fragment>
+        tools:layout="@layout/fragment_unit3" />
     <fragment
         android:id="@+id/unit4Fragment"
         android:name="com.example.eim_coursepack.Unit4Fragment"
         android:label="fragment_unit4"
-        tools:layout="@layout/fragment_unit4" >
-        <action
-            android:id="@+id/action_unit4Fragment_to_unit4Lesson3"
-            app:destination="@id/unit4Lesson3" />
-        <action
-            android:id="@+id/action_unit4Fragment_to_unit4Lesson1"
-            app:destination="@id/unit4Lesson1" />
-        <action
-            android:id="@+id/action_unit4Fragment_to_unit4Lesson2"
-            app:destination="@id/unit4Lesson2" />
-    </fragment>
+        tools:layout="@layout/fragment_unit4" />
     <fragment
         android:id="@+id/unit5Fragment"
         android:name="com.example.eim_coursepack.Unit5Fragment"
         android:label="fragment_unit5"
-        tools:layout="@layout/fragment_unit5" >
-        <action
-            android:id="@+id/action_unit5Fragment_to_unit5Lesson1"
-            app:destination="@id/unit5Lesson1" />
-        <action
-            android:id="@+id/action_unit5Fragment_to_unit5Lesson2"
-            app:destination="@id/unit5Lesson2" />
-        <action
-            android:id="@+id/action_unit5Fragment_to_unit5Lesson3"
-            app:destination="@id/unit5Lesson3" />
-    </fragment>
+        tools:layout="@layout/fragment_unit5" />
     <fragment
         android:id="@+id/unit6"
         android:name="com.example.eim_coursepack.Unit6"
         android:label="fragment_unit6"
-        tools:layout="@layout/fragment_unit6" >
-        <action
-            android:id="@+id/action_unit6_to_unit6Lesson1"
-            app:destination="@id/unit6Lesson1" />
-        <action
-            android:id="@+id/action_unit6_to_unit6Lesson2"
-            app:destination="@id/unit6Lesson2" />
-        <action
-            android:id="@+id/action_unit6_to_unit6Lesson3"
-            app:destination="@id/unit6Lesson3" />
-        <action
-            android:id="@+id/action_unit6_to_unit6Lesson4"
-            app:destination="@id/unit6Lesson4" />
-    </fragment>
-    <fragment
-        android:id="@+id/unit1Lesson3"
-        android:name="com.example.eim_coursepack.Unit1Lesson3"
-        android:label="fragment_unit1_lesson3"
-        tools:layout="@layout/fragment_unit1_lesson3" >
-        <action
-            android:id="@+id/action_unit1Lesson3_to_unit1Quiz3Fragment"
-            app:destination="@id/unit1Quiz3Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/unit1Lesson2"
-        android:name="com.example.eim_coursepack.Unit1Lesson2"
-        android:label="fragment_unit1_lesson2"
-        tools:layout="@layout/fragment_unit1_lesson2" >
-        <action
-            android:id="@+id/action_unit1Lesson2_to_unit1Quiz2Fragment"
-            app:destination="@id/unit1Quiz2Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/unit2Lesson1"
-        android:name="com.example.eim_coursepack.Unit2Lesson1"
-        android:label="fragment_unit2_lesson1"
-        tools:layout="@layout/fragment_unit2_lesson1" />
-    <fragment
-        android:id="@+id/unit2Lesson2"
-        android:name="com.example.eim_coursepack.Unit2Lesson2"
-        android:label="fragment_unit2_lesson2"
-        tools:layout="@layout/fragment_unit2_lesson2" />
-    <fragment
-        android:id="@+id/unit2Lesson3"
-        android:name="com.example.eim_coursepack.Unit2Lesson3"
-        android:label="fragment_unit2_lesson3"
-        tools:layout="@layout/fragment_unit2_lesson3" />
-    <fragment
-        android:id="@+id/unit2Lesson4"
-        android:name="com.example.eim_coursepack.Unit2Lesson4"
-        android:label="fragment_unit2_lesson4"
-        tools:layout="@layout/fragment_unit2_lesson4" />
-    <fragment
-        android:id="@+id/unit3Lesson1"
-        android:name="com.example.eim_coursepack.Unit3Lesson1"
-        android:label="fragment_unit3_lesson1"
-        tools:layout="@layout/fragment_unit3_lesson1" />
-    <fragment
-        android:id="@+id/unit3Lesson2"
-        android:name="com.example.eim_coursepack.Unit3Lesson2"
-        android:label="fragment_unit3_lesson2"
-        tools:layout="@layout/fragment_unit3_lesson2" />
-    <fragment
-        android:id="@+id/unit3Lesson3"
-        android:name="com.example.eim_coursepack.Unit3Lesson3"
-        android:label="fragment_unit3_lesson3"
-        tools:layout="@layout/fragment_unit3_lesson3" />
-    <fragment
-        android:id="@+id/unit3Lesson4"
-        android:name="com.example.eim_coursepack.Unit3Lesson4"
-        android:label="fragment_unit3_lesson4"
-        tools:layout="@layout/fragment_unit3_lesson4" />
-    <fragment
-        android:id="@+id/unit4Lesson1"
-        android:name="com.example.eim_coursepack.Unit4Lesson1"
-        android:label="fragment_unit4_lesson1"
-        tools:layout="@layout/fragment_unit4_lesson1" />
-    <fragment
-        android:id="@+id/unit4Lesson2"
-        android:name="com.example.eim_coursepack.Unit4Lesson2"
-        android:label="fragment_unit4_lesson2"
-        tools:layout="@layout/fragment_unit4_lesson2" />
-    <fragment
-        android:id="@+id/unit4Lesson3"
-        android:name="com.example.eim_coursepack.Unit4Lesson3"
-        android:label="fragment_unit4_lesson3"
-        tools:layout="@layout/fragment_unit4_lesson3" />
-    <fragment
-        android:id="@+id/unit5Lesson1"
-        android:name="com.example.eim_coursepack.Unit5Lesson1"
-        android:label="fragment_unit5_lesson1"
-        tools:layout="@layout/fragment_unit5_lesson1" />
-    <fragment
-        android:id="@+id/unit5Lesson2"
-        android:name="com.example.eim_coursepack.Unit5Lesson2"
-        android:label="fragment_unit5_lesson2"
-        tools:layout="@layout/fragment_unit5_lesson2" />
-    <fragment
-        android:id="@+id/unit5Lesson3"
-        android:name="com.example.eim_coursepack.Unit5Lesson3"
-        android:label="fragment_unit5_lesson3"
-        tools:layout="@layout/fragment_unit5_lesson3" />
-    <fragment
-        android:id="@+id/unit6Lesson2"
-        android:name="com.example.eim_coursepack.Unit6Lesson2"
-        android:label="fragment_unit6_lesson2"
-        tools:layout="@layout/fragment_unit6_lesson2" />
-    <fragment
-        android:id="@+id/unit6Lesson3"
-        android:name="com.example.eim_coursepack.Unit6Lesson3"
-        android:label="fragment_unit6_lesson3"
-        tools:layout="@layout/fragment_unit6_lesson3" />
-    <fragment
-        android:id="@+id/unit6Lesson4"
-        android:name="com.example.eim_coursepack.Unit6Lesson4"
-        android:label="fragment_unit6_lesson4"
-        tools:layout="@layout/fragment_unit6_lesson4" />
-    <fragment
-        android:id="@+id/unit6Lesson1"
-        android:name="com.example.eim_coursepack.Unit6Lesson1"
-        android:label="fragment_unit6_lesson1"
-        tools:layout="@layout/fragment_unit6_lesson1" />
+        tools:layout="@layout/fragment_unit6" />
     <fragment
         android:id="@+id/unit1Lesson1"
         android:name="com.example.eim_coursepack.Unit1Lesson1"
@@ -302,9 +136,13 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/unit1Quiz3Fragment"
-        android:name="com.example.eim_coursepack.Unit1Quiz3Fragment"
-        android:label="fragment_unit1_quiz3"
-        tools:layout="@layout/fragment_unit1_quiz3" />
+        android:id="@+id/allLessonFragment"
+        android:name="com.example.eim_coursepack.AllLessonFragment"
+        android:label="AllLessonFragment"
+        tools:layout="@layout/fragment_all_lesson">
+        <argument
+            android:name="lessonFlag"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
