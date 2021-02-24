@@ -16,62 +16,62 @@ class Unit1Quiz3Fragment : Fragment() {
 
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
-            text = "1. It is the energy that comes from the sun.",
-            answers = mutableListOf("solar", "solar energy"),
+            text = "1. Provide the missing quantity: R=5Ω; I=2A; V=?",
+            answers = mutableListOf("10", "10v", "10volts"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "2. It is the energy that involves water.",
-            answers = mutableListOf("tidal", "tidal energy", "hydroelectric", "hydroelectric power", "hydroelectric energy"),
+            text = "2. Provide the missing quantity: I=2A; R=?",
+            answers = mutableListOf("10", "10Ω", "10ohms"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "3. It is the energy that comes from the inner core of the earth",
-            answers = mutableListOf("geothermal", "geothermal energy"),
+            text = "3. Provide the missing quantity: I=?; R=5Ω",
+            answers = mutableListOf("2", "2a", "2amperes"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "4. It is the result from the splitting or fission of atomic nuclei.",
-            answers = mutableListOf("nuclear", "nuclear energy"),
+            text = "4. Provide the missing quantity: I=500A; R=?",
+            answers = mutableListOf("5", "5ohms", "5Ω"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "5. It is the energy formed from the remains of plant and animals which lived thousands of years ago.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "5. Provide the missing quantity: R=10Ω; I=0.4A; V=?",
+            answers = mutableListOf("4", "4volts", "4v"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "6. It is the energy that comes from the sun.",
-            answers = mutableListOf("solar", "solar energy"),
+            text = "6. Provide the missing quantity: R=25Ω; I=?",
+            answers = mutableListOf("2A", "2", "2amperes"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "7. It is the energy that involves water.",
-            answers = mutableListOf("tidal", "tidal energy", "hydroelectric", "hydroelectric power", "hydroelectric energy"),
+            text = "7. An electric heater is rated at 100V and has a hot resistance of 30 ohms. What current will flow through it? Round your answer to 2 decimal places.",
+            answers = mutableListOf("3.33", "3.33a", "3.33amperes"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "8. It is the energy that comes from the inner core of the earth",
-            answers = mutableListOf("geothermal", "geothermal energy"),
+            text = "8. An ammeter shows a bulb is using 4 amperes from a 120V source. What is the resistance?",
+            answers = mutableListOf("30", "30Ω", "30ohms"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "9. It is the result from the splitting or fission of atomic nuclei.",
-            answers = mutableListOf("nuclear", "nuclear energy"),
+            text = "9. An electric appliance with a resistance of 60 ohms must draw 5A to operate correctly. What is the correct voltage to use?",
+            answers = mutableListOf("300", "300v", "300volts"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "10. It is the energy formed from the remains of plant and animals which lived thousands of years ago.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "10. How much power is consumed by the machine having a current flow of 6 ampere supplied by a 220-volt line?",
+            answers = mutableListOf("1320","1320w","1320watts"),
             isCorrect = false,
             enteredAns = ""
         )
@@ -80,36 +80,56 @@ class Unit1Quiz3Fragment : Fragment() {
 
     private val mulChoQuestions : MutableList<MulChoQuestion> = mutableListOf(
         MulChoQuestion(
-            text = "11. It is the energy that comes from the sun.",
-            answers = mutableListOf("solar", "solar energy"),
+            text = "11. The following are examples of conductor EXCEPT _______.",
+            answers = mutableListOf(
+                "Rubber gloves",
+                "Nail",
+                "Copper wire",
+                "Silver spoon"
+            ),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1
         ),
         MulChoQuestion(
-            text = "12. It is the energy that involves water.",
-            answers = mutableListOf("tidal", "tidal energy", "hydroelectric", "hydroelectric power", "hydroelectric energy"),
+            text = "12. Unit of measurement for resistance is ______.",
+            answers = mutableListOf("Ω", "A", "V", "O", "hydroelectric energy"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1
         ),
         MulChoQuestion(
-            text = "13. It is the energy that comes from the inner core of the earth",
-            answers = mutableListOf("geothermal", "geothermal energy"),
+            text = "13. The electrical pressure which pushes the electrons to flow in a conductor material.",
+            answers = mutableListOf(
+                "voltage",
+                "current",
+                "power",
+                "resistance"
+            ),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1
         ),
         MulChoQuestion(
-            text = "14. It is the result from the splitting or fission of atomic nuclei.",
-            answers = mutableListOf("nuclear", "nuclear energy"),
+            text = "14. In the following situation, which represents the concept of resistance?",
+            answers = mutableListOf(
+                "Faucet is close to stop the flow of water",
+                "Electric motor is turn on to push the water.",
+                "Water is flowing with high intensity.",
+                "There is no supply of water."
+            ),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1
         ),
         MulChoQuestion(
-            text = "15. It is the energy formed from the remains of plant and animals which lived thousands of years ago.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "15. He discover the relationship of voltage, current and resistance.",
+            answers = mutableListOf(
+                "George Simon Ohm",
+                "Andre Marie Ampere",
+                "Alessandro Volta",
+                "James Watt"
+            ),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1
@@ -242,9 +262,9 @@ class Unit1Quiz3Fragment : Fragment() {
                     .toString().toLowerCase().replace("\\s+".toRegex(),"") in currentIdenQuestion.answers
 
                 // For checking only
-//                if (currentIdenQuestion.isCorrect) {
-//                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
-//                }
+                if (currentIdenQuestion.isCorrect) {
+                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
+                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 
@@ -285,9 +305,9 @@ class Unit1Quiz3Fragment : Fragment() {
                 // answer matches, we have the correct answer.
                 currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
 
-//                if (currentMulChoQuestion.isCorrect) {
-//                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
-//                }
+                if (currentMulChoQuestion.isCorrect) {
+                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
+                }
 
                 currentMulChoQuestion.clickedIdx = answerIndex
                 binding.questionRadioGroup.clearCheck()
@@ -319,6 +339,8 @@ class Unit1Quiz3Fragment : Fragment() {
     private fun initQuestions(binding: FragmentUnit1Quiz3Binding) {
         questionIndex = 0
 
+        randomizeMulChoAnswers()
+
         currentMulChoQuestion = mulChoQuestions[0]
 
         setIdenQuestion(binding)
@@ -326,8 +348,9 @@ class Unit1Quiz3Fragment : Fragment() {
 
 
     private fun setIdenQuestion(binding: FragmentUnit1Quiz3Binding) {
-        Toast.makeText(context, "INDEX: $questionIndex", Toast.LENGTH_SHORT).show()
         currentIdenQuestion = idenQuestions[questionIndex]
+
+
 
         questionText = currentIdenQuestion.text
 
@@ -367,6 +390,14 @@ class Unit1Quiz3Fragment : Fragment() {
         }
 
 
+    }
+
+    private fun randomizeMulChoAnswers() {
+        mulChoQuestions.forEach {
+            val correctAns = it.answers[0]
+            it.answers.shuffle()
+            it.correctIdx = it.answers.indexOf(correctAns)
+        }
     }
 
 
