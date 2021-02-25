@@ -260,17 +260,21 @@ class Unit2Quiz1Fragment : Fragment() {
                 }
 
 
-                // Save score and number of questions in shared preferences
-//                with (sharedPref?.edit()) {
-//                    this?.putString("quiz2Score", score.toString())
-//                    this?.putString("quiz2NumQuestions", numQuestions.toString())
-//                    this?.apply()
-//                }
+//              Save score and number of questions in shared preferences
+                with (sharedPref?.edit()) {
+                    this?.putString("unit2Quiz1Score", score.toString())
+                    this?.putString("unit2Quiz1NumQuestions", numQuestions.toString())
+                    this?.apply()
+                }
 //
-//                // Navigate to score screen
-//                view.findNavController()
-//                    .navigate(Unit1Quiz2FragmentDirections
-//                        .actionUnit1Quiz2FragmentToUnit1Quiz2ScoreFragment(numQuestions,score))
+                // Navigate to score screen
+                view.findNavController().navigate(
+                    Unit2Quiz1FragmentDirections
+                        .actionUnit2Quiz1FragmentToQuizScoreFragment(
+                            numQuestions,
+                            score,
+                            "Unit 2: Lesson 1 Quiz"
+                        ))
             }
 
 

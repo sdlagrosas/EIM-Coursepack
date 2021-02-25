@@ -6,12 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentAllLessonBinding
 
 
 
 class AllLessonFragment : Fragment() {
-    private lateinit var lessonNickname: LessonNickname
+    lateinit var lessonNickname: LessonNickname
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,48 +25,54 @@ class AllLessonFragment : Fragment() {
             container,
             false
         )
+
+        binding.lesson = this
+
         val args = AllLessonFragmentArgs.fromBundle(requireArguments())
-        val Unit1Lesson1 = binding.Unit1Lesson1pdf
-        val Unit1Lesson2 = binding.Unit1Lesson2pdf
-        val Unit1Lesson3 = binding.Unit1Lesson3pdf
+        val unitLessonView = binding.unitLessonPDF
 
+        // Default lesson nickname
+        lessonNickname = LessonNickname("Lesson 1.1")
 
+        // Default pdf Asset is unit1lesson1.pdf
+        var pdfAssetName = "unit1lesson1.pdf"
 
+        // Default quiz fragment is quiz 1
+        var quizFragment = AllLessonFragmentDirections.actionAllLessonFragmentToUnit1Quiz1MCFragment()
 
+        // Otherwise, select another PDF asset and quiz fragment, and replace lesson name
         when (args.lessonFlag) {
-            "Lesson1" -> {
-                Unit1Lesson1.visibility=View.VISIBLE
-                lessonNickname=LessonNickname("Lesson 1.1")
-                binding.lessonNickname= lessonNickname
-                Unit1Lesson1.fromAsset("unit1lesson1.pdf")
-                    .password(null)
-                    .defaultPage(0)
-                    .load()
-
+            "Unit1Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 1.2")
+                pdfAssetName = "unit1lesson2.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit1Quiz2Fragment()
             }
-            "Lesson2" -> {
-                Unit1Lesson2.visibility=View.VISIBLE
-                lessonNickname=LessonNickname("Lesson 1.2")
-                binding.lessonNickname= lessonNickname
-                //change pdf
-                Unit1Lesson2.fromAsset("sources_of_energy.pdf")
-                    .password(null)
-                    .defaultPage(0)
-                    .load()
+            "Unit1Lesson3" -> {
+                lessonNickname = LessonNickname("Lesson 1.3")
+                pdfAssetName = "unit1lesson3.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit1Quiz3Fragment()
             }
-
-            else -> {
-                Unit1Lesson3.visibility=View.VISIBLE
-                lessonNickname=LessonNickname("Lesson 1.3")
-                binding.lessonNickname= lessonNickname
-                //change pdf
-                Unit1Lesson3.fromAsset("unit1lesson1.pdf")
-                    .password(null)
-                    .defaultPage(0)
-                    .load()
-
+            "Unit2Lesson1" -> {
+                lessonNickname = LessonNickname("Lesson 2.1")
+                pdfAssetName = "unit2lesson1.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit2Quiz1Fragment()
             }
+        }
 
+        // Load pdf to PDFView
+        unitLessonView.fromAsset(pdfAssetName)
+            .password(null)
+            .defaultPage(0)
+            .load()
+
+        // Click listener for takeQuizButton
+        binding.takeQuizButton.setOnClickListener { view : View ->
+
+            // Advance to quiz fragment
+            view.findNavController().navigate(quizFragment)
         }
 
 

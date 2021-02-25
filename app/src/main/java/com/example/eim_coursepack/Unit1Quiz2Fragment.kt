@@ -261,7 +261,7 @@ class Unit1Quiz2Fragment : Fragment() {
                         .actionUnit1Quiz2FragmentToQuizScoreFragment(
                             numQuestions,
                             score,
-                            "Quiz 2"
+                            "Unit 1: Lesson 2 Quiz"
                         ))
             }
 

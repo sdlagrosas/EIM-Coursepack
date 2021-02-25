@@ -13,7 +13,7 @@ import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit1Quiz1MCBinding
 
 
-class Unit1Quiz1MCFragment : Fragment() {
+class Unit1Quiz1Fragment : Fragment() {
 
     private lateinit var binding : FragmentUnit1Quiz1MCBinding
 
@@ -248,18 +248,18 @@ class Unit1Quiz1MCFragment : Fragment() {
 
                 // Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("quiz1Score", score.toString())
-                    this?.putString("quiz1NumQuestions", numQuestions.toString())
+                    this?.putString("unit1Quiz1Score", score.toString())
+                    this?.putString("unit1Quiz1NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
 
                 // Navigate to score screen
                 view.findNavController()
-                    .navigate(Unit1Quiz1MCFragmentDirections
+                    .navigate(Unit1Quiz1FragmentDirections
                         .actionUnit1Quiz1MCFragmentToQuizScoreFragment(
                             numQuestions,
                             score,
-                            "Quiz 1"
+                            "Unit 1: Lesson 1 Quiz"
                         ))
             }
 

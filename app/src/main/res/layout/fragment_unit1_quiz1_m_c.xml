@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Unit1Quiz1MCFragment">
+    tools:context=".Unit1Quiz1Fragment">
     
     <data>
         <variable
             name="quiz"
-            type="com.example.eim_coursepack.Unit1Quiz1MCFragment" />
+            type="com.example.eim_coursepack.Unit1Quiz1Fragment" />
     </data>
 
 

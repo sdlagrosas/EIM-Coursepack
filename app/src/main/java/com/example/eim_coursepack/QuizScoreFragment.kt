@@ -31,9 +31,9 @@ class QuizScoreFragment : Fragment() {
         quizTitle = args.quizTitle
 
         binding.returnButton.setOnClickListener { view : View ->
-//            view.findNavController().navigate(
-//                Unit1Quiz1ScoreFragmentDirections.actionUni1Quiz1ScoreFragmentToUnit1Fragment()
-//            )
+            view.findNavController().navigate(
+                QuizScoreFragmentDirections.actionQuizScoreFragmentToUnit1Fragment()
+            )
         }
 
         return binding.root
