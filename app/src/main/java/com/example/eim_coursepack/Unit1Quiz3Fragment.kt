@@ -1,5 +1,6 @@
 package com.example.eim_coursepack
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -144,6 +145,7 @@ class Unit1Quiz3Fragment : Fragment() {
     lateinit var answers : MutableList<String>
     lateinit var enteredAns : String
     private val numQuestions = idenQuestions.size + mulChoQuestions.size
+    private var score = 0
 
 
     override fun onCreateView(
@@ -154,6 +156,10 @@ class Unit1Quiz3Fragment : Fragment() {
         val binding : FragmentUnit1Quiz3Binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_unit1_quiz3, container, false
         )
+
+        // SharedPreference Object (for storing data locally)
+        val sharedPref = this.activity?.getSharedPreferences(
+            getString(R.string.preference_key), Context.MODE_PRIVATE)
 
         // Initialize questions and set the first question
         initQuestions(binding)
@@ -199,9 +205,8 @@ class Unit1Quiz3Fragment : Fragment() {
 
                 setIdenQuestion(binding)
             } else if (questionIndex in 10 until numQuestions) {
-                val checkedId = binding.questionRadioGroup.checkedRadioButtonId
 
-                when (checkedId) {
+                when (binding.questionRadioGroup.checkedRadioButtonId) {
                     R.id.firstChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 0
                     R.id.secondChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 1
                     R.id.thirdChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 2
@@ -245,7 +250,54 @@ class Unit1Quiz3Fragment : Fragment() {
         // Set the onClickListener for the submitButton
         binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view : View ->
+            val checkedId = binding.questionRadioGroup.checkedRadioButtonId
 
+            // Check if a radio button is selected
+            if (-1 != checkedId) {
+                var answerIndex = 0
+                when (checkedId) {
+                    R.id.secondChoiceRadioButton -> answerIndex = 1
+                    R.id.thirdChoiceRadioButton -> answerIndex = 2
+                    R.id.fourthChoiceRadioButton -> answerIndex = 3
+                }
+
+                // The first answer in the original question is always the correct one, so if our
+                // answer matches, we have the correct answer.
+                currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
+
+                // Prompt user to select an answer
+            } else {
+                Toast.makeText(context, "Choose your answer", Toast.LENGTH_SHORT).show()
+            }
+
+            // Count each correct answer
+            mulChoQuestions.forEach {
+                if (it.isCorrect){
+                    score++
+                }
+            }
+
+            idenQuestions.forEach {
+                if (it.isCorrect){
+                    score++
+                }
+            }
+
+            // Save score and number of questions in shared preferences
+            with (sharedPref?.edit()) {
+                this?.putString("quiz3Score", score.toString())
+                this?.putString("quiz3NumQuestions", numQuestions.toString())
+                this?.apply()
+            }
+
+            view.findNavController().navigate(
+                Unit1Quiz3FragmentDirections
+                    .actionUnit1Quiz3FragmentToQuizScoreFragment(
+                        numQuestions,
+                        score,
+                        "Quiz 3"
+                    )
+            )
 
 
         }

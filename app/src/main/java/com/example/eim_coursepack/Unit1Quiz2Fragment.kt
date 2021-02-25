@@ -115,7 +115,6 @@ class Unit1Quiz2Fragment : Fragment() {
             isCorrect = false,
             enteredAns = ""
         )
-
     )
 
     private lateinit var currentMulChoQuestion: MulChoQuestion
@@ -259,7 +258,11 @@ class Unit1Quiz2Fragment : Fragment() {
                 // Navigate to score screen
                 view.findNavController()
                     .navigate(Unit1Quiz2FragmentDirections
-                        .actionUnit1Quiz2FragmentToUnit1Quiz2ScoreFragment(numQuestions,score))
+                        .actionUnit1Quiz2FragmentToQuizScoreFragment(
+                            numQuestions,
+                            score,
+                            "Quiz 2"
+                        ))
             }
 
 
