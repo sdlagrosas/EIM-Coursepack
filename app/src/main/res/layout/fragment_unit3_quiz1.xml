@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Unit3_quiz1">
+
+    <data>
+
+        <variable
+            name="quiz"
+            type="com.example.eim_coursepack.Unit3_quiz1" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A2ECEF"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/questionText"
+                style="@style/subHeadText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@{quiz.questionText}"
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold"
+                android:typeface="normal"
+                app:layout_constraintBottom_toTopOf="@+id/questionRadioGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quiz1Image"
+                tools:text="Because?" />
+
+            <RadioGroup
+                android:id="@+id/questionRadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/question_horizontal_margin"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:layout_marginEnd="@dimen/question_horizontal_margin"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionText">
+
+                <RadioButton
+                    android:id="@+id/firstChoiceRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:text="@{quiz.answers[0]}"
+                    android:textSize="@dimen/answer_text_size"
+                    tools:text="Edi don't" />
+
+                <RadioButton
+                    android:id="@+id/secondChoiceRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:text="@{quiz.answers[1]}"
+                    android:textSize="@dimen/answer_text_size"
+                    tools:text="Choice 2" />
+
+                <RadioButton
+                    android:id="@+id/thirdChoiceRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:text="@{quiz.answers[2]}"
+                    android:textSize="@dimen/answer_text_size"
+                    tools:text="Choice 3" />
+
+                <RadioButton
+                    android:id="@+id/fourthChoiceRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{quiz.answers[3]}"
+                    android:textSize="@dimen/answer_text_size"
+                    tools:text="Choice 4" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/Next"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                app:layout_constraintTop_toBottomOf="@+id/answerText" />
+
+            <ImageView
+                android:id="@+id/quiz1Image"
+                android:layout_width="367dp"
+                android:layout_height="271dp"
+
+                android:contentDescription="@string/an_image_in_quiz_fragment"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/guideline15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline14"
+                app:srcCompat="@drawable/ic_unit3_quiz1_iden_allq"
+                tools:src="@tools:sample/avatars" />
+
+            <EditText
+                android:id="@+id/answerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:ems="10"
+                android:hint="@string/type_your_answer_here"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:text="@{quiz.enteredAns}"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/nextButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/back"
+                android:textSize="@dimen/button_text_size"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/nextButton"
+                app:layout_constraintEnd_toStartOf="@+id/nextButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nextButton" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/submit_button"
+                android:textSize="@dimen/button_text_size"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nextButton" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.0"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.4"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

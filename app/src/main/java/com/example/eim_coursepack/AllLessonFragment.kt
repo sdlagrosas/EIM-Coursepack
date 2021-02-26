@@ -56,7 +56,7 @@ class AllLessonFragment : Fragment() {
             }
             "Unit1Lesson3" -> {
                 lessonNickname = LessonNickname("Lesson 1.3")
-                pdfAssetName = "unit1lesson3.pdf"
+                pdfAssetName = "unit1Lesson3.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit1Quiz3Fragment()
             }
@@ -71,8 +71,8 @@ class AllLessonFragment : Fragment() {
             "Unit3Lesson1" -> {
                 lessonNickname = LessonNickname("Lesson 3.1")
                 pdfAssetName = "unit3lesson1.pdf"
-//                quizFragment = AllLessonFragmentDirections
-//                    .actionAllLessonFragmentToUnit3Quiz1Fragment()
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit3Quiz1()
             }
             "Unit3Lesson2" -> {
                 lessonNickname = LessonNickname("Lesson 3.2")
