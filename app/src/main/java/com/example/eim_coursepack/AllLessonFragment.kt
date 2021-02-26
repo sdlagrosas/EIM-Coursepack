@@ -42,6 +42,12 @@ class AllLessonFragment : Fragment() {
 
         // Otherwise, select another PDF asset and quiz fragment, and replace lesson name
         when (args.lessonFlag) {
+            "Unit1Lesson1" -> {
+                lessonNickname = LessonNickname("Lesson 1.1")
+                pdfAssetName = "unit1lesson1.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit1Quiz1MCFragment()
+            }
             "Unit1Lesson2" -> {
                 lessonNickname = LessonNickname("Lesson 1.2")
                 pdfAssetName = "unit1lesson2.pdf"
@@ -54,12 +60,58 @@ class AllLessonFragment : Fragment() {
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit1Quiz3Fragment()
             }
+            // Unit 2
             "Unit2Lesson1" -> {
                 lessonNickname = LessonNickname("Lesson 2.1")
                 pdfAssetName = "unit2lesson1.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit2Quiz1Fragment()
             }
+            //Unit 3
+            "Unit3Lesson1" -> {
+                lessonNickname = LessonNickname("Lesson 3.1")
+                pdfAssetName = "unit3lesson1.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit3Quiz1Fragment()
+            }
+            "Unit3Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 3.2")
+                pdfAssetName = "unit3lesson2.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit3Quiz2Fragment()
+            }
+            "Unit3Lesson3" -> {
+                lessonNickname = LessonNickname("Lesson 3.3")
+                pdfAssetName = "unit3lesson3.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit3Quiz3Fragment()
+            }
+            "Unit3Lesson4" -> {
+                lessonNickname = LessonNickname("Lesson 3.4")
+                pdfAssetName = "unit3lesson4.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit3Quiz3Fragment()
+            }
+            //Unit 4
+            "Unit4Lesson1" -> {
+                lessonNickname = LessonNickname("Lesson 4.1")
+                pdfAssetName = "unit4lesson1.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnitQuiz1Fragment()
+            }
+            "Unit4Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 4.2")
+                pdfAssetName = "unit4lesson2.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit4Quiz2Fragment()
+            }
+            "Unit4Lesson3" -> {
+                lessonNickname = LessonNickname("Lesson 4.3")
+                pdfAssetName = "unit4lesson3.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit4Quiz3Fragment()
+            }
+
         }
 
         // Load pdf to PDFView

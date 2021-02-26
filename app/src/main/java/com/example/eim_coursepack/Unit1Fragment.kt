@@ -44,9 +44,6 @@ class Unit1Fragment : Fragment() {
             R.id.unit1Lesson1Button->view.findNavController().navigate(Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment(lesson1flag))
             R.id.unit1Lesson2Button->view.findNavController().navigate(Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment(lesson2flag))
             R.id.unit1Lesson3Button->view.findNavController().navigate(Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment(lesson3flag))
-
-
-
         }
 
     }
