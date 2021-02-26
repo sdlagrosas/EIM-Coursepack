@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Unit1Quiz1Fragment">
-    
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Unit2Quiz1Fragment">
+
     <data>
         <variable
             name="quiz"
-            type="com.example.eim_coursepack.Unit1Quiz1Fragment" />
+            type="com.example.eim_coursepack.Unit2Quiz1Fragment" />
     </data>
-
 
     <ScrollView
         android:layout_width="match_parent"
@@ -42,7 +41,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/questionRadioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/quiz1Image"
+                app:layout_constraintTop_toBottomOf="@id/quizImage"
                 tools:text="Because?" />
 
             <RadioGroup
@@ -106,7 +105,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/answerText" />
 
             <ImageView
-                android:id="@+id/quiz1Image"
+                android:id="@+id/quizImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -162,4 +161,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/nextButton" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 </layout>

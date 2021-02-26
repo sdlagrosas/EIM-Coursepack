@@ -12,9 +12,9 @@ import com.example.eim_coursepack.databinding.FragmentUnit1Binding
 
 class Unit1Fragment : Fragment() {
 
-    val lesson1flag = "Lesson1"
-    val lesson2flag= "Lesson2"
-    val lesson3flag= "Lesson3"
+    val lesson1flag = "Unit1Lesson1"
+    val lesson2flag= "Unit1Lesson2"
+    val lesson3flag= "Unit1Lesson3"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
