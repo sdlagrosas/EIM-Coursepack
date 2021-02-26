@@ -53,7 +53,7 @@ class AllLessonFragment : Fragment() {
                     .defaultPage(0)
                     .load()
             }
-
+//more lessons Soon
             else -> {
                 Unit1Lesson3.visibility=View.VISIBLE
                 lessonNickname=LessonNickname("Lesson 1.3")
