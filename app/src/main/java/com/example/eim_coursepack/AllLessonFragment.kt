@@ -80,12 +80,13 @@ class AllLessonFragment : Fragment() {
         binding.takeQuizButton.setOnClickListener { view : View ->
 
             this.activity?.actionBar?.show()
-            // Advance to quiz fragment
-//            view.findNavController().navigate(quizFragment)
+//          Advance to quiz fragment
+            view.findNavController().navigate(quizFragment)
 
-            view.findNavController().navigate(
-                AllLessonFragmentDirections.actionAllLessonFragmentToUnit2Quiz4Fragment()
-            )
+            // For testing quiz fragment only
+//            view.findNavController().navigate(
+//                AllLessonFragmentDirections.actionAllLessonFragmentToUnit2Quiz4Fragment()
+//            )
         }
 
 
