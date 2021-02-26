@@ -84,7 +84,7 @@ class AllLessonFragment : Fragment() {
 //            view.findNavController().navigate(quizFragment)
 
             view.findNavController().navigate(
-                AllLessonFragmentDirections.actionAllLessonFragmentToUnit2Quiz3Fragment()
+                AllLessonFragmentDirections.actionAllLessonFragmentToUnit2Quiz4Fragment()
             )
         }
 
