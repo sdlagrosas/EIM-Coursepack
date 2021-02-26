@@ -241,7 +241,10 @@ class Unit2Quiz1Fragment : Fragment() {
         { view : View ->
             // Check last question
             val answerText = binding.answerText.text.toString()
-            currentIdenQuestion.isCorrect = answerText.toLowerCase().trim() in currentIdenQuestion.answers
+            currentIdenQuestion.isCorrect = answerText
+                .toLowerCase()
+                .replace("\\s+".toRegex(), " ")
+                .trim() in currentIdenQuestion.answers
 
             // To make sure button only works once
             if (score == 0) {

@@ -229,7 +229,10 @@ class Unit1Quiz2Fragment : Fragment() {
         { view : View ->
             // Check last question
             val answerText = binding.answerText.text.toString()
-            currentIdenQuestion.isCorrect = answerText.toLowerCase().trim() in currentIdenQuestion.answers
+            currentIdenQuestion.isCorrect = answerText
+                .toLowerCase()
+                .replace("\\s+".toRegex(), " ")
+                .trim() in currentIdenQuestion.answers
 
             // To make sure button only works once
             if (score == 0) {
@@ -328,7 +331,10 @@ class Unit1Quiz2Fragment : Fragment() {
 
             if (answerText.isNotEmpty()) {
                 currentIdenQuestion.isCorrect = answerText
-                    .toString().toLowerCase().trim() in currentIdenQuestion.answers
+                    .toString()
+                    .toLowerCase()
+                    .replace("\\s+".toRegex(), " ")
+                    .trim() in currentIdenQuestion.answers
 
                 if (currentIdenQuestion.isCorrect) {
                     Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()

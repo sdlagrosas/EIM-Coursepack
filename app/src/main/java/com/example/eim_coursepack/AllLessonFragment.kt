@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentAllLessonBinding
-
+import com.example.eim_coursepack.databinding.FragmentUnit2Quiz3Binding
 
 
 class AllLessonFragment : Fragment() {
@@ -18,6 +18,8 @@ class AllLessonFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        this.activity?.actionBar?.hide()
 
         val binding = DataBindingUtil.inflate<FragmentAllLessonBinding>(
             inflater,
@@ -60,6 +62,12 @@ class AllLessonFragment : Fragment() {
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit2Quiz1Fragment()
             }
+            "Unit2Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 2.2")
+                pdfAssetName = "unit2lesson2.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit2Quiz2Fragment()
+            }
         }
 
         // Load pdf to PDFView
@@ -71,8 +79,13 @@ class AllLessonFragment : Fragment() {
         // Click listener for takeQuizButton
         binding.takeQuizButton.setOnClickListener { view : View ->
 
+            this.activity?.actionBar?.show()
             // Advance to quiz fragment
-            view.findNavController().navigate(quizFragment)
+//            view.findNavController().navigate(quizFragment)
+
+            view.findNavController().navigate(
+                AllLessonFragmentDirections.actionAllLessonFragmentToUnit2Quiz3Fragment()
+            )
         }
 
 
