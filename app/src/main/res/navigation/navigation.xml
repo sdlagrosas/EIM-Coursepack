@@ -79,7 +79,11 @@
         android:id="@+id/unit4Fragment"
         android:name="com.example.eim_coursepack.Unit4Fragment"
         android:label="fragment_unit4"
-        tools:layout="@layout/fragment_unit4" />
+        tools:layout="@layout/fragment_unit4" >
+        <action
+            android:id="@+id/action_unit4Fragment_to_allLessonFragment"
+            app:destination="@id/allLessonFragment" />
+    </fragment>
     <fragment
         android:id="@+id/unit5Fragment"
         android:name="com.example.eim_coursepack.Unit5Fragment"
@@ -128,6 +132,15 @@
         <action
             android:id="@+id/action_allLessonFragment_to_unit2Quiz4Fragment"
             app:destination="@id/unit2Quiz4Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit4Quiz1Fragment"
+            app:destination="@id/unit4Quiz1Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit4Quiz2Fragment"
+            app:destination="@id/unit4Quiz2Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit4Quiz3Fragment"
+            app:destination="@id/unit4Quiz3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/quizScoreFragment"
@@ -192,5 +205,32 @@
         android:name="com.example.eim_coursepack.Unit2Quiz4Fragment"
         android:label="fragment_unit2_quiz4"
         tools:layout="@layout/fragment_unit2_quiz4" />
+    <fragment
+        android:id="@+id/unit4Quiz1Fragment"
+        android:name="com.example.eim_coursepack.Unit4Quiz1Fragment"
+        android:label="fragment_unit4_quiz1"
+        tools:layout="@layout/fragment_unit4_quiz1" >
+        <action
+            android:id="@+id/action_unit4Quiz1Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit4Quiz2Fragment"
+        android:name="com.example.eim_coursepack.Unit4Quiz2Fragment"
+        android:label="fragment_unit4_quiz2"
+        tools:layout="@layout/fragment_unit4_quiz2" >
+        <action
+            android:id="@+id/action_unit4Quiz2Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit4Quiz3Fragment"
+        android:name="com.example.eim_coursepack.Unit4Quiz3Fragment"
+        android:label="fragment_unit4_quiz3"
+        tools:layout="@layout/fragment_unit4_quiz3" >
+        <action
+            android:id="@+id/action_unit4Quiz3Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
 
 </navigation>
