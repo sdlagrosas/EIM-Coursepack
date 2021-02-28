@@ -14,137 +14,126 @@ import com.example.eim_coursepack.databinding.FragmentUnit4Quiz2Binding
 class Unit4Quiz2Fragment : Fragment() {
 
     private val mulChoQuestions: MutableList<MulChoQuestion> = mutableListOf(
-        MulChoQuestion(text = "1. UNIT 4 QUIZ 2",
+        MulChoQuestion(text = "1. Electrical Diagram which uses actual or realistic " +
+                "representation devices in a circuit",
             answers = mutableListOf(
-                "Plain Tap Joint",
-                "Aerial Tap Joint",
-                "Rat Tail Joint",
-                "Y-splice"),
+                "Pictorial Diagram",
+                "Line Diagram",
+                "Wiring Diagram",
+                "Actual Connection Diagram"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "2. It is a kind of joint is commonly used to join two or more " +
-                "conductors inside the junction box. It is suitable for service where there is no" +
-                " mechanical stress when wires are to be connected in an outlet box, switch, or " +
-                "conduit fitting.",
+            correctIdx = 0),
+        MulChoQuestion(text = "2. Diagram uses slashes to determine the number or wire " +
+                "inside the conduit pipe.",
             answers = mutableListOf(
-                "Rat Tap Joint ",
-                "Plain Tap Joint",
-                "Aerial Tail Joint",
-                "Y-splice"),
+                "Pictorial Diagram",
+                "Line Diagram",
+                "Wiring Diagram",
+                "Actual Connection Diagram"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "3. Is used as a temporary tap usually done in constructions sites." +
-                " The easy twist will facilitate tap wire movement.",
+            correctIdx = 1),
+        MulChoQuestion(text = "3. this refers to the diagram illustrate the wiring " +
+                "connection and direction of wire in a circuit.",
             answers = mutableListOf(
-                "Aerial Tap Joint ",
-                "Plain Tap Joint",
-                "Rat Tail Joint",
-                "Y-splice"),
+                "Pictorial Diagram",
+                "Line Diagram",
+                "Wiring Diagram",
+                "Actual Connection Diagram"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "4. A two-tap wire turned simultaneously and is used where the " +
-                "two-tap wire is under heavy tensile stress.",
+            correctIdx = 2),
+        MulChoQuestion(text = "4. This diagram shows the detailed connection of each device in " +
+                "a circuit",
             answers = mutableListOf(
-                "Duplex cross joint ",
-                "Plain Tap Joint",
-                "Rat Tail Joint",
-                "Aerial Tap Joint"),
+                "Pictorial Diagram",
+                "Line Diagram",
+                "Wiring Diagram",
+                "Actual Connection Diagram"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "5. This is used where the tap wire is under heavy tensile stress.",
+            correctIdx = 3),
+        MulChoQuestion(text = "5. Electrical diagram uses basic electrical symbol to " +
+                "represents device in a circuit.",
             answers = mutableListOf(
-                "Knotted Tap",
-                "Aerial Tap Joint",
-                "Rat Tail Joint",
-                "Duplex Cross Joint"),
+                "Actual Connection Diagram",
+                "Line Diagram",
+                "Schematic Diagram",
+                "Wiring Diagram"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "6. This is the most widely used splice or joint in interior " +
-                "wiring installation to extend the length of wire from one point to another.",
-            answers = mutableListOf(
-                "Western Union Long Tie",
-                "Western Union Short",
-                "Duplex Cross Joint",
-                "Cross Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "7. This is used on large solid conductors where it is difficult " +
-                "to wrap the heavy tap wire around the main wire.",
-            answers = mutableListOf(
-                "Wrapped Tap or Tee Joint",
-                "Western Union Short",
-                "Western Union Long Tie",
-                "Cross Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "8. It is the method of wrapping is generally used on small cables " +
-                "because the strands are flexible, and all can be wrapped in one operation.",
-            answers = mutableListOf(
-                "Y-splice",
-                "Wrapped Tap or Tee Joint",
-                "Western Union Long Tie",
-                "Cross Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "9. The same application is done as in plain tap and the only " +
-                "difference is that this tap is a combination of two plain taps place side by " +
-                "side with each other.",
-            answers = mutableListOf(
-                "Cross Joint",
-                "Y-splice",
-                "Western Union Long Tie",
-                "Wrapped Tap or Tee Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "10. This is the most widely used splice or joint in interior " +
-                "wiring installation to extend the length of wire from one point to another.",
-            answers = mutableListOf(
-                "Western Union Short",
-                "Wrapped Tap or Tee Joint",
-                "Western Union Long Tie",
-                "Cross Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1)
+            correctIdx = 2)
     )
 
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
-            text = "11. Identify the type of slice or joint.",
-            answers = mutableListOf("western union short"),
+            text = "6. Identify the type of diagram illustrated above",
+            answers = mutableListOf("line diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "12. Identify the type of slice or joint.",
-            answers = mutableListOf("rat tail", "rat tail joint"),
+            text = "7. Identify the type of diagram illustrated above",
+            answers = mutableListOf("line diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "13. Identify the type of slice or joint.",
-            answers = mutableListOf("duplex cross joint", "duplex cross"),
+            text = "8. Identify the type of diagram illustrated above",
+            answers = mutableListOf("line diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "14. Identify the type of slice or joint.",
-            answers = mutableListOf("knotted tap"),
+            text = "9. Identify the type of diagram illustrated above",
+            answers = mutableListOf("line diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "15. Identify the type of slice or joint.",
-            answers = mutableListOf("plain tap joint"),
+            text = "10. Identify the type of diagram illustrated above",
+            answers = mutableListOf("line diagram"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "11. Manoy Bolodoy, wants to know the length of wire he needs for the " +
+                    "electrical job, He has 5 different electrical diagrams, which of these " +
+                    "diagrams is best to refer in this kind of situation.",
+            answers = mutableListOf("line diagram"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "12. Mang Manolo, wanted to show to his client the actual appearance of the " +
+                    "circuit he will be working, what particular diagram is he going to show?",
+            answers = mutableListOf("pictorial diagram"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "13. Manong Gab, draw a diagram which shows the details or wiring " +
+                    "connection, including the color coding of wire so that it will easy for " +
+                    "him to connect accurately all the devices in the circuit. What do you call " +
+                    "in this type of diagram?",
+            answers = mutableListOf("wiring diagram"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "14. Mang Junjun, wants to interpret the job in very easy way, which uses " +
+                    "just the simple electrical symbol in illustrating the job. What do you " +
+                    "think the diagram the best to draw in this type of situation?",
+            answers = mutableListOf("schematic diagram"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "15. Monoy Boy, has several electrical diagram for the job, however he wants " +
+                    "to look for the detail of which of the devices on the job are actually " +
+                    "connected, which diagram is he going to look at?",
+            answers = mutableListOf("actual connection diagram"),
             isCorrect = false,
             enteredAns = ""
         )
@@ -195,6 +184,11 @@ class Unit4Quiz2Fragment : Fragment() {
                 binding.submitButton.visibility = View.VISIBLE
             }
 
+            if (questionIndex >= mulChoQuestions.size) {
+                binding.questionRadioGroup.visibility = View.GONE
+                binding.answerText.visibility = View.VISIBLE
+            }
+
 
         }
 
@@ -213,20 +207,27 @@ class Unit4Quiz2Fragment : Fragment() {
             questionIndex--
 
 
-            if (questionIndex < numQuestions) {
+            if (questionIndex < mulChoQuestions.size) {
                 currentMulChoQuestion = mulChoQuestions[questionIndex]
                 binding.questionRadioGroup.clearCheck()
 
                 setMulChoQuestion(binding)
 
+            } else {
+                currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
+                binding.answerText.text.clear()
+
+                setIdenQuestion(binding)
             }
 
             // Reset fields
             binding.invalidateAll()
 
             // Change to multiple choice if on questions 1-10
-            if (questionIndex < numQuestions) {
+            if (questionIndex < mulChoQuestions.size) {
                 binding.questionRadioGroup.visibility = View.VISIBLE
+                binding.answerText.visibility = View.GONE
+
             }
 
             // Hide submit button if not on last question
@@ -372,14 +373,6 @@ class Unit4Quiz2Fragment : Fragment() {
     private fun initQuestions(binding : FragmentUnit4Quiz2Binding) {
         questionIndex = 0
 
-        mulChoQuestions.forEach {
-            val correct = it.answers[0]
-
-            it.answers.shuffle()
-
-            it.correctIdx = it.answers.indexOf(correct)
-        }
-
         enteredAns = ""
 
         currentIdenQuestion = idenQuestions[0]
@@ -415,11 +408,12 @@ class Unit4Quiz2Fragment : Fragment() {
         quizImage.visibility = View.VISIBLE
 
         when (idenQuestionIndex) {
-            0 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q11)
-            1 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q12)
-            2 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q13)
-            3 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q14)
-            4 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q15)
+            0 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz2_q6)
+            1 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz2_q7)
+            2 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz2_q8)
+            3 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz2_q9)
+            4 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz2_q10)
+            else -> quizImage.setImageResource(0)
         }
 
         questionText = currentIdenQuestion.text
