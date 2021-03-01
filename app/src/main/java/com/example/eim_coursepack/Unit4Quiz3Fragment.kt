@@ -1,6 +1,7 @@
 package com.example.eim_coursepack
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,146 +9,151 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import com.example.eim_coursepack.databinding.FragmentUnit4Quiz1Binding
 import com.example.eim_coursepack.databinding.FragmentUnit4Quiz2Binding
 import com.example.eim_coursepack.databinding.FragmentUnit4Quiz3Binding
 
 class Unit4Quiz3Fragment : Fragment() {
 
     private val mulChoQuestions: MutableList<MulChoQuestion> = mutableListOf(
-        MulChoQuestion(text = "1. UNIT 4 QUIZ 3",
+        MulChoQuestion(text = "1. The following are the advantages of an electrical floor plan, " +
+                "except _______.",
             answers = mutableListOf(
-                "Plain Tap Joint",
-                "Aerial Tap Joint",
-                "Rat Tail Joint",
-                "Y-splice"),
+                "Illustrates the design and area of the establishment/building.",
+                "Demonstrate the actual location of the devices to be installed.",
+                "Itemized the electrical devices to be used in particular area.",
+                "It includes the water distribution at the certain building/establishment."),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "2. It is a kind of joint is commonly used to join two or more " +
-                "conductors inside the junction box. It is suitable for service where there is no" +
-                " mechanical stress when wires are to be connected in an outlet box, switch, or " +
-                "conduit fitting.",
+            correctIdx = 3),
+        MulChoQuestion(text = "2. Which of the following is found in the electrical floor plan?",
             answers = mutableListOf(
-                "Rat Tap Joint ",
-                "Plain Tap Joint",
-                "Aerial Tail Joint",
-                "Y-splice"),
+                "Legend",
+                "Cost",
+                "Materials Cost",
+                "Tools used"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "3. Is used as a temporary tap usually done in constructions sites." +
-                " The easy twist will facilitate tap wire movement.",
+            correctIdx = 0),
+        MulChoQuestion(text = "3. Electrical floor plan consists of the different electrical " +
+                "symbol, which of the following is an example of incandescent lamp?",
             answers = mutableListOf(
-                "Aerial Tap Joint ",
-                "Plain Tap Joint",
-                "Rat Tail Joint",
-                "Y-splice"),
+                "",
+                "",
+                "",
+                ""),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "4. A two-tap wire turned simultaneously and is used where the " +
-                "two-tap wire is under heavy tensile stress.",
+            correctIdx = 0),
+        MulChoQuestion(text = "4. Based from the floor plan above, how many convenience duplex " +
+                "outlet are there?",
             answers = mutableListOf(
-                "Duplex cross joint ",
-                "Plain Tap Joint",
-                "Rat Tail Joint",
-                "Aerial Tap Joint"),
+                "8",
+                "6",
+                "2",
+                "7"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "5. This is used where the tap wire is under heavy tensile stress.",
+            correctIdx = 1),
+        MulChoQuestion(text = "5. How many Single Pole Switch in the electrical floor plan are " +
+                "found?",
             answers = mutableListOf(
-                "Knotted Tap",
-                "Aerial Tap Joint",
-                "Rat Tail Joint",
-                "Duplex Cross Joint"),
+                "4",
+                "6",
+                "2",
+                "5"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "6. This is the most widely used splice or joint in interior " +
-                "wiring installation to extend the length of wire from one point to another.",
+            correctIdx = 0),
+        MulChoQuestion(text = "6. 2 gang switch is found on what part of the house according to " +
+                "floor plan?",
             answers = mutableListOf(
-                "Western Union Long Tie",
-                "Western Union Short",
-                "Duplex Cross Joint",
-                "Cross Joint"),
+                "Porch",
+                "Dining Room",
+                "Living Room",
+                "Kitchen"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "7. This is used on large solid conductors where it is difficult " +
-                "to wrap the heavy tap wire around the main wire.",
-            answers = mutableListOf(
-                "Wrapped Tap or Tee Joint",
-                "Western Union Short",
-                "Western Union Long Tie",
-                "Cross Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "8. It is the method of wrapping is generally used on small cables " +
-                "because the strands are flexible, and all can be wrapped in one operation.",
-            answers = mutableListOf(
-                "Y-splice",
-                "Wrapped Tap or Tee Joint",
-                "Western Union Long Tie",
-                "Cross Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "9. The same application is done as in plain tap and the only " +
-                "difference is that this tap is a combination of two plain taps place side by " +
-                "side with each other.",
-            answers = mutableListOf(
-                "Cross Joint",
-                "Y-splice",
-                "Western Union Long Tie",
-                "Wrapped Tap or Tee Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "10. This is the most widely used splice or joint in interior " +
-                "wiring installation to extend the length of wire from one point to another.",
-            answers = mutableListOf(
-                "Western Union Short",
-                "Wrapped Tap or Tee Joint",
-                "Western Union Long Tie",
-                "Cross Joint"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1)
+            correctIdx = 2),
     )
 
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
-            text = "11. Identify the type of slice or joint.",
-            answers = mutableListOf("western union short"),
+            text = "7. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "12. Identify the type of slice or joint.",
-            answers = mutableListOf("rat tail", "rat tail joint"),
+            text = "8. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "13. Identify the type of slice or joint.",
-            answers = mutableListOf("duplex cross joint", "duplex cross"),
+            text = "9. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "14. Identify the type of slice or joint.",
-            answers = mutableListOf("knotted tap"),
+            text = "10. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "15. Identify the type of slice or joint.",
-            answers = mutableListOf("plain tap joint"),
+            text = "11. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "12. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "13. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "14. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "15. Identify an electrical device found in the floorplan above. Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         )
+    )
+
+    private val idenAnswerSet : MutableList<String> = mutableListOf(
+        "ceiling mounted lamp",
+        "duplex convenience outlet",
+        "wall mounted light",
+        "fan",
+        "duplex receptacle outlet",
+        "telephone outlet",
+        "switch",
+        "dimmer switch",
+        "door bell"
     )
 
     private lateinit var currentMulChoQuestion: MulChoQuestion
@@ -195,6 +201,14 @@ class Unit4Quiz3Fragment : Fragment() {
                 binding.submitButton.visibility = View.VISIBLE
             }
 
+            if (questionIndex < mulChoQuestions.size) {
+                binding.questionRadioGroup.visibility = View.VISIBLE
+                binding.answerText.visibility = View.GONE
+            } else {
+                binding.questionRadioGroup.visibility = View.GONE
+                binding.answerText.visibility = View.VISIBLE
+            }
+
 
         }
 
@@ -209,24 +223,35 @@ class Unit4Quiz3Fragment : Fragment() {
                 R.id.fourthChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 3
             }
 
+            // Save answer in identification
+            currentIdenQuestion.enteredAns = binding.answerText.text.toString()
 
             questionIndex--
 
 
-            if (questionIndex < numQuestions) {
+            if (questionIndex < mulChoQuestions.size) {
                 currentMulChoQuestion = mulChoQuestions[questionIndex]
                 binding.questionRadioGroup.clearCheck()
 
                 setMulChoQuestion(binding)
 
+            } else {
+                currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
+                binding.answerText.text.clear()
+
+                setIdenQuestion(binding)
             }
 
             // Reset fields
             binding.invalidateAll()
 
             // Change to multiple choice if on questions 1-10
-            if (questionIndex < numQuestions) {
+            if (questionIndex < mulChoQuestions.size) {
                 binding.questionRadioGroup.visibility = View.VISIBLE
+                binding.answerText.visibility = View.GONE
+            } else {
+                binding.questionRadioGroup.visibility = View.GONE
+                binding.answerText.visibility = View.VISIBLE
             }
 
             // Hide submit button if not on last question
@@ -253,6 +278,18 @@ class Unit4Quiz3Fragment : Fragment() {
             // To make sure button only works once
             if (score == 0) {
 
+                currentIdenQuestion.enteredAns = binding.answerText.text.toString()
+
+                idenQuestions.forEach {
+                    if (it.enteredAns
+                            .toLowerCase()
+                            .replace("\\s+".toRegex(), " ")
+                            .trim() in idenAnswerSet) {
+                        idenAnswerSet.remove(it.enteredAns)
+                        score++
+                    }
+                }
+
                 // Count each correct answer
                 mulChoQuestions.forEach {
                     if (it.isCorrect){
@@ -262,19 +299,19 @@ class Unit4Quiz3Fragment : Fragment() {
 
 //              Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("unit2Quiz4Score", score.toString())
-                    this?.putString("unit2Quiz4NumQuestions", numQuestions.toString())
+                    this?.putString("unit4Quiz3Score", score.toString())
+                    this?.putString("unit4Quiz3NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
 //
                 // Navigate to score screen
-//                view.findNavController().navigate(
-//                    Unit2Quiz2FragmentDirections
-//                        .actionUnit2Quiz2FragmentToQuizScoreFragment(
-//                            numQuestions,
-//                            score,
-//                            "Unit 2: Lesson 2 Quiz"
-//                        ))
+                view.findNavController().navigate(
+                    Unit4Quiz3FragmentDirections
+                        .actionUnit4Quiz3FragmentToQuizScoreFragment(
+                            numQuestions,
+                            score,
+                            "Unit 4: Lesson 3 Quiz"
+                        ))
             }
         }
 
@@ -337,15 +374,6 @@ class Unit4Quiz3Fragment : Fragment() {
             val answerText = binding.answerText.text
 
             if (answerText.isNotEmpty()) {
-                currentIdenQuestion.isCorrect = answerText
-                    .toString()
-                    .toLowerCase()
-                    .replace("\\s+".toRegex()," ")
-                    .trim() in currentIdenQuestion.answers
-
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
-                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 
@@ -372,14 +400,6 @@ class Unit4Quiz3Fragment : Fragment() {
     private fun initQuestions(binding : FragmentUnit4Quiz3Binding) {
         questionIndex = 0
 
-        mulChoQuestions.forEach {
-            val correct = it.answers[0]
-
-            it.answers.shuffle()
-
-            it.correctIdx = it.answers.indexOf(correct)
-        }
-
         enteredAns = ""
 
         currentIdenQuestion = idenQuestions[0]
@@ -394,9 +414,6 @@ class Unit4Quiz3Fragment : Fragment() {
         // randomize the answers into a copy of the array
         answers = currentMulChoQuestion.answers
 
-        binding.quizImage.visibility = View.GONE
-
-
         when (currentMulChoQuestion.clickedIdx) {
             0 -> binding.firstChoiceRadioButton.isChecked = true
             1 -> binding.secondChoiceRadioButton.isChecked = true
@@ -404,6 +421,61 @@ class Unit4Quiz3Fragment : Fragment() {
             3 -> binding.fourthChoiceRadioButton.isChecked = true
         }
 
+        setImageChoices(binding)
+        setQuestionImage(binding)
+
+    }
+
+    private fun setQuestionImage(binding : FragmentUnit4Quiz3Binding) {
+        val quizImage = binding.quizImage
+        quizImage.adjustViewBounds = true
+        when (questionIndex) {
+            in 3 until 6 -> {
+                quizImage.setImageResource(R.drawable.ic_unit4_quiz3_q4to6)
+            }
+            in 6 until numQuestions -> {
+                quizImage.setImageResource(R.drawable.ic_unit4_quiz3_q7to15)
+            }
+            else -> {
+                quizImage.setImageResource(0)
+            }
+        }
+    }
+
+    private fun setImageChoices(binding: FragmentUnit4Quiz3Binding) {
+        if (questionIndex == 2) {
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                binding.firstChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, R.drawable.ic_unit4_quiz3_q3_choice1, 0
+                )
+                binding.secondChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, R.drawable.ic_unit4_quiz3_q3_choice2, 0
+                )
+                binding.thirdChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, R.drawable.ic_unit4_quiz3_q3_choice3, 0
+                )
+                binding.fourthChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, R.drawable.ic_unit4_quiz3_q3_choice4, 0
+                )
+            }
+
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                binding.firstChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, 0, 0
+                )
+                binding.secondChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, 0, 0
+                )
+                binding.thirdChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, 0, 0
+                )
+                binding.fourthChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, 0, 0
+                )
+            }
+        }
     }
 
     private fun setIdenQuestion(binding: FragmentUnit4Quiz3Binding) {
@@ -414,13 +486,7 @@ class Unit4Quiz3Fragment : Fragment() {
 
         quizImage.visibility = View.VISIBLE
 
-        when (idenQuestionIndex) {
-            0 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q11)
-            1 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q12)
-            2 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q13)
-            3 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q14)
-            4 -> quizImage.setImageResource(R.drawable.ic_unit2_quiz3_q15)
-        }
+        setQuestionImage(binding)
 
         questionText = currentIdenQuestion.text
         // randomize the answers into a copy of the array

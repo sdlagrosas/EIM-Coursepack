@@ -103,14 +103,6 @@ class Unit4Quiz1Fragment : Fragment() {
         )
     )
 
-    private val answerSet : MutableList<String> = mutableListOf(
-        "prohibition",
-        "caution",
-        "voltage danger",
-        "safety alert",
-        "warning"
-    )
-
     private val imageSets : List<List<Int>> = listOf(
         listOf(
             R.drawable.ic_unit4_quiz1_q2_choice1,
@@ -203,6 +195,9 @@ class Unit4Quiz1Fragment : Fragment() {
                 R.id.thirdChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 2
                 R.id.fourthChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 3
             }
+
+            // Save answer in identification
+            currentIdenQuestion.enteredAns = binding.answerText.text.toString()
 
             questionIndex--
 

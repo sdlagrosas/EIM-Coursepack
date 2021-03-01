@@ -75,7 +75,7 @@ class Unit4Quiz2Fragment : Fragment() {
         ),
         IdenQuestion(
             text = "7. Identify the type of diagram illustrated above",
-            answers = mutableListOf("line diagram"),
+            answers = mutableListOf("schematic diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
@@ -87,7 +87,7 @@ class Unit4Quiz2Fragment : Fragment() {
         ),
         IdenQuestion(
             text = "9. Identify the type of diagram illustrated above",
-            answers = mutableListOf("line diagram"),
+            answers = mutableListOf("actual connection diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
@@ -203,6 +203,8 @@ class Unit4Quiz2Fragment : Fragment() {
                 R.id.fourthChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 3
             }
 
+            // Save answer in identification
+            currentIdenQuestion.enteredAns = binding.answerText.text.toString()
 
             questionIndex--
 
