@@ -80,63 +80,63 @@ class Unit4Quiz3Fragment : Fragment() {
 
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
-            text = "7. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "7. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "8. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "8. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "9. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "9. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "10. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "10. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "11. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "11. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "12. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "12. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "13. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "13. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "14. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "14. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "15. Identify an electrical device found in the floorplan above. Duplicate " +
+            text = "15. Identify an electrical device found in the floorplan above. Note: Duplicate " +
                     "answers are not counted.",
             answers = mutableListOf(),
             isCorrect = false,

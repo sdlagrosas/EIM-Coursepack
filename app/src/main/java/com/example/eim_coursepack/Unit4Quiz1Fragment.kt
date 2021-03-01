@@ -79,7 +79,7 @@ class Unit4Quiz1Fragment : Fragment() {
         ),
         IdenQuestion(
             text = "7. Identify the electrical symbol",
-            answers = mutableListOf("incandescent lamp"),
+            answers = mutableListOf("incandescent lamp", "incandescent light"),
             isCorrect = false,
             enteredAns = ""
         ),
@@ -100,7 +100,50 @@ class Unit4Quiz1Fragment : Fragment() {
             answers = mutableListOf("wires connected"),
             isCorrect = false,
             enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "11. Identify an electrical sign in the crossword above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "12. Identify an electrical sign in the crossword above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "13. Identify an electrical sign in the crossword above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "14. Identify an electrical sign in the crossword above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "15. Identify an electrical sign in the crossword above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
+            isCorrect = false,
+            enteredAns = ""
         )
+    )
+
+    private val crossWordAnswerSet : MutableList<String> = mutableListOf(
+        "prohibition",
+        "caution",
+        "voltage danger",
+        "safety alert",
+        "warning"
     )
 
     private val imageSets : List<List<Int>> = listOf(
@@ -244,14 +287,14 @@ class Unit4Quiz1Fragment : Fragment() {
         { view : View ->
             // Check last question
 
-            val answerText = binding.answerText.text.toString()
-            currentIdenQuestion.isCorrect = answerText
-                .toLowerCase()
-                .replace("\\s+".toRegex()," ")
-                .trim() in currentIdenQuestion.answers
+            currentIdenQuestion.enteredAns = binding.answerText.text.toString()
+
+
 
             // To make sure button only works once
             if (score == 0) {
+
+
 
                 // Count each correct answer
                 mulChoQuestions.forEach {
@@ -259,8 +302,17 @@ class Unit4Quiz1Fragment : Fragment() {
                         score++
                     }
                 }
-                idenQuestions.forEach {
+                idenQuestions.slice(0 until 5).forEach {
                     if (it.isCorrect){
+                        score++
+                    }
+                }
+                idenQuestions.slice(5 until 10).forEach {
+                    if (it.enteredAns
+                            .toLowerCase()
+                            .replace("\\s+".toRegex(), " ")
+                            .trim() in crossWordAnswerSet) {
+                        crossWordAnswerSet.remove(it.enteredAns)
                         score++
                     }
                 }
@@ -342,15 +394,21 @@ class Unit4Quiz1Fragment : Fragment() {
             val answerText = binding.answerText.text
 
             if (answerText.isNotEmpty()) {
-                currentIdenQuestion.isCorrect = answerText
-                    .toString()
-                    .toLowerCase()
-                    .replace("\\s+".toRegex()," ")
-                    .trim() in currentIdenQuestion.answers
 
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+                if (questionIndex in 5 until 10) {
+                    currentIdenQuestion.isCorrect = answerText
+                        .toString()
+                        .toLowerCase()
+                        .replace("\\s+".toRegex()," ")
+                        .trim() in currentIdenQuestion.answers
+
+                    if (currentIdenQuestion.isCorrect) {
+                        Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+                    }
                 }
+
+
+
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 
@@ -391,8 +449,7 @@ class Unit4Quiz1Fragment : Fragment() {
         // randomize the answers into a copy of the array
         answers = currentMulChoQuestion.answers
 
-        binding.quizImage.visibility = View.GONE
-
+        setQuestionImage(binding)
 
         when (currentMulChoQuestion.clickedIdx) {
             0 -> binding.firstChoiceRadioButton.isChecked = true
@@ -447,23 +504,27 @@ class Unit4Quiz1Fragment : Fragment() {
         val idenQuestionIndex = questionIndex - mulChoQuestions.size
         currentIdenQuestion = idenQuestions[idenQuestionIndex]
 
-        val quizImage = binding.quizImage
-
-        quizImage.visibility = View.VISIBLE
-
-        when (idenQuestionIndex) {
-            0 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q6)
-            1 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q7)
-            2 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q8)
-            3 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q9)
-            4 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q10)
-            else -> quizImage.setImageResource(0)
-        }
+        setQuestionImage(binding)
 
         questionText = currentIdenQuestion.text
         // randomize the answers into a copy of the array
 
         enteredAns = currentIdenQuestion.enteredAns
+    }
+
+    private fun setQuestionImage(binding: FragmentUnit4Quiz1Binding) {
+        val quizImage = binding.quizImage
+        quizImage.adjustViewBounds = true
+
+        when (questionIndex) {
+            5 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q6)
+            6 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q7)
+            7 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q8)
+            8 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q9)
+            9 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q10)
+            in 10 until 15 -> quizImage.setImageResource(R.drawable.ic_unit4_quiz1_q11to15)
+            else -> quizImage.setImageResource(0)
+        }
     }
 
 }
