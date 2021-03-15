@@ -36,7 +36,7 @@ class MainMenuFragment : Fragment() {
             view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit5Fragment)
         }
         binding.unit6Button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit6)
+            view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit6Fragment)
         }
 
         return binding.root

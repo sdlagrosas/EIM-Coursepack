@@ -93,6 +93,30 @@ class AllLessonFragment : Fragment() {
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit4Quiz3Fragment()
             }
+            "Unit6Lesson1" -> {
+                lessonNickname = LessonNickname("Lesson 6.1")
+                pdfAssetName = "unit6lesson1.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit6Quiz1Fragment()
+            }
+            "Unit6Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 6.2")
+                pdfAssetName = "unit6lesson2.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit4Quiz2Fragment()
+            }
+            "Unit6Lesson3" -> {
+                lessonNickname = LessonNickname("Lesson 6.3")
+                pdfAssetName = "unit6lesson3.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit4Quiz3Fragment()
+            }
+            "Unit6Lesson4" -> {
+                lessonNickname = LessonNickname("Lesson 6.4")
+                pdfAssetName = "unit6lesson4.pdf"
+//                quizFragment = AllLessonFragmentDirections
+//                    .actionAllLessonFragmentToUnit4Quiz3Fragment()
+            }
         }
 
         // Load pdf to PDFView
