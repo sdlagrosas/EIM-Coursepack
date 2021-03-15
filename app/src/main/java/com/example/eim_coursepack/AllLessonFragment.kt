@@ -77,8 +77,8 @@ class AllLessonFragment : Fragment() {
             "Unit3Lesson2" -> {
                 lessonNickname = LessonNickname("Lesson 3.2")
                 pdfAssetName = "unit3lesson2.pdf"
-//                quizFragment = AllLessonFragmentDirections
-//                    .actionAllLessonFragmentToUnit3Quiz2Fragment()
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit3Quiz2Fragment()
             }
             "Unit3Lesson3" -> {
                 lessonNickname = LessonNickname("Lesson 3.3")
