@@ -218,7 +218,7 @@ class Unit6Quiz1Fragment : Fragment() {
                 currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
                 binding.answerText.text.clear()
 
-                setIdenQuestion(binding)
+                setIdenQuestion()
             }
 
             // Reset fields
@@ -337,7 +337,7 @@ class Unit6Quiz1Fragment : Fragment() {
                 } else if (questionIndex in mulChoQuestions.size until numQuestions) {
 
                     currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
-                    setIdenQuestion(binding)
+                    setIdenQuestion()
                 }
                 binding.invalidateAll()
 
@@ -371,7 +371,7 @@ class Unit6Quiz1Fragment : Fragment() {
                 // Advance to the next question
                 questionIndex++
                 currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
-                setIdenQuestion(binding)
+                setIdenQuestion()
 
                 // reset fields
                 binding.invalidateAll()
@@ -415,7 +415,7 @@ class Unit6Quiz1Fragment : Fragment() {
     }
 
 
-    private fun setIdenQuestion(binding: FragmentUnit6Quiz1Binding) {
+    private fun setIdenQuestion() {
         val idenQuestionIndex = questionIndex - mulChoQuestions.size
         currentIdenQuestion = idenQuestions[idenQuestionIndex]
 
