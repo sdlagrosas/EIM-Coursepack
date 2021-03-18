@@ -9,169 +9,148 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.eim_coursepack.databinding.FragmentUnit6Quiz1Binding
 import com.example.eim_coursepack.databinding.FragmentUnit6Quiz2Binding
+import com.example.eim_coursepack.databinding.FragmentUnit6Quiz3Binding
 
-class Unit6Quiz2Fragment : Fragment() {
+class Unit6Quiz3Fragment : Fragment() {
 
     private val mulChoQuestions: MutableList<MulChoQuestion> = mutableListOf(
-        MulChoQuestion(text = "1. Chemicals with lower flash points present a greater __________.",
+        MulChoQuestion(text = "1. Personal Protective Device use to protect the eye from heat " +
+                "and debris that can the damage the eye.",
             answers = mutableListOf(
-                "Personal Hazard",
-                "Flammability Hazard",
-                "Explosion Hazard",
-                "Skin Hazard"),
+                "Sun glass",
+                "Eye glass",
+                "Eye protection",
+                "Hour glass"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = 1),
-        MulChoQuestion(text = "2. Process where a person identify, evaluate and determine the " +
-                "solution to the risks.",
+        MulChoQuestion(text = "2. In using the gloves, is it important to know the voltage " +
+                "capacity of a  certain gloves?",
             answers = mutableListOf(
-                "Chemical Assessment",
-                "Risk Assessment",
-                "Physical Assessment",
-                "NC Assessment"),
+                "No, because it has already an insulator",
+                "Yes, because there are some gloves cannot resist the amount of voltage of a " +
+                        "certain electrical equipment",
+                "No, No need because it is only for compliance only",
+                "Yes, to test how the rubber gloves can protect the electrician"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = 1),
-        MulChoQuestion(text = "3. Any alteration of the physical, chemical and biological " +
-                "properties of the atmospheric air, or any discharge thereto of any liquid, " +
-                "gaseous or solid substances that will or is likely to create or to render the " +
-                "air resources of the country harmful, detrimental, or injurious to public " +
-                "health, safety or welfare or which will adversely affect their utilization for " +
-                "domestic, commercial, industrial, agricultural, recreational, or other " +
-                "legitimate purposes.",
+        MulChoQuestion(text = "3. In selecting safety shoes, what are the best characteristics " +
+                "to be considered?",
             answers = mutableListOf(
-                "Pollution",
-                "Atmoshperic Pollution",
-                "Air Pollution",
-                "Surrounding Pollution"),
+                "As long it is a leather shoes, it is safety shoes",
+                "Safety shoes should have rubber sole only.",
+                "Safety shoes has metal top and rubber sole to protect the toes form any " +
+                        "hard falling objects and rubber sole to avoid electrocution.",
+                "Rubber Shoes is a safety shoes"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = 2),
-        MulChoQuestion(text = "4. The cross disciplinary area concerned with the safety, " +
-                "health and welfare of people engaged in work or employment.",
+        MulChoQuestion(text = "4. What is the PPE which protects electrician’s head form " +
+                "falling debris?",
             answers = mutableListOf(
-                "Waste Management",
-                "PEC",
-                "ACGIH",
-                "OHS"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = 3),
-        MulChoQuestion(text = "5. The collection, transport, processing or disposal, managing " +
-                "and monitoring of waste materials.",
-            answers = mutableListOf(
-                "Waste Management",
-                "PEC",
-                "ACGIH",
-                "OHS"),
+                "Hard hat",
+                "Helmet",
+                "Cap",
+                "Hat"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = 0),
-        MulChoQuestion(text = "6. Once a hazard has been identified and the risk assessed, " +
-                "control measures should be put into place. Which of the following is the " +
-                "correct hierarchy of control?",
+        MulChoQuestion(text = "5. PPE which used as protection of all body parts except to " +
+                "hands and feet which made of asbestos for body insulation.",
             answers = mutableListOf(
-                "Identify the hazard, assess the risk, eliminate the hazard/risk, " +
-                        "engineering control, administrative controls, substitution",
-                "Identify the risk, assess the hazard, eliminate the hazard/risk, " +
-                        "administrative control, engineering control, substitution",
-                "Identify the hazard, assess the risk, engineering control, eliminate the " +
-                        "hazard and risk, engineering control, substitution",
-                "Identify the risk, assess the hazard, eliminate the hazard/risk, " +
-                        "engineering control, administrative controls, substitution"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = 0),
-        MulChoQuestion(text = "7. Layla the supervisor wants to replace Mang Sun in his job " +
-                "because he cannot perform his job efficiently anymore which can cause accident " +
-                "to himself and may affect other workers, what particular control does Layla " +
-                "implement in this situation?",
-            answers = mutableListOf(
-                "Eliminates hazard/risk",
-                "Substitution",
-                "Identify Hazard",
-                "Assess Hazard"),
+                "Apron",
+                "Coverall",
+                "Gloves",
+                "Safety shoes"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = 1),
-        MulChoQuestion(text = "8. Nana decided to used cut off  which can cut 50 pcs of pipe in " +
-                "one hour instead of manual cutting which 3 cutters can 40 pipe in 1 hour, what " +
-                "control did Nana considered in this situation?",
+        MulChoQuestion(text = "6. Personal Hygiene is another important thing to protect or " +
+                "body aside from wearing PPE, which of the following is not correct about " +
+                "Personal Hygiene?",
             answers = mutableListOf(
-                "Eliminates hazard/risk",
-                "Substitution",
-                "Identify Hazard",
-                "Assess Hazard"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = 2),
-        MulChoQuestion(text = "9. Mia is very consistent in Identifying hazards, Analyzing or " +
-                "evaluate the risk associated with that hazard and determining appropriate ways " +
-                "to eliminate or control the hazard. What stage being execute by Mia?",
-            answers = mutableListOf(
-                "Eliminates hazard/risk",
-                "Substitution",
-                "Identify Hazard",
-                "Assess Hazard"),
+                "If you wear protective clothing at work, such as aprons, laboratory coats, " +
+                        "overalls, etc., these should be cleaned regularly and you should " +
+                        "inspect them for holes or areas that are worn out.",
+                "It may seem that the amount of contaminant you can bring home on your " +
+                        "clothes or skin is very small and cannot hurt your family",
+                "Spreading the hazard‖ involves asbestos, where wives of asbestos workers " +
+                        "have developed asbestosis from exposure to the asbestos on their " +
+                        "husbands' work clothes.",
+                "If you wear protective clothing at work, such as aprons, laboratory coats, " +
+                        "overalls, etc., these should  not be cleaned regularly and not needed  " +
+                        "to inspect them for holes or areas that are worn out."),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = 3),
-        MulChoQuestion(text = "10. Working a limited number of hours in a hazardous area is an " +
-                "example of what stage of hierarchy?",
+        MulChoQuestion(text = "7. Personal  Protective Equipment used to protect lungs from " +
+                "inhaling dust and gas fumes.",
             answers = mutableListOf(
-                "Eliminates hazard/risk",
-                "Substitution",
-                "Identify Hazard",
-                "Assess Hazard"),
+                "Mask",
+                "Respirator",
+                "Har hat",
+                "Gloves"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = 0)
+            correctIdx = 1),
+        MulChoQuestion(text = "8. Personal Protective Equipment which provide protection for " +
+                "the sole and toe.",
+            answers = mutableListOf(
+                "Mask",
+                "Respirator",
+                "Har hat",
+                "Safety shoes"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = 3)
     )
 
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
-            text = "11. It includes ear and eye protection, respirators, and protective clothing.",
-            answers = mutableListOf("personal protective equipment", "personal protective device"),
+            text = "9. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("coverall"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "12. It may mean changing a piece of machinery (for example, using proper " +
-                    "machine guards) or a work process to reduce exposure to a hazard.",
-            answers = mutableListOf("engineering control"),
+            text = "10. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("gloves"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "13. Working a limited number of hours in a hazardous area ",
-            answers = mutableListOf("administrative control"),
+            text = "11. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("helmet"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "14. The process where you identify hazards, analyze or evaluate the risk " +
-                    "associated with that hazard, and determine appropriate ways to eliminate or " +
-                    "control the hazard.",
-            answers = mutableListOf(
-                "assess the risks",
-                "assess risks",
-                "assess risk",
-                "assess the risk"),
+            text = "12. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("safety shoes"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "15. Identify the source of the problem.",
-            answers = mutableListOf(
-                "identify hazards",
-                "identify hazard",
-                "identify the hazards",
-                "identify the hazard"),
+            text = "13. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("eye protection"),
             isCorrect = false,
             enteredAns = ""
-        )
+        ),
+        IdenQuestion(
+            text = "14. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("safety harness"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "15. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("respirator"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+
     )
 
     private lateinit var currentMulChoQuestion: MulChoQuestion
@@ -188,10 +167,9 @@ class Unit6Quiz2Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding : FragmentUnit6Quiz2Binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_unit6_quiz2, container, false
+        val binding : FragmentUnit6Quiz3Binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_unit6_quiz3, container, false
         )
-
         // SharedPreference Object (for storing data locally)
         val sharedPref = this.activity?.getSharedPreferences(
             getString(R.string.preference_key), Context.MODE_PRIVATE)
@@ -253,7 +231,7 @@ class Unit6Quiz2Fragment : Fragment() {
                 currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
                 binding.answerText.text.clear()
 
-                setIdenQuestion()
+                setIdenQuestion(binding)
             }
 
             // Reset fields
@@ -313,18 +291,18 @@ class Unit6Quiz2Fragment : Fragment() {
 
 //              Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("unit6Quiz2Score", score.toString())
-                    this?.putString("unit6Quiz2NumQuestions", numQuestions.toString())
+                    this?.putString("unit6Quiz3Score", score.toString())
+                    this?.putString("unit6Quiz3NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
 //
                 // Navigate to score screen
                 view.findNavController().navigate(
-                    Unit6Quiz2FragmentDirections
-                        .actionUnit6Quiz2FragmentToQuizScoreFragment(
+                    Unit6Quiz3FragmentDirections
+                        .actionUnit6Quiz3FragmentToQuizScoreFragment(
                             numQuestions,
                             score,
-                            "Unit 6: Lesson 2 Quiz"
+                            "Unit 6: Lesson 3 Quiz"
                         ))
             }
         }
@@ -333,7 +311,7 @@ class Unit6Quiz2Fragment : Fragment() {
     }
 
     // Handles scoring and quiz logic
-    private fun handleQuizProper(binding : FragmentUnit6Quiz2Binding) {
+    private fun handleQuizProper(binding : FragmentUnit6Quiz3Binding) {
 
         // Multiple choice questions 1-10
         if (questionIndex in 0 until mulChoQuestions.size) {
@@ -372,7 +350,7 @@ class Unit6Quiz2Fragment : Fragment() {
                 } else if (questionIndex in mulChoQuestions.size until numQuestions) {
 
                     currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
-                    setIdenQuestion()
+                    setIdenQuestion(binding)
                 }
                 binding.invalidateAll()
 
@@ -406,7 +384,7 @@ class Unit6Quiz2Fragment : Fragment() {
                 // Advance to the next question
                 questionIndex++
                 currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
-                setIdenQuestion()
+                setIdenQuestion(binding)
 
                 // reset fields
                 binding.invalidateAll()
@@ -423,7 +401,7 @@ class Unit6Quiz2Fragment : Fragment() {
     }
 
     // Initialize the questions and set the first question
-    private fun initQuestions(binding : FragmentUnit6Quiz2Binding) {
+    private fun initQuestions(binding : FragmentUnit6Quiz3Binding) {
         questionIndex = 0
 
         enteredAns = ""
@@ -433,11 +411,13 @@ class Unit6Quiz2Fragment : Fragment() {
         setMulChoQuestion(binding)
     }
 
-    private fun setMulChoQuestion(binding : FragmentUnit6Quiz2Binding) {
+    private fun setMulChoQuestion(binding : FragmentUnit6Quiz3Binding) {
         currentMulChoQuestion = mulChoQuestions[questionIndex]
 
         questionText = currentMulChoQuestion.text
-        // randomize the answers into a copy of the array
+
+        binding.quizImage.setImageResource(0)
+
         answers = currentMulChoQuestion.answers
 
         when (currentMulChoQuestion.clickedIdx) {
@@ -449,15 +429,24 @@ class Unit6Quiz2Fragment : Fragment() {
 
     }
 
-
-    private fun setIdenQuestion() {
+    private fun setIdenQuestion(binding: FragmentUnit6Quiz3Binding) {
         val idenQuestionIndex = questionIndex - mulChoQuestions.size
         currentIdenQuestion = idenQuestions[idenQuestionIndex]
 
         questionText = currentIdenQuestion.text
-        // randomize the answers into a copy of the array
+
+        val questionImage = binding.quizImage
+
+        when(idenQuestionIndex) {
+            0 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q9)
+            1 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q10)
+            2 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q11)
+            3 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q12)
+            4 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q13)
+            5 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q14)
+            6 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q15)
+        }
 
         enteredAns = currentIdenQuestion.enteredAns
     }
-
 }

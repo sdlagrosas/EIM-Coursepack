@@ -142,6 +142,9 @@
         <action
             android:id="@+id/action_allLessonFragment_to_unit6Quiz2Fragment"
             app:destination="@id/unit6Quiz2Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit6Quiz3Fragment"
+            app:destination="@id/unit6Quiz3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/quizScoreFragment"
@@ -258,6 +261,15 @@
         tools:layout="@layout/fragment_unit6_quiz2" >
         <action
             android:id="@+id/action_unit6Quiz2Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit6Quiz3Fragment"
+        android:name="com.example.eim_coursepack.Unit6Quiz3Fragment"
+        android:label="fragment_unit6_quiz3"
+        tools:layout="@layout/fragment_unit6_quiz3" >
+        <action
+            android:id="@+id/action_unit6Quiz3Fragment_to_quizScoreFragment"
             app:destination="@id/quizScoreFragment" />
     </fragment>
 
