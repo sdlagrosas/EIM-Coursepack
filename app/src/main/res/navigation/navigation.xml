@@ -164,6 +164,21 @@
             android:id="@+id/action_quizScoreFragment_to_unit1Fragment"
             app:destination="@id/unit1Fragment"
             app:popUpTo="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit2Fragment"
+            app:destination="@id/unit2Fragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit4Fragment"
+            app:destination="@id/unit4Fragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit5Fragment"
+            app:destination="@id/unit5Fragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit3Fragment"
+            app:destination="@id/unit3Fragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit6Fragment"
+            app:destination="@id/unit6Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit1Quiz3Fragment"
