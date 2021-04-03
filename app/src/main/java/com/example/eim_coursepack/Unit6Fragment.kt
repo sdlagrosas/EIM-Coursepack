@@ -57,11 +57,11 @@ class Unit6Fragment : Fragment() {
                     Unit6FragmentDirections.actionUnit6FragmentToAllLessonFragment(lessonFlags[2])
                 )
             }
-            R.id.unit6Lesson4Button -> {
-                view.findNavController().navigate(
-                    Unit6FragmentDirections.actionUnit6FragmentToAllLessonFragment(lessonFlags[3])
-                )
-            }
+//            R.id.unit6Lesson4Button -> {
+//                view.findNavController().navigate(
+//                    Unit6FragmentDirections.actionUnit6FragmentToAllLessonFragment(lessonFlags[3])
+//                )
+//            }
         }
     }
 
