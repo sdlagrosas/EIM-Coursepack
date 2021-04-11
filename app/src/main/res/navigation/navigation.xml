@@ -141,6 +141,12 @@
         <action
             android:id="@+id/action_allLessonFragment_to_unit3Quiz2Fragment"
             app:destination="@id/unit3Quiz2Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit3Quiz3"
+            app:destination="@id/unit3Quiz3" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit3Quiz4"
+            app:destination="@id/unit3Quiz4" />
     </fragment>
     <fragment
         android:id="@+id/quizScoreFragment"
@@ -197,6 +203,24 @@
         tools:layout="@layout/fragment_unit3_quiz2" >
         <action
             android:id="@+id/action_unit3Quiz2Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit3Quiz3"
+        android:name="com.example.eim_coursepack.Unit3Quiz3"
+        android:label="fragment_unit3_quiz3"
+        tools:layout="@layout/fragment_unit3_quiz3" >
+        <action
+            android:id="@+id/action_unit3Quiz3_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit3Quiz4"
+        android:name="com.example.eim_coursepack.Unit3Quiz4"
+        android:label="fragment_unit3_quiz4"
+        tools:layout="@layout/fragment_unit3_quiz4" >
+        <action
+            android:id="@+id/action_unit3Quiz4_to_quizScoreFragment"
             app:destination="@id/quizScoreFragment" />
     </fragment>
 
