@@ -33,8 +33,8 @@
             android:id="@+id/action_mainMenuFragment_to_unit5Fragment"
             app:destination="@id/unit5Fragment" />
         <action
-            android:id="@+id/action_mainMenuFragment_to_unit6"
-            app:destination="@id/unit6" />
+            android:id="@+id/action_mainMenuFragment_to_unit6Fragment"
+            app:destination="@id/unit6Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit1Fragment"
@@ -74,11 +74,7 @@
         android:id="@+id/unit3Fragment"
         android:name="com.example.eim_coursepack.Unit3Fragment"
         android:label="fragment_unit3"
-        tools:layout="@layout/fragment_unit3" >
-        <action
-            android:id="@+id/action_unit3Fragment_to_allLessonFragment"
-            app:destination="@id/allLessonFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_unit3" />
     <fragment
         android:id="@+id/unit4Fragment"
         android:name="com.example.eim_coursepack.Unit4Fragment"
@@ -95,15 +91,6 @@
         tools:layout="@layout/fragment_unit5" >
         <action
             android:id="@+id/action_unit5Fragment_to_allLessonFragment"
-            app:destination="@id/allLessonFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/unit6"
-        android:name="com.example.eim_coursepack.Unit6"
-        android:label="fragment_unit6"
-        tools:layout="@layout/fragment_unit6" >
-        <action
-            android:id="@+id/action_unit6_to_allLessonFragment"
             app:destination="@id/allLessonFragment" />
     </fragment>
     <fragment
@@ -136,17 +123,41 @@
             android:id="@+id/action_allLessonFragment_to_unit2Quiz1Fragment"
             app:destination="@id/unit2Quiz1Fragment" />
         <action
-            android:id="@+id/action_allLessonFragment_to_unit3_quiz1"
-            app:destination="@id/unit3_quiz1" />
+            android:id="@+id/action_allLessonFragment_to_unit2Quiz2Fragment"
+            app:destination="@id/unit2Quiz2Fragment" />
         <action
-            android:id="@+id/action_allLessonFragment_to_unit3Quiz2Fragment"
-            app:destination="@id/unit3Quiz2Fragment" />
+            android:id="@+id/action_allLessonFragment_to_unit2Quiz3Fragment"
+            app:destination="@id/unit2Quiz3Fragment" />
         <action
-            android:id="@+id/action_allLessonFragment_to_unit3Quiz3"
-            app:destination="@id/unit3Quiz3" />
+            android:id="@+id/action_allLessonFragment_to_unit2Quiz4Fragment"
+            app:destination="@id/unit2Quiz4Fragment" />
         <action
-            android:id="@+id/action_allLessonFragment_to_unit3Quiz4"
-            app:destination="@id/unit3Quiz4" />
+            android:id="@+id/action_allLessonFragment_to_unit4Quiz1Fragment"
+            app:destination="@id/unit4Quiz1Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit4Quiz2Fragment"
+            app:destination="@id/unit4Quiz2Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit4Quiz3Fragment"
+            app:destination="@id/unit4Quiz3Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit6Quiz1Fragment"
+            app:destination="@id/unit6Quiz1Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit6Quiz2Fragment"
+            app:destination="@id/unit6Quiz2Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit6Quiz3Fragment"
+            app:destination="@id/unit6Quiz3Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit5Quiz1Fragment"
+            app:destination="@id/unit5Quiz1Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit5Quiz2Fragment"
+            app:destination="@id/unit5Quiz2Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_unit5Quiz3Fragment"
+            app:destination="@id/unit5Quiz3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/quizScoreFragment"
@@ -164,7 +175,23 @@
             app:argType="string" />
         <action
             android:id="@+id/action_quizScoreFragment_to_unit1Fragment"
-            app:destination="@id/unit1Fragment" />
+            app:destination="@id/unit1Fragment"
+            app:popUpTo="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit2Fragment"
+            app:destination="@id/unit2Fragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit4Fragment"
+            app:destination="@id/unit4Fragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit5Fragment"
+            app:destination="@id/unit5Fragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit3Fragment"
+            app:destination="@id/unit3Fragment" />
+        <action
+            android:id="@+id/action_quizScoreFragment_to_unit6Fragment"
+            app:destination="@id/unit6Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit1Quiz3Fragment"
@@ -188,39 +215,116 @@
             app:destination="@id/quizScoreFragment" />
     </fragment>
     <fragment
-        android:id="@+id/unit3_quiz1"
-        android:name="com.example.eim_coursepack.Unit3_quiz1"
-        android:label="fragment_unit3_quiz1"
-        tools:layout="@layout/fragment_unit3_quiz1" >
+        android:id="@+id/unit2Quiz2Fragment"
+        android:name="com.example.eim_coursepack.Unit2Quiz2Fragment"
+        android:label="fragment_unit2_quiz2"
+        tools:layout="@layout/fragment_unit2_quiz2" >
         <action
-            android:id="@+id/action_unit3_quiz1_to_quizScoreFragment"
+            android:id="@+id/action_unit2Quiz2Fragment_to_quizScoreFragment"
             app:destination="@id/quizScoreFragment" />
     </fragment>
     <fragment
-        android:id="@+id/unit3Quiz2Fragment"
-        android:name="com.example.eim_coursepack.Unit3Quiz2Fragment"
-        android:label="fragment_unit3_quiz2"
-        tools:layout="@layout/fragment_unit3_quiz2" >
+        android:id="@+id/unit2Quiz3Fragment"
+        android:name="com.example.eim_coursepack.Unit2Quiz3Fragment"
+        android:label="fragment_unit2_quiz3"
+        tools:layout="@layout/fragment_unit2_quiz3" >
         <action
-            android:id="@+id/action_unit3Quiz2Fragment_to_quizScoreFragment"
+            android:id="@+id/action_unit2Quiz3Fragment_to_quizScoreFragment"
             app:destination="@id/quizScoreFragment" />
     </fragment>
     <fragment
-        android:id="@+id/unit3Quiz3"
-        android:name="com.example.eim_coursepack.Unit3Quiz3"
-        android:label="fragment_unit3_quiz3"
-        tools:layout="@layout/fragment_unit3_quiz3" >
+        android:id="@+id/unit2Quiz4Fragment"
+        android:name="com.example.eim_coursepack.Unit2Quiz4Fragment"
+        android:label="fragment_unit2_quiz4"
+        tools:layout="@layout/fragment_unit2_quiz4" />
+    <fragment
+        android:id="@+id/unit4Quiz1Fragment"
+        android:name="com.example.eim_coursepack.Unit4Quiz1Fragment"
+        android:label="fragment_unit4_quiz1"
+        tools:layout="@layout/fragment_unit4_quiz1" >
         <action
-            android:id="@+id/action_unit3Quiz3_to_quizScoreFragment"
+            android:id="@+id/action_unit4Quiz1Fragment_to_quizScoreFragment"
             app:destination="@id/quizScoreFragment" />
     </fragment>
     <fragment
-        android:id="@+id/unit3Quiz4"
-        android:name="com.example.eim_coursepack.Unit3Quiz4"
-        android:label="fragment_unit3_quiz4"
-        tools:layout="@layout/fragment_unit3_quiz4" >
+        android:id="@+id/unit4Quiz2Fragment"
+        android:name="com.example.eim_coursepack.Unit4Quiz2Fragment"
+        android:label="fragment_unit4_quiz2"
+        tools:layout="@layout/fragment_unit4_quiz2" >
         <action
-            android:id="@+id/action_unit3Quiz4_to_quizScoreFragment"
+            android:id="@+id/action_unit4Quiz2Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit4Quiz3Fragment"
+        android:name="com.example.eim_coursepack.Unit4Quiz3Fragment"
+        android:label="fragment_unit4_quiz3"
+        tools:layout="@layout/fragment_unit4_quiz3" >
+        <action
+            android:id="@+id/action_unit4Quiz3Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit6Fragment"
+        android:name="com.example.eim_coursepack.Unit6Fragment"
+        android:label="fragment_unit6"
+        tools:layout="@layout/fragment_unit6" >
+        <action
+            android:id="@+id/action_unit6Fragment_to_allLessonFragment"
+            app:destination="@id/allLessonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit6Quiz1Fragment"
+        android:name="com.example.eim_coursepack.Unit6Quiz1Fragment"
+        android:label="fragment_unit6_quiz1"
+        tools:layout="@layout/fragment_unit6_quiz1" >
+        <action
+            android:id="@+id/action_unit6Quiz1Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit6Quiz2Fragment"
+        android:name="com.example.eim_coursepack.Unit6Quiz2Fragment"
+        android:label="fragment_unit6_quiz2"
+        tools:layout="@layout/fragment_unit6_quiz2" >
+        <action
+            android:id="@+id/action_unit6Quiz2Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit6Quiz3Fragment"
+        android:name="com.example.eim_coursepack.Unit6Quiz3Fragment"
+        android:label="fragment_unit6_quiz3"
+        tools:layout="@layout/fragment_unit6_quiz3" >
+        <action
+            android:id="@+id/action_unit6Quiz3Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit5Quiz1Fragment"
+        android:name="com.example.eim_coursepack.Unit5Quiz1Fragment"
+        android:label="fragment_unit5_quiz1"
+        tools:layout="@layout/fragment_unit5_quiz1" >
+        <action
+            android:id="@+id/action_unit5Quiz1Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit5Quiz2Fragment"
+        android:name="com.example.eim_coursepack.Unit5Quiz2Fragment"
+        android:label="fragment_unit5_quiz2"
+        tools:layout="@layout/fragment_unit5_quiz2" >
+        <action
+            android:id="@+id/action_unit5Quiz2Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unit5Quiz3Fragment"
+        android:name="com.example.eim_coursepack.Unit5Quiz3Fragment"
+        android:label="fragment_unit5_quiz3"
+        tools:layout="@layout/fragment_unit5_quiz3" >
+        <action
+            android:id="@+id/action_unit5Quiz3Fragment_to_quizScoreFragment"
             app:destination="@id/quizScoreFragment" />
     </fragment>
 

@@ -53,6 +53,7 @@
 
         <Button
             android:id="@+id/returnButton"
+            style="@style/allbuttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"

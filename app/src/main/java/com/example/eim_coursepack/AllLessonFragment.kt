@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentAllLessonBinding
-
+import com.example.eim_coursepack.databinding.FragmentUnit2Quiz3Binding
 
 
 class AllLessonFragment : Fragment() {
@@ -18,6 +18,8 @@ class AllLessonFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        this.activity?.actionBar?.hide()
 
         val binding = DataBindingUtil.inflate<FragmentAllLessonBinding>(
             inflater,
@@ -173,6 +175,73 @@ class AllLessonFragment : Fragment() {
 //                quizFragment = AllLessonFragmentDirections
 //                    .actionAllLessonFragmentToUnit4Quiz3Fragment()
             }
+            "Unit2Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 2.2")
+                pdfAssetName = "unit2lesson2.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit2Quiz2Fragment()
+            }
+            "Unit2Lesson3" -> {
+                lessonNickname = LessonNickname("Lesson 2.3")
+                pdfAssetName = "unit2lesson3.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit2Quiz3Fragment()
+            }
+
+            "Unit4Lesson1" -> {
+                lessonNickname = LessonNickname("Lesson 4.1")
+                pdfAssetName = "unit4lesson1.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit4Quiz1Fragment()
+            }
+            "Unit4Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 4.2")
+                pdfAssetName = "unit4lesson2.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit4Quiz2Fragment()
+            }
+            "Unit4Lesson3" -> {
+                lessonNickname = LessonNickname("Lesson 4.3")
+                pdfAssetName = "unit4lesson3.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit4Quiz3Fragment()
+            }
+            "Unit5Lesson1" -> {
+                lessonNickname = LessonNickname("Lesson 5.1")
+                pdfAssetName = "unit5lesson1.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit5Quiz1Fragment()
+            }
+            "Unit5Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 5.2")
+                pdfAssetName = "unit5lesson2.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit5Quiz2Fragment()
+            }
+            "Unit5Lesson3" -> {
+                lessonNickname = LessonNickname("Lesson 5.3")
+                pdfAssetName = "unit5lesson3.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit5Quiz3Fragment()
+            }
+            "Unit6Lesson1" -> {
+                lessonNickname = LessonNickname("Lesson 6.1")
+                pdfAssetName = "unit6lesson1.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit6Quiz1Fragment()
+            }
+            "Unit6Lesson2" -> {
+                lessonNickname = LessonNickname("Lesson 6.2")
+                pdfAssetName = "unit6lesson2.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit6Quiz2Fragment()
+            }
+            "Unit6Lesson3" -> {
+                lessonNickname = LessonNickname("Lesson 6.3")
+                pdfAssetName = "unit6lesson3.pdf"
+                quizFragment = AllLessonFragmentDirections
+                    .actionAllLessonFragmentToUnit6Quiz3Fragment()
+            }
         }
 
         // Load pdf to PDFView
@@ -187,8 +256,14 @@ class AllLessonFragment : Fragment() {
         // Click listener for takeQuizButton
         binding.takeQuizButton.setOnClickListener { view : View ->
 
-            // Advance to quiz fragment
+            this.activity?.actionBar?.show()
+//          Advance to quiz fragment
             view.findNavController().navigate(quizFragment)
+
+            // For testing quiz fragment only
+//            view.findNavController().navigate(
+//                AllLessonFragmentDirections.actionAllLessonFragmentToUnit4Quiz3Fragment()
+//            )
         }
 
 

@@ -9,122 +9,148 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.eim_coursepack.databinding.FragmentUnit1Quiz2Binding
-import com.example.eim_coursepack.databinding.FragmentUnit2Binding
-import com.example.eim_coursepack.databinding.FragmentUnit2Quiz1Binding
+import com.example.eim_coursepack.databinding.FragmentUnit6Quiz2Binding
+import com.example.eim_coursepack.databinding.FragmentUnit6Quiz3Binding
 
-
-class Unit2Quiz1Fragment : Fragment() {
+class Unit6Quiz3Fragment : Fragment() {
 
     private val mulChoQuestions: MutableList<MulChoQuestion> = mutableListOf(
-        MulChoQuestion(text = "1. This is used for griping, holding, cutting electrical wires and cables and even small nails. Usually used by linemen in doing heavy tasks.",
+        MulChoQuestion(text = "1. Personal Protective Device use to protect the eye from heat " +
+                "and debris that can the damage the eye.",
             answers = mutableListOf(
-                "Combination Pliers",
-                "Screwdriver",
-                "Fuse ",
-                "Switch"),
+                "Sun glass",
+                "Eye glass",
+                "Eye protection",
+                "Hour glass"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "2. Used for cutting and holding fine wires. This can reach tight space or small opening where other pliers cannot reach and also used in making terminal loops of copper wires.",
+            correctIdx = 1),
+        MulChoQuestion(text = "2. In using the gloves, is it important to know the voltage " +
+                "capacity of a  certain gloves?",
             answers = mutableListOf(
-                "Long Nose Pliers",
-                "Phillip Screwdriver",
-                "Fuse",
-                "Switch"),
+                "No, because it has already an insulator",
+                "Yes, because there are some gloves cannot resist the amount of voltage of a " +
+                        "certain electrical equipment",
+                "No, No need because it is only for compliance only",
+                "Yes, to test how the rubber gloves can protect the electrician"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "3. This has a cross tip resembling a positive (+) sign. It is used to drive screws with cross slot heads.",
+            correctIdx = 1),
+        MulChoQuestion(text = "3. In selecting safety shoes, what are the best characteristics " +
+                "to be considered?",
             answers = mutableListOf(
-                "Phillip Screwdriver",
-                "Fuse",
-                "Long Nose Pliers",
-                "Switch"),
+                "As long it is a leather shoes, it is safety shoes",
+                "Safety shoes should have rubber sole only.",
+                "Safety shoes has metal top and rubber sole to protect the toes form any " +
+                        "hard falling objects and rubber sole to avoid electrocution.",
+                "Rubber Shoes is a safety shoes"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "4. This is tools used in driving or pounding and pulling out nails.",
+            correctIdx = 2),
+        MulChoQuestion(text = "4. What is the PPE which protects electrician’s head form " +
+                "falling debris?",
             answers = mutableListOf(
-                "Hammer",
-                "Long Nose Pliers",
-                "Switch",
-                "Phillip Screwdriver"),
+                "Hard hat",
+                "Helmet",
+                "Cap",
+                "Hat"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "5. A tool used for removing insulation of medium sized wires ranging from gauge #10 to gauge #16.",
+            correctIdx = 0),
+        MulChoQuestion(text = "5. PPE which used as protection of all body parts except to " +
+                "hands and feet which made of asbestos for body insulation.",
             answers = mutableListOf(
-                "Wire Stripper",
-                "Hammer",
-                "Switch",
-                "Phillip Screwdriver"),
+                "Apron",
+                "Coverall",
+                "Gloves",
+                "Safety shoes"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1)
+            correctIdx = 1),
+        MulChoQuestion(text = "6. Personal Hygiene is another important thing to protect or " +
+                "body aside from wearing PPE, which of the following is not correct about " +
+                "Personal Hygiene?",
+            answers = mutableListOf(
+                "If you wear protective clothing at work, such as aprons, laboratory coats, " +
+                        "overalls, etc., these should be cleaned regularly and you should " +
+                        "inspect them for holes or areas that are worn out.",
+                "It may seem that the amount of contaminant you can bring home on your " +
+                        "clothes or skin is very small and cannot hurt your family",
+                "Spreading the hazard‖ involves asbestos, where wives of asbestos workers " +
+                        "have developed asbestosis from exposure to the asbestos on their " +
+                        "husbands' work clothes.",
+                "If you wear protective clothing at work, such as aprons, laboratory coats, " +
+                        "overalls, etc., these should  not be cleaned regularly and not needed  " +
+                        "to inspect them for holes or areas that are worn out."),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = 3),
+        MulChoQuestion(text = "7. Personal  Protective Equipment used to protect lungs from " +
+                "inhaling dust and gas fumes.",
+            answers = mutableListOf(
+                "Mask",
+                "Respirator",
+                "Har hat",
+                "Gloves"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = 1),
+        MulChoQuestion(text = "8. Personal Protective Equipment which provide protection for " +
+                "the sole and toe.",
+            answers = mutableListOf(
+                "Mask",
+                "Respirator",
+                "Har hat",
+                "Safety shoes"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = 3)
     )
 
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
-            text = "6. Identify the tool in the figure above.",
-            answers = mutableListOf("solar", "solar energy"),
+            text = "9. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("coverall"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "7. Identify the tool in the figure above.",
-            answers = mutableListOf("tidal", "tidal energy", "hydroelectric", "hydroelectric power", "hydroelectric energy"),
+            text = "10. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("gloves"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "8. Identify the tool in the figure above.",
-            answers = mutableListOf("geothermal", "geothermal energy"),
+            text = "11. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("helmet"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "9. Identify the tool in the figure above.",
-            answers = mutableListOf("nuclear", "nuclear energy"),
+            text = "12. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("safety shoes"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "10. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "13. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("eye protection"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "11. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "14. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("safety harness"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "12. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "15. Identify the Personal Protective Device used by electricians/",
+            answers = mutableListOf("respirator"),
             isCorrect = false,
             enteredAns = ""
         ),
-        IdenQuestion(
-            text = "13. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
-            isCorrect = false,
-            enteredAns = ""
-        ),
-        IdenQuestion(
-            text = "14. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
-            isCorrect = false,
-            enteredAns = ""
-        ),
-        IdenQuestion(
-            text = "15. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
-            isCorrect = false,
-            enteredAns = ""
-        )
+
     )
 
     private lateinit var currentMulChoQuestion: MulChoQuestion
@@ -141,10 +167,9 @@ class Unit2Quiz1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding : FragmentUnit2Quiz1Binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_unit2_quiz1, container, false
+        val binding : FragmentUnit6Quiz3Binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_unit6_quiz3, container, false
         )
-
         // SharedPreference Object (for storing data locally)
         val sharedPref = this.activity?.getSharedPreferences(
             getString(R.string.preference_key), Context.MODE_PRIVATE)
@@ -172,8 +197,7 @@ class Unit2Quiz1Fragment : Fragment() {
                 binding.submitButton.visibility = View.VISIBLE
             }
 
-            // Hide radio group and show edit text in identification part of the quiz
-            if (questionIndex > mulChoQuestions.size-1) {
+            if (questionIndex >= mulChoQuestions.size) {
                 binding.questionRadioGroup.visibility = View.GONE
                 binding.answerText.visibility = View.VISIBLE
             }
@@ -191,24 +215,23 @@ class Unit2Quiz1Fragment : Fragment() {
                 R.id.thirdChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 2
                 R.id.fourthChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 3
             }
+
             // Save answer in identification
             currentIdenQuestion.enteredAns = binding.answerText.text.toString()
 
             questionIndex--
 
-
-            if (questionIndex in 0 until mulChoQuestions.size) {
+            if (questionIndex < mulChoQuestions.size) {
                 currentMulChoQuestion = mulChoQuestions[questionIndex]
                 binding.questionRadioGroup.clearCheck()
 
                 setMulChoQuestion(binding)
 
-            } else if (questionIndex in mulChoQuestions.size until numQuestions) {
+            } else {
                 currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
                 binding.answerText.text.clear()
+
                 setIdenQuestion(binding)
-
-
             }
 
             // Reset fields
@@ -240,11 +263,16 @@ class Unit2Quiz1Fragment : Fragment() {
         binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view : View ->
             // Check last question
-            val answerText = binding.answerText.text.toString()
+            val answerText = binding.answerText.text
             currentIdenQuestion.isCorrect = answerText
+                .toString()
                 .toLowerCase()
-                .replace("\\s+".toRegex(), " ")
+                .replace("\\s+".toRegex()," ")
                 .trim() in currentIdenQuestion.answers
+
+//            if (currentIdenQuestion.isCorrect) {
+//                Toast.makeText(context, "CORRECT", Toast.LENGTH_SHORT).show()
+//            }
 
             // To make sure button only works once
             if (score == 0) {
@@ -255,39 +283,35 @@ class Unit2Quiz1Fragment : Fragment() {
                         score++
                     }
                 }
-
                 idenQuestions.forEach {
                     if (it.isCorrect){
                         score++
                     }
                 }
 
-
 //              Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("unit2Quiz1Score", score.toString())
-                    this?.putString("unit2Quiz1NumQuestions", numQuestions.toString())
+                    this?.putString("unit6Quiz3Score", score.toString())
+                    this?.putString("unit6Quiz3NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
 //
                 // Navigate to score screen
                 view.findNavController().navigate(
-                    Unit2Quiz1FragmentDirections
-                        .actionUnit2Quiz1FragmentToQuizScoreFragment(
+                    Unit6Quiz3FragmentDirections
+                        .actionUnit6Quiz3FragmentToQuizScoreFragment(
                             numQuestions,
                             score,
-                            "Unit 2: Lesson 1 Quiz"
+                            "Unit 6: Lesson 3 Quiz"
                         ))
             }
-
-
         }
 
         return binding.root
     }
 
     // Handles scoring and quiz logic
-    private fun handleQuizProper(binding : FragmentUnit2Quiz1Binding) {
+    private fun handleQuizProper(binding : FragmentUnit6Quiz3Binding) {
 
         // Multiple choice questions 1-10
         if (questionIndex in 0 until mulChoQuestions.size) {
@@ -307,9 +331,9 @@ class Unit2Quiz1Fragment : Fragment() {
                 // answer matches, we have the correct answer.
                 currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
 
-                if (currentMulChoQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
-                }
+//                if (currentMulChoQuestion.isCorrect) {
+//                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
+//                }
 
                 currentMulChoQuestion.clickedIdx = answerIndex
                 binding.questionRadioGroup.clearCheck()
@@ -342,11 +366,17 @@ class Unit2Quiz1Fragment : Fragment() {
             val answerText = binding.answerText.text
 
             if (answerText.isNotEmpty()) {
-                currentIdenQuestion.isCorrect = answerText
-                    .toString().toLowerCase().trim() in currentIdenQuestion.answers
 
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+                if (questionIndex in 5 until numQuestions) {
+                    currentIdenQuestion.isCorrect = answerText
+                        .toString()
+                        .toLowerCase()
+                        .replace("\\s+".toRegex()," ")
+                        .trim() in currentIdenQuestion.answers
+
+//                    if (currentIdenQuestion.isCorrect) {
+//                        Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
+//                    }
                 }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
@@ -371,31 +401,24 @@ class Unit2Quiz1Fragment : Fragment() {
     }
 
     // Initialize the questions and set the first question
-    private fun initQuestions(binding : FragmentUnit2Quiz1Binding) {
+    private fun initQuestions(binding : FragmentUnit6Quiz3Binding) {
         questionIndex = 0
 
-        mulChoQuestions.forEach {
-            val correct = it.answers[0]
-
-            it.answers.shuffle()
-
-            it.correctIdx = it.answers.indexOf(correct)
-        }
-
         enteredAns = ""
+
+        currentIdenQuestion = idenQuestions[0]
 
         setMulChoQuestion(binding)
     }
 
-    private fun setMulChoQuestion(binding : FragmentUnit2Quiz1Binding) {
+    private fun setMulChoQuestion(binding : FragmentUnit6Quiz3Binding) {
         currentMulChoQuestion = mulChoQuestions[questionIndex]
 
         questionText = currentMulChoQuestion.text
-        // randomize the answers into a copy of the array
+
+        binding.quizImage.setImageResource(0)
+
         answers = currentMulChoQuestion.answers
-
-        binding.quizImage.visibility = View.GONE
-
 
         when (currentMulChoQuestion.clickedIdx) {
             0 -> binding.firstChoiceRadioButton.isChecked = true
@@ -406,29 +429,24 @@ class Unit2Quiz1Fragment : Fragment() {
 
     }
 
-    private fun setIdenQuestion(binding: FragmentUnit2Quiz1Binding) {
+    private fun setIdenQuestion(binding: FragmentUnit6Quiz3Binding) {
         val idenQuestionIndex = questionIndex - mulChoQuestions.size
         currentIdenQuestion = idenQuestions[idenQuestionIndex]
 
-        binding.quizImage.visibility = View.VISIBLE
-
-        when (idenQuestionIndex) {
-            0 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q6)
-            1 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q7)
-            2 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q8)
-            3 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q9)
-            4 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q10)
-            5 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q11)
-            6 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q12)
-            7 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q13)
-            8 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q14)
-            9 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q15)
-        }
-
         questionText = currentIdenQuestion.text
-        // randomize the answers into a copy of the array
+
+        val questionImage = binding.quizImage
+
+        when(idenQuestionIndex) {
+            0 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q9)
+            1 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q10)
+            2 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q11)
+            3 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q12)
+            4 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q13)
+            5 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q14)
+            6 -> questionImage.setImageResource(R.drawable.ic_unit6_quiz3_q15)
+        }
 
         enteredAns = currentIdenQuestion.enteredAns
     }
-
 }

@@ -1,6 +1,7 @@
 package com.example.eim_coursepack
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,122 +10,150 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.eim_coursepack.databinding.FragmentUnit1Quiz2Binding
-import com.example.eim_coursepack.databinding.FragmentUnit2Binding
-import com.example.eim_coursepack.databinding.FragmentUnit2Quiz1Binding
+import com.example.eim_coursepack.databinding.FragmentUnit4Quiz1Binding
+import com.example.eim_coursepack.databinding.FragmentUnit4Quiz2Binding
+import com.example.eim_coursepack.databinding.FragmentUnit4Quiz3Binding
 
-
-class Unit2Quiz1Fragment : Fragment() {
+class Unit4Quiz3Fragment : Fragment() {
 
     private val mulChoQuestions: MutableList<MulChoQuestion> = mutableListOf(
-        MulChoQuestion(text = "1. This is used for griping, holding, cutting electrical wires and cables and even small nails. Usually used by linemen in doing heavy tasks.",
+        MulChoQuestion(text = "1. The following are the advantages of an electrical floor plan, " +
+                "except _______.",
             answers = mutableListOf(
-                "Combination Pliers",
-                "Screwdriver",
-                "Fuse ",
-                "Switch"),
+                "Illustrates the design and area of the establishment/building.",
+                "Demonstrate the actual location of the devices to be installed.",
+                "Itemized the electrical devices to be used in particular area.",
+                "It includes the water distribution at the certain building/establishment."),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "2. Used for cutting and holding fine wires. This can reach tight space or small opening where other pliers cannot reach and also used in making terminal loops of copper wires.",
+            correctIdx = 3),
+        MulChoQuestion(text = "2. Which of the following is found in the electrical floor plan?",
             answers = mutableListOf(
-                "Long Nose Pliers",
-                "Phillip Screwdriver",
-                "Fuse",
-                "Switch"),
+                "Legend",
+                "Cost",
+                "Materials Cost",
+                "Tools used"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "3. This has a cross tip resembling a positive (+) sign. It is used to drive screws with cross slot heads.",
+            correctIdx = 0),
+        MulChoQuestion(text = "3. Electrical floor plan consists of the different electrical " +
+                "symbol, which of the following is an example of incandescent lamp?",
             answers = mutableListOf(
-                "Phillip Screwdriver",
-                "Fuse",
-                "Long Nose Pliers",
-                "Switch"),
+                "",
+                "",
+                "",
+                ""),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "4. This is tools used in driving or pounding and pulling out nails.",
+            correctIdx = 0),
+        MulChoQuestion(text = "4. Based from the floor plan above, how many convenience duplex " +
+                "outlet are there?",
             answers = mutableListOf(
-                "Hammer",
-                "Long Nose Pliers",
-                "Switch",
-                "Phillip Screwdriver"),
+                "8",
+                "6",
+                "2",
+                "7"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "5. A tool used for removing insulation of medium sized wires ranging from gauge #10 to gauge #16.",
+            correctIdx = 1),
+        MulChoQuestion(text = "5. How many Single Pole Switch in the electrical floor plan are " +
+                "found?",
             answers = mutableListOf(
-                "Wire Stripper",
-                "Hammer",
-                "Switch",
-                "Phillip Screwdriver"),
+                "4",
+                "6",
+                "2",
+                "5"),
             isCorrect = false,
             clickedIdx = -1,
-            correctIdx = -1)
+            correctIdx = 0),
+        MulChoQuestion(text = "6. 2 gang switch is found on what part of the house according to " +
+                "floor plan?",
+            answers = mutableListOf(
+                "Porch",
+                "Dining Room",
+                "Living Room",
+                "Kitchen"),
+            isCorrect = false,
+            clickedIdx = -1,
+            correctIdx = 2),
     )
 
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
-            text = "6. Identify the tool in the figure above.",
-            answers = mutableListOf("solar", "solar energy"),
+            text = "7. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "7. Identify the tool in the figure above.",
-            answers = mutableListOf("tidal", "tidal energy", "hydroelectric", "hydroelectric power", "hydroelectric energy"),
+            text = "8. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "8. Identify the tool in the figure above.",
-            answers = mutableListOf("geothermal", "geothermal energy"),
+            text = "9. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "9. Identify the tool in the figure above.",
-            answers = mutableListOf("nuclear", "nuclear energy"),
+            text = "10. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "10. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "11. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "11. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "12. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "12. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "13. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "13. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "14. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "14. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
-            isCorrect = false,
-            enteredAns = ""
-        ),
-        IdenQuestion(
-            text = "15. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            text = "15. Identify an electrical device found in the floorplan above. Note: Duplicate " +
+                    "answers are not counted.",
+            answers = mutableListOf(),
             isCorrect = false,
             enteredAns = ""
         )
+    )
+
+    private val idenAnswerSet : MutableList<String> = mutableListOf(
+        "ceiling mounted lamp",
+        "duplex convenience outlet",
+        "wall mounted light",
+        "fan",
+        "duplex receptacle outlet",
+        "telephone outlet",
+        "switch",
+        "dimmer switch",
+        "door bell"
     )
 
     private lateinit var currentMulChoQuestion: MulChoQuestion
@@ -141,8 +170,8 @@ class Unit2Quiz1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding : FragmentUnit2Quiz1Binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_unit2_quiz1, container, false
+        val binding : FragmentUnit4Quiz3Binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_unit4_quiz3, container, false
         )
 
         // SharedPreference Object (for storing data locally)
@@ -172,8 +201,10 @@ class Unit2Quiz1Fragment : Fragment() {
                 binding.submitButton.visibility = View.VISIBLE
             }
 
-            // Hide radio group and show edit text in identification part of the quiz
-            if (questionIndex > mulChoQuestions.size-1) {
+            if (questionIndex < mulChoQuestions.size) {
+                binding.questionRadioGroup.visibility = View.VISIBLE
+                binding.answerText.visibility = View.GONE
+            } else {
                 binding.questionRadioGroup.visibility = View.GONE
                 binding.answerText.visibility = View.VISIBLE
             }
@@ -191,24 +222,24 @@ class Unit2Quiz1Fragment : Fragment() {
                 R.id.thirdChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 2
                 R.id.fourthChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 3
             }
+
             // Save answer in identification
             currentIdenQuestion.enteredAns = binding.answerText.text.toString()
 
             questionIndex--
 
 
-            if (questionIndex in 0 until mulChoQuestions.size) {
+            if (questionIndex < mulChoQuestions.size) {
                 currentMulChoQuestion = mulChoQuestions[questionIndex]
                 binding.questionRadioGroup.clearCheck()
 
                 setMulChoQuestion(binding)
 
-            } else if (questionIndex in mulChoQuestions.size until numQuestions) {
+            } else {
                 currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
                 binding.answerText.text.clear()
+
                 setIdenQuestion(binding)
-
-
             }
 
             // Reset fields
@@ -218,6 +249,9 @@ class Unit2Quiz1Fragment : Fragment() {
             if (questionIndex < mulChoQuestions.size) {
                 binding.questionRadioGroup.visibility = View.VISIBLE
                 binding.answerText.visibility = View.GONE
+            } else {
+                binding.questionRadioGroup.visibility = View.GONE
+                binding.answerText.visibility = View.VISIBLE
             }
 
             // Hide submit button if not on last question
@@ -240,14 +274,21 @@ class Unit2Quiz1Fragment : Fragment() {
         binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view : View ->
             // Check last question
-            val answerText = binding.answerText.text.toString()
-            currentIdenQuestion.isCorrect = answerText
-                .toLowerCase()
-                .replace("\\s+".toRegex(), " ")
-                .trim() in currentIdenQuestion.answers
 
             // To make sure button only works once
             if (score == 0) {
+
+                currentIdenQuestion.enteredAns = binding.answerText.text.toString()
+
+                idenQuestions.forEach {
+                    if (it.enteredAns
+                            .toLowerCase()
+                            .replace("\\s+".toRegex(), " ")
+                            .trim() in idenAnswerSet) {
+                        idenAnswerSet.remove(it.enteredAns)
+                        score++
+                    }
+                }
 
                 // Count each correct answer
                 mulChoQuestions.forEach {
@@ -256,38 +297,29 @@ class Unit2Quiz1Fragment : Fragment() {
                     }
                 }
 
-                idenQuestions.forEach {
-                    if (it.isCorrect){
-                        score++
-                    }
-                }
-
-
 //              Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("unit2Quiz1Score", score.toString())
-                    this?.putString("unit2Quiz1NumQuestions", numQuestions.toString())
+                    this?.putString("unit4Quiz3Score", score.toString())
+                    this?.putString("unit4Quiz3NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
 //
                 // Navigate to score screen
                 view.findNavController().navigate(
-                    Unit2Quiz1FragmentDirections
-                        .actionUnit2Quiz1FragmentToQuizScoreFragment(
+                    Unit4Quiz3FragmentDirections
+                        .actionUnit4Quiz3FragmentToQuizScoreFragment(
                             numQuestions,
                             score,
-                            "Unit 2: Lesson 1 Quiz"
+                            "Unit 4: Lesson 3 Quiz"
                         ))
             }
-
-
         }
 
         return binding.root
     }
 
     // Handles scoring and quiz logic
-    private fun handleQuizProper(binding : FragmentUnit2Quiz1Binding) {
+    private fun handleQuizProper(binding : FragmentUnit4Quiz3Binding) {
 
         // Multiple choice questions 1-10
         if (questionIndex in 0 until mulChoQuestions.size) {
@@ -342,12 +374,6 @@ class Unit2Quiz1Fragment : Fragment() {
             val answerText = binding.answerText.text
 
             if (answerText.isNotEmpty()) {
-                currentIdenQuestion.isCorrect = answerText
-                    .toString().toLowerCase().trim() in currentIdenQuestion.answers
-
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
-                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 
@@ -371,31 +397,22 @@ class Unit2Quiz1Fragment : Fragment() {
     }
 
     // Initialize the questions and set the first question
-    private fun initQuestions(binding : FragmentUnit2Quiz1Binding) {
+    private fun initQuestions(binding : FragmentUnit4Quiz3Binding) {
         questionIndex = 0
 
-        mulChoQuestions.forEach {
-            val correct = it.answers[0]
-
-            it.answers.shuffle()
-
-            it.correctIdx = it.answers.indexOf(correct)
-        }
-
         enteredAns = ""
+
+        currentIdenQuestion = idenQuestions[0]
 
         setMulChoQuestion(binding)
     }
 
-    private fun setMulChoQuestion(binding : FragmentUnit2Quiz1Binding) {
+    private fun setMulChoQuestion(binding : FragmentUnit4Quiz3Binding) {
         currentMulChoQuestion = mulChoQuestions[questionIndex]
 
         questionText = currentMulChoQuestion.text
         // randomize the answers into a copy of the array
         answers = currentMulChoQuestion.answers
-
-        binding.quizImage.visibility = View.GONE
-
 
         when (currentMulChoQuestion.clickedIdx) {
             0 -> binding.firstChoiceRadioButton.isChecked = true
@@ -404,26 +421,72 @@ class Unit2Quiz1Fragment : Fragment() {
             3 -> binding.fourthChoiceRadioButton.isChecked = true
         }
 
+        setImageChoices(binding)
+        setQuestionImage(binding)
+
     }
 
-    private fun setIdenQuestion(binding: FragmentUnit2Quiz1Binding) {
+    private fun setQuestionImage(binding : FragmentUnit4Quiz3Binding) {
+        val quizImage = binding.quizImage
+        quizImage.adjustViewBounds = true
+        when (questionIndex) {
+            in 3 until 6 -> {
+                quizImage.setImageResource(R.drawable.ic_unit4_quiz3_q4to6)
+            }
+            in 6 until numQuestions -> {
+                quizImage.setImageResource(R.drawable.ic_unit4_quiz3_q7to15)
+            }
+            else -> {
+                quizImage.setImageResource(0)
+            }
+        }
+    }
+
+    private fun setImageChoices(binding: FragmentUnit4Quiz3Binding) {
+        if (questionIndex == 2) {
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                binding.firstChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, R.drawable.ic_unit4_quiz3_q3_choice1, 0
+                )
+                binding.secondChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, R.drawable.ic_unit4_quiz3_q3_choice2, 0
+                )
+                binding.thirdChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, R.drawable.ic_unit4_quiz3_q3_choice3, 0
+                )
+                binding.fourthChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, R.drawable.ic_unit4_quiz3_q3_choice4, 0
+                )
+            }
+
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                binding.firstChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, 0, 0
+                )
+                binding.secondChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, 0, 0
+                )
+                binding.thirdChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, 0, 0
+                )
+                binding.fourthChoiceRadioButton.setCompoundDrawablesWithIntrinsicBounds(
+                    0, 0, 0, 0
+                )
+            }
+        }
+    }
+
+    private fun setIdenQuestion(binding: FragmentUnit4Quiz3Binding) {
         val idenQuestionIndex = questionIndex - mulChoQuestions.size
         currentIdenQuestion = idenQuestions[idenQuestionIndex]
 
-        binding.quizImage.visibility = View.VISIBLE
+        val quizImage = binding.quizImage
 
-        when (idenQuestionIndex) {
-            0 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q6)
-            1 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q7)
-            2 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q8)
-            3 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q9)
-            4 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q10)
-            5 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q11)
-            6 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q12)
-            7 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q13)
-            8 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q14)
-            9 -> binding.quizImage.setImageResource(R.drawable.ic_unit2_quiz1_q15)
-        }
+        quizImage.visibility = View.VISIBLE
+
+        setQuestionImage(binding)
 
         questionText = currentIdenQuestion.text
         // randomize the answers into a copy of the array

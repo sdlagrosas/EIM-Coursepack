@@ -311,7 +311,10 @@ class Unit1Quiz3Fragment : Fragment() {
 
             if (answerText.isNotEmpty()) {
                 currentIdenQuestion.isCorrect = answerText
-                    .toString().toLowerCase().replace("\\s+".toRegex(),"") in currentIdenQuestion.answers
+                    .toString()
+                    .toLowerCase()
+                    .replace("\\s+".toRegex()," ")
+                    .trim() in currentIdenQuestion.answers
 
 
                 currentIdenQuestion.enteredAns = answerText.toString()

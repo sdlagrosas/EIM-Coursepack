@@ -78,6 +78,10 @@
     <string name="roman5">V</string>
     <string name="roman6">VI</string>
     <string name="progress">Check Progress</string>
+    <string name="an_image_icon_for_the_first_choice_in_quiz_fragment">an image icon for the first choice in quiz fragment</string>
+    <string name="an_image_icon_for_the_second_choice_in_quiz_fragment">an image icon for the second choice in quiz fragment</string>
+    <string name="an_image_icon_for_the_third_choice_in_quiz_fragment">an image icon for the third choice in quiz fragment</string>
+    <string name="an_image_icon_for_the_fourth_choice_in_quiz_fragment">an image icon for the fourth choice in quiz fragment</string>
 
 
 </resources>
