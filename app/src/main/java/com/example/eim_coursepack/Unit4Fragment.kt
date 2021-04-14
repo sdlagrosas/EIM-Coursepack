@@ -10,17 +10,13 @@ import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit4Binding
 
 class Unit4Fragment : Fragment() {
-    private val lessonFlags : List<String> = listOf(
+    private val lessonFlag : List<String> = listOf(
         "Unit4Lesson1",
         "Unit4Lesson2",
         "Unit4Lesson3",
     )
 
-    private val lessonFlags : List<String> = listOf(
-        "Unit4Lesson1",
-        "Unit4Lesson2",
-        "Unit4Lesson3"
-    )
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,17 +51,17 @@ class Unit4Fragment : Fragment() {
             R.id.unit4Lesson1Button -> {
                 view.findNavController()
                     .navigate(Unit4FragmentDirections
-                        .actionUnit4FragmentToAllLessonFragment(lessonFlags[0]))
+                        .actionUnit4FragmentToAllLessonFragment(lessonFlag[0]))
             }
             R.id.unit4Lesson2Button -> {
                 view.findNavController()
                     .navigate(Unit4FragmentDirections
-                        .actionUnit4FragmentToAllLessonFragment(lessonFlags[1]))
+                        .actionUnit4FragmentToAllLessonFragment(lessonFlag[1]))
             }
             R.id.unit4Lesson3Button -> {
                 view.findNavController()
                     .navigate(Unit4FragmentDirections
-                        .actionUnit4FragmentToAllLessonFragment(lessonFlags[2]))
+                        .actionUnit4FragmentToAllLessonFragment(lessonFlag[2]))
             }
 
 
@@ -77,17 +73,17 @@ class Unit4Fragment : Fragment() {
             R.id.unit4Lesson1Button -> {
                 view.findNavController()
                     .navigate(Unit4FragmentDirections
-                        .actionUnit4FragmentToAllLessonFragment(lessonFlags[0]))
+                        .actionUnit4FragmentToAllLessonFragment(lessonFlag[0]))
             }
             R.id.unit4Lesson2Button -> {
                 view.findNavController()
                     .navigate(Unit4FragmentDirections
-                        .actionUnit4FragmentToAllLessonFragment(lessonFlags[1]))
+                        .actionUnit4FragmentToAllLessonFragment(lessonFlag[1]))
             }
             R.id.unit4Lesson3Button -> {
                 view.findNavController()
                     .navigate(Unit4FragmentDirections
-                        .actionUnit4FragmentToAllLessonFragment(lessonFlags[2]))
+                        .actionUnit4FragmentToAllLessonFragment(lessonFlag[2]))
             }
         }
     }

@@ -12,7 +12,7 @@ import com.example.eim_coursepack.databinding.FragmentUnit5Binding
 
 class Unit5Fragment : Fragment() {
 
-    private val lessonFlags : List<String> = listOf(
+    private val lessonFlag : List<String> = listOf(
         "Unit5Lesson1",
         "Unit5Lesson2",
         "Unit5Lesson3"
@@ -41,17 +41,17 @@ class Unit5Fragment : Fragment() {
         when(view.id) {
             R.id.unit5Lesson1Button -> {
                 view.findNavController().navigate(
-                    Unit5FragmentDirections.actionUnit5FragmentToAllLessonFragment(lessonFlags[0])
+                    Unit5FragmentDirections.actionUnit5FragmentToAllLessonFragment(lessonFlag[0])
                 )
             }
             R.id.unit5Lesson2Button -> {
                 view.findNavController().navigate(
-                    Unit5FragmentDirections.actionUnit5FragmentToAllLessonFragment(lessonFlags[1])
+                    Unit5FragmentDirections.actionUnit5FragmentToAllLessonFragment(lessonFlag[1])
                 )
             }
             R.id.unit5Lesson3Button -> {
                 view.findNavController().navigate(
-                    Unit5FragmentDirections.actionUnit5FragmentToAllLessonFragment(lessonFlags[2])
+                    Unit5FragmentDirections.actionUnit5FragmentToAllLessonFragment(lessonFlag[2])
 
                 )
             }

@@ -252,7 +252,7 @@ class Unit3_quiz1 : Fragment() {
                 // Navigate to score screen
                 view.findNavController()
                     .navigate(Unit3_quiz1Directions
-                        .actionUnit3Quiz1ToQuizScoreFragment(
+                        .actionUnit3Quiz12ToQuizScoreFragment(
                             numQuestions,
                             score,
                             "Unit 3: Lesson 1 Quiz"
