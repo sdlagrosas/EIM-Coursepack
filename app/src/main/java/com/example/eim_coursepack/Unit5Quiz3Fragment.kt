@@ -164,6 +164,8 @@ class Unit5Quiz3Fragment : Fragment() {
             inflater, R.layout.fragment_unit5_quiz3, container, false
         )
 
+        activity
+
         // SharedPreference Object (for storing data locally)
         val sharedPref = this.activity?.getSharedPreferences(
             getString(R.string.preference_key), Context.MODE_PRIVATE)
