@@ -241,7 +241,11 @@
         android:id="@+id/unit2Quiz4Fragment"
         android:name="com.example.eim_coursepack.Unit2Quiz4Fragment"
         android:label="fragment_unit2_quiz4"
-        tools:layout="@layout/fragment_unit2_quiz4" />
+        tools:layout="@layout/fragment_unit2_quiz4" >
+        <action
+            android:id="@+id/action_unit2Quiz4Fragment_to_quizScoreFragment"
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
     <fragment
         android:id="@+id/unit4Quiz1Fragment"
         android:name="com.example.eim_coursepack.Unit4Quiz1Fragment"

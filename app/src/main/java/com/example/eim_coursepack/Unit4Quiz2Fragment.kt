@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit4Quiz1Binding
 import com.example.eim_coursepack.databinding.FragmentUnit4Quiz2Binding
 
@@ -265,19 +266,19 @@ class Unit4Quiz2Fragment : Fragment() {
 
 //              Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("unit2Quiz4Score", score.toString())
+                    this?.putInt("unit2Quiz4Score", score)
                     this?.putString("unit2Quiz4NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
 //
                 // Navigate to score screen
-//                view.findNavController().navigate(
-//                    Unit2Quiz2FragmentDirections
-//                        .actionUnit2Quiz2FragmentToQuizScoreFragment(
-//                            numQuestions,
-//                            score,
-//                            "Unit 2: Lesson 2 Quiz"
-//                        ))
+                view.findNavController().navigate(
+                    Unit4Quiz2FragmentDirections
+                        .actionUnit4Quiz2FragmentToQuizScoreFragment(
+                            numQuestions,
+                            score,
+                            "Unit 4: Lesson 2 Quiz"
+                        ))
             }
         }
 

@@ -41,7 +41,7 @@ class MainMenuFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit2Fragment)
             } else {
                 Toast.makeText(context,
-                    "Pass the final quiz on the precious unit to proceed",
+                    "Pass the final quiz on the previous unit to proceed",
                     Toast.LENGTH_LONG).show()
             }
 
@@ -54,7 +54,7 @@ class MainMenuFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit3Fragment)
             } else {
                 Toast.makeText(context,
-                    "Pass the final quiz on the precious unit to proceed",
+                    "Pass the final quiz on the previous unit to proceed",
                     Toast.LENGTH_LONG).show()
             }
 
@@ -68,7 +68,7 @@ class MainMenuFragment : Fragment() {
 //                view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit4Fragment)
 //            } else {
 //                Toast.makeText(context,
-//                    "Pass the final quiz on the precious unit to proceed",
+//                    "Pass the final quiz on the previous unit to proceed",
 //                    Toast.LENGTH_LONG).show()
 //            }
         }
@@ -80,7 +80,7 @@ class MainMenuFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit5Fragment)
             } else {
                 Toast.makeText(context,
-                    "Pass the final quiz on the precious unit to proceed",
+                    "Pass the final quiz on the previous unit to proceed",
                     Toast.LENGTH_LONG).show()
             }
 
@@ -92,7 +92,7 @@ class MainMenuFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit6Fragment)
             } else {
                 Toast.makeText(context,
-                    "Pass the final quiz on the precious unit to proceed",
+                    "Pass the final quiz on the previous unit to proceed",
                     Toast.LENGTH_LONG).show()
             }
         }

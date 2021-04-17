@@ -319,7 +319,7 @@ class Unit4Quiz1Fragment : Fragment() {
 
 //              Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("unit4Quiz1Score", score.toString())
+                    this?.putInt("unit4Quiz1Score", score)
                     this?.putString("unit4Quiz1NumQuestions", numQuestions.toString())
                     this?.apply()
                 }

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit2Quiz3Binding
 import com.example.eim_coursepack.databinding.FragmentUnit2Quiz4Binding
 
@@ -168,7 +169,7 @@ class Unit2Quiz4Fragment : Fragment() {
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1),
-        MulChoQuestion(text = "A written instruction to perform a work according to specified " +
+        MulChoQuestion(text = "15. A written instruction to perform a work according to specified " +
                 "requirements, within specified timeframe and cost estimates.",
             answers = mutableListOf(
                 "Job Order/Work Order Form",
@@ -297,14 +298,14 @@ class Unit2Quiz4Fragment : Fragment() {
                     this?.apply()
                 }
 //
-                // Navigate to score screen
-//                view.findNavController().navigate(
-//                    Unit2Quiz2FragmentDirections
-//                        .actionUnit2Quiz2FragmentToQuizScoreFragment(
-//                            numQuestions,
-//                            score,
-//                            "Unit 2: Lesson 2 Quiz"
-//                        ))
+//                 Navigate to score screen
+                view.findNavController().navigate(
+                    Unit2Quiz4FragmentDirections
+                        .actionUnit2Quiz4FragmentToQuizScoreFragment(
+                            numQuestions,
+                            score,
+                            "Unit 2: Lesson 4 Quiz"
+                        ))
             }
         }
 

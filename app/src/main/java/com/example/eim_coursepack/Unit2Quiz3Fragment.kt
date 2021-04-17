@@ -288,19 +288,19 @@ class Unit2Quiz3Fragment : Fragment() {
 
 //              Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("unit2Quiz3Score", score.toString())
+                    this?.putInt("unit2Quiz3Score", score)
                     this?.putString("unit2Quiz3NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
 //
-                // Navigate to score screen
-//                view.findNavController().navigate(
-//                    Unit2Quiz2FragmentDirections
-//                        .actionUnit2Quiz2FragmentToQuizScoreFragment(
-//                            numQuestions,
-//                            score,
-//                            "Unit 2: Lesson 2 Quiz"
-//                        ))
+//                 Navigate to score screen
+                view.findNavController().navigate(
+                    Unit2Quiz3FragmentDirections
+                        .actionUnit2Quiz3FragmentToQuizScoreFragment(
+                            numQuestions,
+                            score,
+                            "Unit 2: Lesson 3 Quiz"
+                        ))
             }
         }
 
