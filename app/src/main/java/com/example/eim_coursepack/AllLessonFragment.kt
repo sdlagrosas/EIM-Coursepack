@@ -42,6 +42,8 @@ class AllLessonFragment : Fragment() {
         // Default quiz fragment is quiz 1
         var quizFragment = AllLessonFragmentDirections.actionAllLessonFragmentToUnit1Quiz1MCFragment()
 
+
+
         // Otherwise, select another PDF asset and quiz fragment, and replace lesson name
         when (args.lessonFlag) {
             "Unit1Lesson2" -> {

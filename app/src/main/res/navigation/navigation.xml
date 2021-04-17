@@ -179,19 +179,24 @@
             app:popUpTo="@id/mainMenuFragment" />
         <action
             android:id="@+id/action_quizScoreFragment_to_unit2Fragment"
-            app:destination="@id/unit2Fragment" />
+            app:destination="@id/unit2Fragment"
+            app:popUpTo="@id/mainMenuFragment" />
         <action
             android:id="@+id/action_quizScoreFragment_to_unit4Fragment"
-            app:destination="@id/unit4Fragment" />
+            app:destination="@id/unit4Fragment"
+            app:popUpTo="@id/mainMenuFragment" />
         <action
             android:id="@+id/action_quizScoreFragment_to_unit5Fragment"
-            app:destination="@id/unit5Fragment" />
+            app:destination="@id/unit5Fragment"
+            app:popUpTo="@id/mainMenuFragment" />
         <action
             android:id="@+id/action_quizScoreFragment_to_unit3Fragment"
-            app:destination="@id/unit3Fragment" />
+            app:destination="@id/unit3Fragment"
+            app:popUpTo="@id/mainMenuFragment" />
         <action
             android:id="@+id/action_quizScoreFragment_to_unit6Fragment"
-            app:destination="@id/unit6Fragment" />
+            app:destination="@id/unit6Fragment"
+            app:popUpTo="@id/mainMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/unit1Quiz3Fragment"

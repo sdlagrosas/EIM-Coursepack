@@ -179,5 +179,31 @@ be used in electric power generation and direct heat applications such as space 
     <string name="an_image_icon_for_the_third_choice_in_quiz_fragment">an image icon for the third choice in quiz fragment</string>
     <string name="an_image_icon_for_the_fourth_choice_in_quiz_fragment">an image icon for the fourth choice in quiz fragment</string>
 
+    <string name="unit1Quiz1Score">unit1Quiz1Score</string>
+    <string name="unit1Quiz2Score">unit1Quiz2Score</string>
+    <string name="unit1Quiz3Score">unit1Quiz3Score</string>
+
+    <string name="unit2Quiz1Score">unit2Quiz1Score</string>
+    <string name="unit2Quiz2Score">unit2Quiz2Score</string>
+    <string name="unit2Quiz3Score">unit2Quiz3Score</string>
+    <string name="unit2Quiz4Score">unit2Quiz4Score</string>
+
+<!--    <string name="unit3Quiz1Score">unit3Quiz1Score</string>-->
+<!--    <string name="unit3Quiz2Score">unit3Quiz2Score</string>-->
+    <string name="unit3Quiz3Score">unit3Quiz3Score</string>
+
+    <string name="unit4Quiz1Score">unit4Quiz1Score</string>
+    <string name="unit4Quiz2Score">unit4Quiz2Score</string>
+    <string name="unit4Quiz3Score">unit4Quiz3Score</string>
+
+    <string name="unit5Quiz1Score">unit5Quiz1Score</string>
+    <string name="unit5Quiz2Score">unit5Quiz2Score</string>
+    <string name="unit5Quiz3Score">unit5Quiz3Score</string>
+
+    <string name="unit6Quiz1Score">unit6Quiz1Score</string>
+    <string name="unit6Quiz2Score">unit6Quiz2Score</string>
+    <string name="unit6Quiz3Score">unit6Quiz3Score</string>
+    <string name="unit6Quiz4Score">unit6Quiz4Score</string>
+
 
 </resources>

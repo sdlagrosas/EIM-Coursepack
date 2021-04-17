@@ -299,7 +299,7 @@ class Unit4Quiz3Fragment : Fragment() {
 
 //              Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putString("unit4Quiz3Score", score.toString())
+                    this?.putInt("unit4Quiz3Score", score)
                     this?.putString("unit4Quiz3NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
@@ -339,9 +339,9 @@ class Unit4Quiz3Fragment : Fragment() {
                 // answer matches, we have the correct answer.
                 currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
 
-                if (currentMulChoQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
-                }
+//                if (currentMulChoQuestion.isCorrect) {
+//                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
+//                }
 
                 currentMulChoQuestion.clickedIdx = answerIndex
                 binding.questionRadioGroup.clearCheck()

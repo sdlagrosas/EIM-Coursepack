@@ -48,7 +48,7 @@ class Unit1Quiz3Fragment : Fragment() {
         ),
         IdenQuestion(
             text = "6. Provide the missing quantity: R=25Ω; I=?",
-            answers = mutableListOf("2A", "2", "2amperes"),
+            answers = mutableListOf("2a", "2", "2amperes"),
             isCorrect = false,
             enteredAns = ""
         ),
@@ -94,7 +94,7 @@ class Unit1Quiz3Fragment : Fragment() {
         ),
         MulChoQuestion(
             text = "12. Unit of measurement for resistance is ______.",
-            answers = mutableListOf("Ω", "A", "V", "O", "hydroelectric energy"),
+            answers = mutableListOf("Ω", "A", "V", "O"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1
@@ -285,7 +285,7 @@ class Unit1Quiz3Fragment : Fragment() {
 
             // Save score and number of questions in shared preferences
             with (sharedPref?.edit()) {
-                this?.putString("unit1Quiz3Score", score.toString())
+                this?.putInt("unit1Quiz3Score", score)
                 this?.putString("unit1Quiz3NumQuestions", numQuestions.toString())
                 this?.apply()
             }
