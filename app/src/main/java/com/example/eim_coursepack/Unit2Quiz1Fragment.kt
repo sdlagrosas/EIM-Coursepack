@@ -67,61 +67,61 @@ class Unit2Quiz1Fragment : Fragment() {
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
             text = "6. Identify the tool in the figure above.",
-            answers = mutableListOf("solar", "solar energy"),
+            answers = mutableListOf("pull-push rule", "pull-push ruler", "push-pull rule", "push-pull ruler"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "7. Identify the tool in the figure above.",
-            answers = mutableListOf("tidal", "tidal energy", "hydroelectric", "hydroelectric power", "hydroelectric energy"),
+            answers = mutableListOf("hammer"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "8. Identify the tool in the figure above.",
-            answers = mutableListOf("geothermal", "geothermal energy"),
+            answers = mutableListOf("multimeter"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "9. Identify the tool in the figure above.",
-            answers = mutableListOf("nuclear", "nuclear energy"),
+            answers = mutableListOf("allen screwdriver"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "10. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            answers = mutableListOf("wire gauge tool", "wire measuring tool"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "11. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            answers = mutableListOf("ruler", "rule"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "12. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            answers = mutableListOf("wire stripper"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "13. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            answers = mutableListOf("combination pliers", "lineman's pliers"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "14. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            answers = mutableListOf("standard screwdriver", "flat screwdriver"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "15. Identify the tool in the figure above.",
-            answers = mutableListOf("fossil fuel", "fossil fuels"),
+            answers = mutableListOf("micro caliper", "micrometer caliper"),
             isCorrect = false,
             enteredAns = ""
         )
@@ -307,9 +307,9 @@ class Unit2Quiz1Fragment : Fragment() {
                 // answer matches, we have the correct answer.
                 currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
 
-                if (currentMulChoQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
-                }
+//                if (currentMulChoQuestion.isCorrect) {
+//                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
+//                }
 
                 currentMulChoQuestion.clickedIdx = answerIndex
                 binding.questionRadioGroup.clearCheck()
@@ -345,9 +345,9 @@ class Unit2Quiz1Fragment : Fragment() {
                 currentIdenQuestion.isCorrect = answerText
                     .toString().toLowerCase().trim() in currentIdenQuestion.answers
 
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
-                }
+//                if (currentIdenQuestion.isCorrect) {
+//                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+//                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 

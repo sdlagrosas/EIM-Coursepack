@@ -1,16 +1,21 @@
 package com.example.eim_coursepack
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.eim_coursepack.databinding.FragmentUnit2Binding
 
 
 class Unit2Fragment : Fragment() {
+
+    val passingScore = 7
 
     private val lessonFlags : List<String> = listOf(
         "Unit2Lesson1",
@@ -37,38 +42,65 @@ class Unit2Fragment : Fragment() {
             binding.unit2Lesson4Button
         )
 
+        // SharedPreference Object (for accessing data locally)
+        val sharedPref = this.activity?.getSharedPreferences(
+            getString(R.string.preference_key), Context.MODE_PRIVATE)
+
         clickableViews.forEach { it ->
-            it.setOnClickListener { whatButtons(it) }
+            it.setOnClickListener { whatButtons(it, sharedPref) }
         }
 
 
         return binding.root
     }
 
-    private fun whatButtons(view : View) {
+    private fun whatButtons(view : View, sharedPref : SharedPreferences?) {
+        var unitQuizScore: Int
+
         when (view.id) {
             R.id.unit2Lesson1Button -> {
+
                 view.findNavController()
                     .navigate(Unit2FragmentDirections
                         .actionUnit2FragmentToAllLessonFragment(lessonFlags[0]))
+
+
             }
             R.id.unit2Lesson2Button -> {
-                view.findNavController()
-                    .navigate(Unit2FragmentDirections
-                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[1]))
+                unitQuizScore = sharedPref?.getInt("unit2Quiz1Score", 0)!!
+
+                if (unitQuizScore > passingScore) {
+                    view.findNavController()
+                        .navigate(Unit2FragmentDirections
+                            .actionUnit2FragmentToAllLessonFragment(lessonFlags[1]))
+                } else { lockedMessage() }
             }
             R.id.unit2Lesson3Button -> {
-                view.findNavController()
-                    .navigate(Unit2FragmentDirections
-                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[2]))
+                unitQuizScore = sharedPref?.getInt("unit2Quiz2Score", 0)!!
+
+                if (unitQuizScore > passingScore) {
+                    view.findNavController()
+                        .navigate(Unit2FragmentDirections
+                            .actionUnit2FragmentToAllLessonFragment(lessonFlags[2]))
+                } else { lockedMessage() }
             }
             R.id.unit2Lesson4Button -> {
-                view.findNavController()
-                    .navigate(Unit2FragmentDirections
-                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[3]))
+                unitQuizScore = sharedPref?.getInt("unit2Quiz3Score", 0)!!
+
+                if (unitQuizScore > passingScore) {
+                    view.findNavController()
+                        .navigate(Unit2FragmentDirections
+                            .actionUnit2FragmentToAllLessonFragment(lessonFlags[3]))
+                } else { lockedMessage() }
             }
 
         }
+    }
+
+    private fun lockedMessage() {
+        Toast.makeText(context,
+            "Reach a passing score (8+/15) on the previous lesson's quiz to proceed.",
+            Toast.LENGTH_LONG).show()
     }
 
 }

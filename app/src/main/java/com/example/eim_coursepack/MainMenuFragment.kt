@@ -27,9 +27,9 @@ class MainMenuFragment : Fragment() {
         val sharedPref = this.activity?.getSharedPreferences(
             getString(R.string.preference_key), Context.MODE_PRIVATE)
 
-        var unitFinalQuizScore = 0
+        var unitFinalQuizScore: Int
 
-        val passingScore = 8
+        val passingScore = 7
 
         binding.unit1Button.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit1Fragment)
@@ -41,7 +41,7 @@ class MainMenuFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit2Fragment)
             } else {
                 Toast.makeText(context,
-                    "Pass the final quiz on the previous unit to proceed",
+                    "Reach a passing score (8+/15) on the previous unit's final quiz to proceed.",
                     Toast.LENGTH_LONG).show()
             }
 
@@ -50,11 +50,11 @@ class MainMenuFragment : Fragment() {
         binding.unit3Button.setOnClickListener { view : View ->
             unitFinalQuizScore = sharedPref?.getInt("unit2Quiz4Score", 0)!!
 
-            if (unitFinalQuizScore >= passingScore) {
+            if (unitFinalQuizScore > passingScore) {
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit3Fragment)
             } else {
                 Toast.makeText(context,
-                    "Pass the final quiz on the previous unit to proceed",
+                    "Reach a passing score (8+/15) on the previous unit's final quiz to proceed.",
                     Toast.LENGTH_LONG).show()
             }
 
@@ -64,11 +64,11 @@ class MainMenuFragment : Fragment() {
 
 //            unitFinalQuizScore = sharedPref?.getInt("unit3Quiz3Score", 0)!!
 //
-//            if (unitFinalQuizScore >= passingScore) {
+//            if (unitFinalQuizScore > passingScore) {
 //                view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit4Fragment)
 //            } else {
 //                Toast.makeText(context,
-//                    "Pass the final quiz on the previous unit to proceed",
+//                    "Reach a passing score (8+/15) on the previous unit's final quiz to proceed.",
 //                    Toast.LENGTH_LONG).show()
 //            }
         }
@@ -76,11 +76,11 @@ class MainMenuFragment : Fragment() {
 
             unitFinalQuizScore = sharedPref?.getInt("unit4Quiz3Score", 0)!!
 
-            if (unitFinalQuizScore >= passingScore) {
+            if (unitFinalQuizScore > passingScore) {
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit5Fragment)
             } else {
                 Toast.makeText(context,
-                    "Pass the final quiz on the previous unit to proceed",
+                    "Reach a passing score (8+/15) on the previous unit's final quiz to proceed.",
                     Toast.LENGTH_LONG).show()
             }
 
@@ -88,11 +88,11 @@ class MainMenuFragment : Fragment() {
         binding.unit6Button.setOnClickListener { view : View ->
             unitFinalQuizScore = sharedPref?.getInt("unit5Quiz3Score", 0)!!
 
-            if (unitFinalQuizScore >= passingScore) {
+            if (unitFinalQuizScore > passingScore) {
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit6Fragment)
             } else {
                 Toast.makeText(context,
-                    "Pass the final quiz on the previous unit to proceed",
+                    "Reach a passing score (8+/15) on the previous unit's final quiz to proceed.",
                     Toast.LENGTH_LONG).show()
             }
         }
