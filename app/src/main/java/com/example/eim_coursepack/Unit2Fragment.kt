@@ -62,8 +62,7 @@ class Unit2Fragment : Fragment() {
 
                 view.findNavController()
                     .navigate(Unit2FragmentDirections
-                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[0]))
-
+                        .actionUnit2FragmentToAllLessonFragment(lessonFlag[0]))
 
             }
             R.id.unit2Lesson2Button -> {

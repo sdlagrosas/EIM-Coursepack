@@ -1,6 +1,5 @@
 package com.example.eim_coursepack
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,104 +9,110 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.eim_coursepack.databinding.FragmentUnit1Quiz1MCBinding
+import com.example.eim_coursepack.databinding.FragmentUnit3Quiz2Binding
 
 
-class Unit1Quiz1Fragment : Fragment() {
-
-    private lateinit var binding : FragmentUnit1Quiz1MCBinding
+class Unit3Quiz2Fragment : Fragment() {
+    private lateinit var binding : FragmentUnit3Quiz2Binding
 
     private val mulChoQuestions: MutableList<MulChoQuestion> = mutableListOf(
-        MulChoQuestion(text = "1. The same electrical charge ___________ each other.",
-            answers = mutableListOf("repel", "attracts", "destroy", "neutralize"),
+        MulChoQuestion(text = "1.\tShiela measure the table with 3 ½ feet length, what is the equivalent of this in centimeter?",
+            answers = mutableListOf("106.68", "320.04", "8.89", "10.6"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1),
-        MulChoQuestion(text = "2. It is neither positively nor negatively charged.",
-            answers = mutableListOf("neutron", "electron in motion", "electrostatic force", "atom"),
+        MulChoQuestion(text = "2.\tWhich of the following statement is TRUE?",
+            answers = mutableListOf( "Inch is an English unit and the smallest unit of measurement in English system.",
+                "Foot is an English unit and second to the smallest unit in Metric system of measurement.",
+                "Millimeter is an English unit and the smallest unit of measurement in English system.",
+                "Centimeter in metric unit and the second to the largest unit of metric system."),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1),
-        MulChoQuestion(text = "3. It is the equal number of electron and proton in an atom.",
-            answers = mutableListOf("neutral", "positive", "negative", "none of the choices"),
+        MulChoQuestion(text = "3.\tThe following are correct equivalent, EXCEPT",
+            answers = mutableListOf("10 yards is equal to 30 feet",
+                    "60 inches is 6 feet",
+                    "8 inches is equal to 20.32",
+                    "5 meters is equal to 500 centimeters"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1),
-        MulChoQuestion(text = "4. The electron theory states that all matter is made of ________________.",
-            answers = mutableListOf("electron", "neutron", "atom", "molecules"),
+        MulChoQuestion(text = "4.\tAngela has 8 yards of yarn, what is the equivalent of this in centimeter?",
+            answers = mutableListOf("731.52 centimeters",
+                "20.32 centimeters",
+                    "243.84 centimeters",
+                    "96 centimeters"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1),
-        MulChoQuestion(text = "5. It is the smallest particle of molecule.",
-            answers = mutableListOf("atom", "ion", "proton", "electron"),
+        MulChoQuestion(text = "5.\tEstrella needs to measure the height of the windows to purchase correct length of fabric. 36 feet is how many meters?",
+            answers = mutableListOf("10.97",
+                    "109.7",
+                    "1.09",
+                    "1,097"),
             isCorrect = false,
             clickedIdx = -1,
             correctIdx = -1),
-        MulChoQuestion(text = "6. What is found at the center body of an atom?",
-            answers = mutableListOf("nucleus", "atom", "proton", "electron"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "7. How will you prove that electricity is a matter?",
-            answers = mutableListOf(
-                "It occupies space",
-                "It is not seen by the naked eye",
-                "It travels along insulator materials",
-                "It has weight"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1
-        ),
-        MulChoQuestion(text = "8. Movement of electrons from one atom to another atom is ______.",
-            answers = mutableListOf("electricity", "resistance", "flow", "voltage"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "9. The flow of electrons in a material is _____.",
-            answers = mutableListOf("electric current", "resistance", "circuit", "voltage"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1),
-        MulChoQuestion(text = "10. How do you describe the electrostatic force in an atom?",
-            answers = mutableListOf(
-                "When attraction occurs between nucleus and electron",
-                "When the proton and electron contracts",
-                "When proton and electron attracts inside the atom",
-                "When separation occurs between the nucleus and proton"),
-            isCorrect = false,
-            clickedIdx = -1,
-            correctIdx = -1
-        ),
     )
 
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
-            text = "11. It contains the positive and neutral charged of an atom.",
-            answers = mutableListOf("nucleus"),
+            text = "1. \t1 cm is  \t \t_____ mm ? ",
+            answers = mutableListOf("10", "10 mm"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "12. This refers to the attraction between the nucleus and the electron.",
-            answers = mutableListOf("electrostatic force"),
+            text = "2.\t1 yard is  \t\t_____ inches ",
+            answers = mutableListOf("36", "36 inches"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "13. The particle which has equal charged to electron",
-            answers = mutableListOf("proton"),
+            text = "3. \t1 dm is  \t \t_____ cm ",
+            answers = mutableListOf("100","100 cm"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "14. Particle which found in the outer orbit of an atom.",
-            answers = mutableListOf("electron"),
+            text = "4.\t10 mm is  \t\t_____ cm ",
+            answers = mutableListOf("1", "1 cm"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
-            text = "15. Particle of an atom without electrical charge.",
-            answers = mutableListOf("neutron"),
+            text = "5.\t1 foot is \t\t_____ inches ",
+            answers = mutableListOf("12", "12 inches"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "6.\t 10 feet \t\t =  ________cm",
+            answers = mutableListOf("304.8", "304.8 cm"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "7.\t 70 cm \t\t =  ________mm",
+            answers = mutableListOf("700", "700 cm"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "8.\t 15 inches \t\t =  ________ft",
+            answers = mutableListOf("1.25", "1.25 ft"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "9.\t 5 meters \t\t =  ________yard",
+            answers = mutableListOf("5.46", "5.46 yard"),
+            isCorrect = false,
+            enteredAns = ""
+        ),
+        IdenQuestion(
+            text = "10.\t8 meters \t\t= _____ ft",
+            answers = mutableListOf("26.24", "26.24 ft"),
             isCorrect = false,
             enteredAns = ""
         )
@@ -122,14 +127,14 @@ class Unit1Quiz1Fragment : Fragment() {
     private val numQuestions = mulChoQuestions.size + idenQuestions.size
     private var score = 0
 
-    @SuppressLint("CommitPrefEdits")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_unit1_quiz1_m_c, container, false)
+            inflater, R.layout.fragment_unit3_quiz2, container, false)
 
         // SharedPreference Object (for storing data locally)
         val sharedPref = this.activity?.getSharedPreferences(
@@ -159,7 +164,7 @@ class Unit1Quiz1Fragment : Fragment() {
             }
 
             // Hide radio group and show edit text in identification part of the quiz
-            if (questionIndex > 9) {
+            if (questionIndex > 4) {
                 binding.questionRadioGroup.visibility = View.GONE
                 binding.answerText.visibility = View.VISIBLE
             }
@@ -172,7 +177,7 @@ class Unit1Quiz1Fragment : Fragment() {
         { view: View ->
 
             // Save answer in multiple choice
-            if (questionIndex in 0 until 11) {
+            if (questionIndex in 0 until 6) {
                 when (binding.questionRadioGroup.checkedRadioButtonId) {
                     R.id.firstChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 0
                     R.id.secondChoiceRadioButton -> currentMulChoQuestion.clickedIdx = 1
@@ -186,7 +191,7 @@ class Unit1Quiz1Fragment : Fragment() {
 
                 setMulChoQuestion()
 
-            } else if (questionIndex in 11 until numQuestions) {
+            } else if (questionIndex in 6 until numQuestions) {
                 currentIdenQuestion.enteredAns = binding.answerText.text.toString()
 
                 // move to previous question
@@ -194,13 +199,13 @@ class Unit1Quiz1Fragment : Fragment() {
                 currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
                 binding.answerText.text.clear()
                 setIdenQuestion()
-        }
+            }
 
             // Reset fields
             binding.invalidateAll()
 
-            // Change to multiple choice if on questions 1-10
-            if (questionIndex < 10) {
+            // Change to multiple choice if on questions 1-5
+            if (questionIndex < 5) {
                 binding.questionRadioGroup.visibility = View.VISIBLE
                 binding.answerText.visibility = View.GONE
             }
@@ -226,10 +231,7 @@ class Unit1Quiz1Fragment : Fragment() {
         { view : View ->
             // Check last question
             val answerText = binding.answerText.text.toString()
-            currentMulChoQuestion.isCorrect = answerText
-                .toLowerCase()
-                .replace("\\s+".toRegex(), " ")
-                .trim() in currentIdenQuestion.answers
+            currentMulChoQuestion.isCorrect = answerText.toLowerCase().trim() in currentIdenQuestion.answers
 
             // To make sure button only works once
             if (score == 0) {
@@ -251,18 +253,18 @@ class Unit1Quiz1Fragment : Fragment() {
 
                 // Save score and number of questions in shared preferences
                 with (sharedPref?.edit()) {
-                    this?.putInt("unit1Quiz1Score", score)
-                    this?.putString("unit1Quiz1NumQuestions", numQuestions.toString())
+                    this?.putString("unit3Quiz2Score", score.toString())
+                    this?.putString("unit3Quiz2NumQuestions", numQuestions.toString())
                     this?.apply()
                 }
 
                 // Navigate to score screen
                 view.findNavController()
-                    .navigate(Unit1Quiz1FragmentDirections
-                        .actionUnit1Quiz1MCFragmentToQuizScoreFragment(
+                    .navigate(Unit3Quiz2FragmentDirections
+                        .actionUnit3Quiz2FragmentToQuizScoreFragment(
                             numQuestions,
                             score,
-                            "Unit 1: Lesson 1 Quiz"
+                            "Unit 3: Lesson 2 Quiz"
                         ))
             }
 
@@ -275,8 +277,8 @@ class Unit1Quiz1Fragment : Fragment() {
     // Handles scoring and quiz logic
     private fun handleQuizProper() {
 
-        // Multiple choice questions 1-10
-        if (questionIndex in 0 until 10) {
+        // Multiple choice questions 1-5
+        if (questionIndex in 0 until 5) {
 
             val checkedId = binding.questionRadioGroup.checkedRadioButtonId
 
@@ -305,11 +307,11 @@ class Unit1Quiz1Fragment : Fragment() {
                 questionIndex++
 
 
-                if (questionIndex in 0 until 10) {
+                if (questionIndex in 0 until 5) {
                     currentMulChoQuestion = mulChoQuestions[questionIndex]
                     setMulChoQuestion()
 
-                } else if (questionIndex in 10 until numQuestions) {
+                } else if (questionIndex in 5 until numQuestions) {
 
                     currentIdenQuestion = idenQuestions[questionIndex - mulChoQuestions.size]
                     setIdenQuestion()
@@ -317,22 +319,19 @@ class Unit1Quiz1Fragment : Fragment() {
                 binding.invalidateAll()
 
 
-            // Prompt user to select an answer
+                // Prompt user to select an answer
             } else {
                 Toast.makeText(context, "Choose your answer", Toast.LENGTH_SHORT).show()
             }
 
             // Identification questions 11-15
-        } else if (questionIndex in 10 until numQuestions) {
+        } else if (questionIndex in 5 until numQuestions) {
 
             val answerText = binding.answerText.text
 
             if (answerText.isNotEmpty()) {
                 currentIdenQuestion.isCorrect = answerText
-                    .toString()
-                    .toLowerCase()
-                    .replace("\\s+".toRegex(), " ")
-                    .trim() in currentIdenQuestion.answers
+                    .toString().toLowerCase().trim() in currentIdenQuestion.answers
 
                 if (currentIdenQuestion.isCorrect) {
                     Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
@@ -351,7 +350,7 @@ class Unit1Quiz1Fragment : Fragment() {
 
 
             } else {
-                Toast.makeText(context,"Enter your answer",Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"Enter your answer", Toast.LENGTH_SHORT).show()
             }
         } else {
             // For error checking only
@@ -401,6 +400,7 @@ class Unit1Quiz1Fragment : Fragment() {
 
         enteredAns = currentIdenQuestion.enteredAns
     }
+
 
 
 }

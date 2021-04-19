@@ -2,12 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Unit1Quiz2Fragment">
+    tools:context=".Unit3_quiz1">
 
     <data>
+
         <variable
             name="quiz"
-            type="com.example.eim_coursepack.Unit1Quiz2Fragment" />
+            type="com.example.eim_coursepack.Unit3_quiz1" />
     </data>
 
 
@@ -106,16 +107,16 @@
 
             <ImageView
                 android:id="@+id/quiz1Image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="367dp"
+                android:layout_height="271dp"
 
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:contentDescription="@string/an_image_in_quiz_fragment"
-                app:layout_constraintBottom_toTopOf="@+id/questionText"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/guideline15"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline14"
+                app:srcCompat="@drawable/ic_unit3_quiz1_iden_allq"
                 tools:src="@tools:sample/avatars" />
 
             <EditText
@@ -126,9 +127,9 @@
                 android:layout_marginBottom="32dp"
                 android:ems="10"
                 android:hint="@string/type_your_answer_here"
-                android:text="@{quiz.enteredAns}"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
+                android:text="@{quiz.enteredAns}"
                 android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/nextButton"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -159,7 +160,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nextButton" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.0"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.4"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
 </layout>
