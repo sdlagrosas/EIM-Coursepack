@@ -268,13 +268,17 @@ class Unit3Quiz3 : Fragment() {
                     }
                 }
 
-                Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
 
-                // Save score and number of questions in shared preferences
-                with(sharedPref?.edit()) {
-                    this?.putString("unit3Quiz3Score", score.toString())
-                    this?.putString("unit3Quiz3NumQuestions", numQuestions.toString())
-                    this?.apply()
+                // Update if new score > prev score
+                val prevScore = sharedPref?.getInt("unit3Quiz3Score", 0)!!
+                if (prevScore < score) {
+                    // Save score and number of questions in shared preferences
+                    with (sharedPref?.edit()) {
+                        this?.putInt("unit3Quiz3Score", score)
+                        this?.putString("unit3Quiz3NumQuestions", numQuestions.toString())
+                        this?.apply()
+                    }
                 }
 
                 // Navigate to score screen

@@ -35,7 +35,7 @@ class QuizScoreFragment : Fragment() {
 
         val text = quizTitle[5]
 
-        Toast.makeText(context, "$text!", Toast.LENGTH_LONG).show()
+//        Toast.makeText(context, "$text!", Toast.LENGTH_LONG).show()
 
         var unitFragment = QuizScoreFragmentDirections.actionQuizScoreFragmentToUnit1Fragment()
         when(unitNo) {

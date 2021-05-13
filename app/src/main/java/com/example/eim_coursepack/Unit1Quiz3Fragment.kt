@@ -283,11 +283,15 @@ class Unit1Quiz3Fragment : Fragment() {
                 }
             }
 
-            // Save score and number of questions in shared preferences
-            with (sharedPref?.edit()) {
-                this?.putInt("unit1Quiz3Score", score)
-                this?.putString("unit1Quiz3NumQuestions", numQuestions.toString())
-                this?.apply()
+            // Update if new score > prev score
+            val prevScore = sharedPref?.getInt("unit1Quiz3Score", 0)!!
+            if (prevScore < score) {
+                // Save score and number of questions in shared preferences
+                with (sharedPref?.edit()) {
+                    this?.putInt("unit1Quiz3Score", score)
+                    this?.putString("unit1Quiz3NumQuestions", numQuestions.toString())
+                    this?.apply()
+                }
             }
 
             view.findNavController().navigate(

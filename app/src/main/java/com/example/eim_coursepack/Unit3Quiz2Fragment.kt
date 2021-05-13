@@ -30,7 +30,8 @@ class Unit3Quiz2Fragment : Fragment() {
             clickedIdx = -1,
             correctIdx = -1),
         MulChoQuestion(text = "3.\tThe following are correct equivalent, EXCEPT",
-            answers = mutableListOf("10 yards is equal to 30 feet",
+            answers = mutableListOf(
+                    "10 yards is equal to 30 feet",
                     "60 inches is 6 feet",
                     "8 inches is equal to 20.32",
                     "5 meters is equal to 500 centimeters"),
@@ -38,8 +39,9 @@ class Unit3Quiz2Fragment : Fragment() {
             clickedIdx = -1,
             correctIdx = -1),
         MulChoQuestion(text = "4.\tAngela has 8 yards of yarn, what is the equivalent of this in centimeter?",
-            answers = mutableListOf("731.52 centimeters",
-                "20.32 centimeters",
+            answers = mutableListOf(
+                    "731.52 centimeters",
+                    "20.32 centimeters",
                     "243.84 centimeters",
                     "96 centimeters"),
             isCorrect = false,
@@ -249,13 +251,17 @@ class Unit3Quiz2Fragment : Fragment() {
                     }
                 }
 
-                Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
 
-                // Save score and number of questions in shared preferences
-                with (sharedPref?.edit()) {
-                    this?.putString("unit3Quiz2Score", score.toString())
-                    this?.putString("unit3Quiz2NumQuestions", numQuestions.toString())
-                    this?.apply()
+                // Update if new score > prev score
+                val prevScore = sharedPref?.getInt("unit3Quiz2Score", 0)!!
+                if (prevScore < score) {
+                    // Save score and number of questions in shared preferences
+                    with (sharedPref?.edit()) {
+                        this?.putInt("unit3Quiz2Score", score)
+                        this?.putString("unit3Quiz2NumQuestions", numQuestions.toString())
+                        this?.apply()
+                    }
                 }
 
                 // Navigate to score screen

@@ -77,42 +77,42 @@ class Unit3Quiz4 : Fragment() {
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
             text = "Parts of Multimeter: \n1. ",
-            answers = mutableListOf("Scale"),
+            answers = mutableListOf("scale"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "Parts of Multimeter: \n" +
                     "2. ",
-            answers = mutableListOf("Adjustment screw"),
+            answers = mutableListOf("adjustment screw"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "Parts of Multimeter: \n" +
                     "3. ",
-            answers = mutableListOf("Range selector knob"),
+            answers = mutableListOf("range selector knob"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "Parts of Multimeter: \n" +
                     "4. ",
-            answers = mutableListOf("Pointer"),
+            answers = mutableListOf("pointer"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "Parts of Multimeter: \n" +
                     "5. ",
-            answers = mutableListOf("Zero-ohm adjustment knob"),
+            answers = mutableListOf("zero-ohm adjustment knob"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "Parts of Multimeter: \n" +
                     "6. ",
-            answers = mutableListOf("Test probe"),
+            answers = mutableListOf("test probe"),
             isCorrect = false,
             enteredAns = ""
         )
@@ -251,13 +251,17 @@ class Unit3Quiz4 : Fragment() {
                     }
                 }
 
-                Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
 
-                // Save score and number of questions in shared preferences
-                with(sharedPref?.edit()) {
-                    this?.putString("unit3Quiz4Score", score.toString())
-                    this?.putString("unit3Quiz4NumQuestions", numQuestions.toString())
-                    this?.apply()
+                // Update if new score > prev score
+                val prevScore = sharedPref?.getInt("unit3Quiz4Score", 0)!!
+                if (prevScore < score) {
+                    // Save score and number of questions in shared preferences
+                    with (sharedPref?.edit()) {
+                        this?.putInt("unit3Quiz4Score", score)
+                        this?.putString("unit3Quiz4NumQuestions", numQuestions.toString())
+                        this?.apply()
+                    }
                 }
 
                 // Navigate to score screen

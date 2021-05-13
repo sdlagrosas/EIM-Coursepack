@@ -58,7 +58,8 @@
         tools:layout="@layout/fragment_unit1_quiz1_m_c">
         <action
             android:id="@+id/action_unit1Quiz1MCFragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit1Fragment" />
     </fragment>
 
     <fragment
@@ -104,7 +105,8 @@
         tools:layout="@layout/fragment_unit1_quiz2" >
         <action
             android:id="@+id/action_unit1Quiz2Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/allLessonFragment"
@@ -221,10 +223,8 @@
         tools:layout="@layout/fragment_unit1_quiz3" >
         <action
             android:id="@+id/action_unit1Quiz3Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
-        <action
-            android:id="@+id/action_unit1Quiz3Fragment_self"
-            app:destination="@id/unit1Quiz3Fragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit2Quiz1Fragment"
@@ -233,7 +233,8 @@
         tools:layout="@layout/fragment_unit2_quiz1" >
         <action
             android:id="@+id/action_unit2Quiz1Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit2Quiz2Fragment"
@@ -242,7 +243,8 @@
         tools:layout="@layout/fragment_unit2_quiz2" >
         <action
             android:id="@+id/action_unit2Quiz2Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit2Quiz3Fragment"
@@ -251,7 +253,8 @@
         tools:layout="@layout/fragment_unit2_quiz3" >
         <action
             android:id="@+id/action_unit2Quiz3Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit2Quiz4Fragment"
@@ -260,7 +263,8 @@
         tools:layout="@layout/fragment_unit2_quiz4" >
         <action
             android:id="@+id/action_unit2Quiz4Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit4Quiz1Fragment"
@@ -269,7 +273,8 @@
         tools:layout="@layout/fragment_unit4_quiz1" >
         <action
             android:id="@+id/action_unit4Quiz1Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit4Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit4Quiz2Fragment"
@@ -278,7 +283,8 @@
         tools:layout="@layout/fragment_unit4_quiz2" >
         <action
             android:id="@+id/action_unit4Quiz2Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit4Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit4Quiz3Fragment"
@@ -287,7 +293,8 @@
         tools:layout="@layout/fragment_unit4_quiz3" >
         <action
             android:id="@+id/action_unit4Quiz3Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit4Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit6Fragment"
@@ -305,7 +312,8 @@
         tools:layout="@layout/fragment_unit6_quiz1" >
         <action
             android:id="@+id/action_unit6Quiz1Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit6Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit6Quiz2Fragment"
@@ -314,7 +322,8 @@
         tools:layout="@layout/fragment_unit6_quiz2" >
         <action
             android:id="@+id/action_unit6Quiz2Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit6Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit6Quiz3Fragment"
@@ -323,7 +332,8 @@
         tools:layout="@layout/fragment_unit6_quiz3" >
         <action
             android:id="@+id/action_unit6Quiz3Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit6Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit5Quiz1Fragment"
@@ -332,7 +342,8 @@
         tools:layout="@layout/fragment_unit5_quiz1" >
         <action
             android:id="@+id/action_unit5Quiz1Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit5Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit5Quiz2Fragment"
@@ -341,7 +352,8 @@
         tools:layout="@layout/fragment_unit5_quiz2" >
         <action
             android:id="@+id/action_unit5Quiz2Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit5Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit5Quiz3Fragment"
@@ -350,7 +362,8 @@
         tools:layout="@layout/fragment_unit5_quiz3" >
         <action
             android:id="@+id/action_unit5Quiz3Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit5Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit3_quiz12"
@@ -359,7 +372,8 @@
         tools:layout="@layout/fragment_unit3_quiz1" >
         <action
             android:id="@+id/action_unit3_quiz12_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit3Quiz2Fragment"
@@ -368,7 +382,8 @@
         tools:layout="@layout/fragment_unit3_quiz2" >
         <action
             android:id="@+id/action_unit3Quiz2Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit3Quiz3"
@@ -377,7 +392,8 @@
         tools:layout="@layout/fragment_unit3_quiz3" >
         <action
             android:id="@+id/action_unit3Quiz3_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/unit3Quiz4"
@@ -386,7 +402,8 @@
         tools:layout="@layout/fragment_unit3_quiz4" >
         <action
             android:id="@+id/action_unit3Quiz4_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment" />
+            app:destination="@id/quizScoreFragment"
+            app:popUpTo="@id/unit3Fragment" />
     </fragment>
 
 </navigation>

@@ -262,14 +262,17 @@ class Unit2Quiz1Fragment : Fragment() {
                     }
                 }
 
-
-//              Save score and number of questions in shared preferences
-                with (sharedPref?.edit()) {
-                    this?.putInt("unit2Quiz1Score", score)
-                    this?.putString("unit2Quiz1NumQuestions", numQuestions.toString())
-                    this?.apply()
+                // Update if new score > prev score
+                val prevScore = sharedPref?.getInt("unit2Quiz1Score", 0)!!
+                if (prevScore < score) {
+                    // Save score and number of questions in shared preferences
+                    with (sharedPref?.edit()) {
+                        this?.putInt("unit2Quiz1Score", score)
+                        this?.putString("unit2Quiz1NumQuestions", numQuestions.toString())
+                        this?.apply()
+                    }
                 }
-//
+
                 // Navigate to score screen
                 view.findNavController().navigate(
                     Unit2Quiz1FragmentDirections

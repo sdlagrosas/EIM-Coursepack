@@ -15,14 +15,15 @@ import com.example.eim_coursepack.databinding.FragmentUnit2Binding
 
 class Unit2Fragment : Fragment() {
 
-    val passingScore = 7
-
     private val lessonFlags : List<String> = listOf(
         "Unit2Lesson1",
         "Unit2Lesson2",
         "Unit2Lesson3",
         "Unit2Lesson4"
     )
+
+    private val passingScore = 8
+    private val enableLock = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,28 +48,61 @@ class Unit2Fragment : Fragment() {
             getString(R.string.preference_key), Context.MODE_PRIVATE)
 
         clickableViews.forEach { it ->
-            it.setOnClickListener { whatButtons(it, sharedPref) }
+            if (enableLock) {
+                it.setOnClickListener { whatButtonsLocked(it, sharedPref) }
+            }
+            else {
+                it.setOnClickListener { whatButtons(it) }
+            }
         }
 
 
         return binding.root
     }
 
-    private fun whatButtons(view : View, sharedPref : SharedPreferences?) {
+    private fun whatButtons(view : View) {
+        when (view.id) {
+            R.id.unit2Lesson1Button -> {
+                view.findNavController()
+                    .navigate(Unit2FragmentDirections
+                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[0]))
+
+            }
+            R.id.unit2Lesson2Button -> {
+                view.findNavController()
+                    .navigate(Unit2FragmentDirections
+                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[1]))
+
+            }
+            R.id.unit2Lesson3Button -> {
+                view.findNavController()
+                    .navigate(Unit2FragmentDirections
+                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[2]))
+
+            }
+            R.id.unit2Lesson4Button -> {
+                view.findNavController()
+                    .navigate(Unit2FragmentDirections
+                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[3]))
+
+            }
+        }
+    }
+
+    private fun whatButtonsLocked(view : View, sharedPref: SharedPreferences?) {
         var unitQuizScore: Int
 
         when (view.id) {
             R.id.unit2Lesson1Button -> {
-
                 view.findNavController()
                     .navigate(Unit2FragmentDirections
-                        .actionUnit2FragmentToAllLessonFragment(lessonFlag[0]))
+                        .actionUnit2FragmentToAllLessonFragment(lessonFlags[0]))
 
             }
             R.id.unit2Lesson2Button -> {
                 unitQuizScore = sharedPref?.getInt("unit2Quiz1Score", 0)!!
 
-                if (unitQuizScore > passingScore) {
+                if (unitQuizScore >= passingScore) {
                     view.findNavController()
                         .navigate(Unit2FragmentDirections
                             .actionUnit2FragmentToAllLessonFragment(lessonFlags[1]))
@@ -77,7 +111,7 @@ class Unit2Fragment : Fragment() {
             R.id.unit2Lesson3Button -> {
                 unitQuizScore = sharedPref?.getInt("unit2Quiz2Score", 0)!!
 
-                if (unitQuizScore > passingScore) {
+                if (unitQuizScore >= passingScore) {
                     view.findNavController()
                         .navigate(Unit2FragmentDirections
                             .actionUnit2FragmentToAllLessonFragment(lessonFlags[2]))
@@ -86,7 +120,7 @@ class Unit2Fragment : Fragment() {
             R.id.unit2Lesson4Button -> {
                 unitQuizScore = sharedPref?.getInt("unit2Quiz3Score", 0)!!
 
-                if (unitQuizScore > passingScore) {
+                if (unitQuizScore >= passingScore) {
                     view.findNavController()
                         .navigate(Unit2FragmentDirections
                             .actionUnit2FragmentToAllLessonFragment(lessonFlags[3]))

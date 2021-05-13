@@ -46,6 +46,8 @@ class AllLessonFragment : Fragment() {
 
         // Otherwise, select another PDF asset and quiz fragment, and replace lesson name
         when (args.lessonFlag) {
+
+            // Unit 1
             "Unit1Lesson1" -> {
                 lessonNickname = LessonNickname("Lesson 1.1")
                 pdfAssetName = "unit1lesson1.pdf"
@@ -64,6 +66,7 @@ class AllLessonFragment : Fragment() {
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit1Quiz3Fragment()
             }
+
             // Unit 2
             "Unit2Lesson1" -> {
                 lessonNickname = LessonNickname("Lesson 2.1")
@@ -89,6 +92,7 @@ class AllLessonFragment : Fragment() {
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit2Quiz1Fragment()
             }
+
             //Unit 3
             "Unit3Lesson1" -> {
                 lessonNickname = LessonNickname("Lesson 3.1")
@@ -114,6 +118,7 @@ class AllLessonFragment : Fragment() {
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit3Quiz4()
             }
+
             //Unit 4
             "Unit4Lesson1" -> {
                 lessonNickname = LessonNickname("Lesson 4.1")
@@ -134,6 +139,7 @@ class AllLessonFragment : Fragment() {
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit4Quiz3Fragment()
             }
+
             //Unit 5
             "Unit5Lesson1" -> {
                 lessonNickname = LessonNickname("Lesson 5.1")
@@ -145,14 +151,15 @@ class AllLessonFragment : Fragment() {
                 lessonNickname = LessonNickname("Lesson 5.2")
                 pdfAssetName = "unit5Lesson2.pdf"
                 quizFragment = AllLessonFragmentDirections
-                    .actionAllLessonFragmentToUnit4Quiz2Fragment()
+                    .actionAllLessonFragmentToUnit5Quiz2Fragment()
             }
             "Unit5Lesson3" -> {
                 lessonNickname = LessonNickname("Lesson 5.3")
                 pdfAssetName = "unit5Lesson3.pdf"
                 quizFragment = AllLessonFragmentDirections
-                    .actionAllLessonFragmentToUnit4Quiz3Fragment()
+                    .actionAllLessonFragmentToUnit5Quiz3Fragment()
             }
+
             //Unit 6
             "Unit6Lesson1" -> {
                 lessonNickname = LessonNickname("Lesson 6.1")
@@ -179,47 +186,6 @@ class AllLessonFragment : Fragment() {
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit6Quiz3Fragment()
             }
-//            "Unit2Lesson2" -> {
-//                lessonNickname = LessonNickname("Lesson 2.2")
-//                pdfAssetName = "unit2lesson2.pdf"
-//                quizFragment = AllLessonFragmentDirections
-//                    .actionAllLessonFragmentToUnit2Quiz2Fragment()
-//            }
-//            "Unit2Lesson3" -> {
-//                lessonNickname = LessonNickname("Lesson 2.3")
-//                pdfAssetName = "unit2lesson3.pdf"
-//                quizFragment = AllLessonFragmentDirections
-//                    .actionAllLessonFragmentToUnit2Quiz3Fragment()
-//            }
-//
-//
-//            "Unit4Lesson2" -> {
-//                lessonNickname = LessonNickname("Lesson 4.2")
-//                pdfAssetName = "unit4lesson2.pdf"
-//                quizFragment = AllLessonFragmentDirections
-//                    .actionAllLessonFragmentToUnit4Quiz2Fragment()
-//            }
-//            "Unit4Lesson3" -> {
-//                lessonNickname = LessonNickname("Lesson 4.3")
-//                pdfAssetName = "unit4lesson3.pdf"
-//                quizFragment = AllLessonFragmentDirections
-//                    .actionAllLessonFragmentToUnit4Quiz3Fragment()
-//            }
-//
-//            "Unit5Lesson2" -> {
-//                lessonNickname = LessonNickname("Lesson 5.2")
-//                pdfAssetName = "unit5lesson2.pdf"
-//                quizFragment = AllLessonFragmentDirections
-//                    .actionAllLessonFragmentToUnit5Quiz2Fragment()
-//            }
-//            "Unit5Lesson3" -> {
-//                lessonNickname = LessonNickname("Lesson 5.3")
-//                pdfAssetName = "unit5lesson3.pdf"
-//                quizFragment = AllLessonFragmentDirections
-//                    .actionAllLessonFragmentToUnit5Quiz3Fragment()
-//            }
-
-
         }
 
         // Load pdf to PDFView

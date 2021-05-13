@@ -249,12 +249,17 @@ class Unit1Quiz1Fragment : Fragment() {
 
                 Toast.makeText(context, "Scores: $score", Toast.LENGTH_SHORT).show()
 
-                // Save score and number of questions in shared preferences
-                with (sharedPref?.edit()) {
-                    this?.putInt("unit1Quiz1Score", score)
-                    this?.putString("unit1Quiz1NumQuestions", numQuestions.toString())
-                    this?.apply()
+                // Update if new score > prev score
+                val prevScore = sharedPref?.getInt("unit1Quiz1Score", 0)!!
+                if (prevScore < score) {
+                    // Save score and number of questions in shared preferences
+                    with (sharedPref?.edit()) {
+                        this?.putInt("unit1Quiz1Score", score)
+                        this?.putString("unit1Quiz1NumQuestions", numQuestions.toString())
+                        this?.apply()
+                    }
                 }
+
 
                 // Navigate to score screen
                 view.findNavController()

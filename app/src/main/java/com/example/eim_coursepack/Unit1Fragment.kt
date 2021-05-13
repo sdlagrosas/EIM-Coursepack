@@ -15,10 +15,11 @@ import com.example.eim_coursepack.databinding.FragmentUnit1Binding
 
 class Unit1Fragment : Fragment() {
 
-    val lesson1flag = "Unit1Lesson1"
-    val lesson2flag = "Unit1Lesson2"
-    val lesson3flag = "Unit1Lesson3"
-    val passingScore = 7
+    private val lesson1flag = "Unit1Lesson1"
+    private val lesson2flag = "Unit1Lesson2"
+    private val lesson3flag = "Unit1Lesson3"
+    private val passingScore = 8
+    private val enableLock = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,18 +37,41 @@ class Unit1Fragment : Fragment() {
 
         val clickableViews: List<View> = listOf(lesson1id,lesson2id,lesson3id)
         for (items in clickableViews) {
-            items.setOnClickListener{whatButtons(it, sharedPref)}
+            if (enableLock) {
+                items.setOnClickListener{whatButtonsLocked(it, sharedPref)}
+            }
+            else {
+                items.setOnClickListener{whatButtons(it)}
+            }
         }
-//        binding.unit1Lesson1Button.setOnClickListener { view : View ->
-//            view.findNavController().navigate(Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment())
-//        }
+
 
 
         return binding.root
     }
 
 
-    private fun whatButtons(view: View, sharedPref : SharedPreferences?) {
+    private fun whatButtons(view: View) {
+        when (view.id) {
+            R.id.unit1Lesson1Button -> {
+                view.findNavController().navigate(
+                    Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment(lesson1flag)
+                )
+            }
+            R.id.unit1Lesson2Button -> {
+                view.findNavController().navigate(
+                    Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment(lesson2flag)
+                )
+            }
+            R.id.unit1Lesson3Button -> {
+                view.findNavController().navigate(
+                    Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment(lesson3flag)
+                )
+            }
+        }
+    }
+
+    private fun whatButtonsLocked(view : View, sharedPref: SharedPreferences?) {
         var unitQuizScore: Int
         when (view.id) {
             R.id.unit1Lesson1Button-> {
@@ -56,33 +80,26 @@ class Unit1Fragment : Fragment() {
             R.id.unit1Lesson2Button-> {
                 unitQuizScore = sharedPref?.getInt("unit1Quiz1Score", 0)!!
 
-                if (unitQuizScore > passingScore) {
+                if (unitQuizScore >= passingScore) {
                     view.findNavController().navigate(Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment(lesson2flag))
-                } else {
-                    Toast.makeText(context,
-                        "Reach a passing score (8+/15) on the previous lesson's quiz to proceed.",
-                        Toast.LENGTH_LONG).show()
-                }
+                } else { lockedMessage() }
 
             }
             R.id.unit1Lesson3Button-> {
                 unitQuizScore = sharedPref?.getInt("unit1Quiz2Score", 0)!!
 
-                if (unitQuizScore > passingScore) {
+                if (unitQuizScore >= passingScore) {
                     view.findNavController().navigate(Unit1FragmentDirections.actionUnit1FragmentToAllLessonFragment(lesson3flag))
-                } else {
-                    Toast.makeText(context,
-                        "Reach a passing score (8+/15) on the previous lesson's quiz to proceed.",
-                        Toast.LENGTH_LONG).show()
-                }
+                } else { lockedMessage() }
             }
-
-
-
         }
-
     }
 
+    private fun lockedMessage() {
+        Toast.makeText(context,
+            "Reach a passing score (8+/15) on the previous lesson's quiz to proceed.",
+            Toast.LENGTH_LONG).show()
+    }
 
 }
 

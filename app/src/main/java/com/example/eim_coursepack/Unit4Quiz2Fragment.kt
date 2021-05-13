@@ -253,6 +253,13 @@ class Unit4Quiz2Fragment : Fragment() {
         binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view : View ->
             // Check last question
+            val answerText = binding.answerText.text
+
+            currentIdenQuestion.isCorrect = answerText
+                .toString()
+                .toLowerCase()
+                .replace("\\s+".toRegex()," ")
+                .trim() in currentIdenQuestion.answers
 
             // To make sure button only works once
             if (score == 0) {
@@ -263,14 +270,24 @@ class Unit4Quiz2Fragment : Fragment() {
                         score++
                     }
                 }
-
-//              Save score and number of questions in shared preferences
-                with (sharedPref?.edit()) {
-                    this?.putInt("unit2Quiz4Score", score)
-                    this?.putString("unit2Quiz4NumQuestions", numQuestions.toString())
-                    this?.apply()
+                // Count each correct answer
+                idenQuestions.forEach {
+                    if (it.isCorrect){
+                        score++
+                    }
                 }
-//
+
+                // Update if new score > prev score
+                val prevScore = sharedPref?.getInt("unit4Quiz2Score", 0)!!
+                if (prevScore < score) {
+                    // Save score and number of questions in shared preferences
+                    with (sharedPref?.edit()) {
+                        this?.putInt("unit4Quiz2Score", score)
+                        this?.putString("unit4Quiz2NumQuestions", numQuestions.toString())
+                        this?.apply()
+                    }
+                }
+
                 // Navigate to score screen
                 view.findNavController().navigate(
                     Unit4Quiz2FragmentDirections
