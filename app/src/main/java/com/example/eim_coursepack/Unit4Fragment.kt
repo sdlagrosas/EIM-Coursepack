@@ -19,6 +19,13 @@ class Unit4Fragment : Fragment() {
         "Unit4Lesson3",
     )
 
+    lateinit var unit4LessonScoreText : MutableList<String>
+    private val scoreTexts : MutableList<String> = mutableListOf(
+        "0 / 15",
+        "0 / 15",
+        "0 / 15"
+    )
+
     private var passingScore = 8
     private val enableLock = false
 
@@ -27,16 +34,32 @@ class Unit4Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentUnit4Binding>(inflater,R.layout.fragment_unit4,container,false)
+
+        binding.unit = this
+
         val clickableViews : List<View> = listOf(
             binding.unit4Lesson1Button,
             binding.unit4Lesson2Button,
             binding.unit4Lesson3Button,
-
         )
 
         // SharedPreference Object (for accessing data locally)
         val sharedPref = this.activity?.getSharedPreferences(
             getString(R.string.preference_key), Context.MODE_PRIVATE)
+
+        val unit4Lesson1Score = sharedPref?.getInt("unit4Quiz1Score", 0)!!
+        val unit4Lesson1Items = sharedPref?.getInt("unit4Quiz1NumQuestions", 15)!!
+        scoreTexts[0] = "$unit4Lesson1Score / $unit4Lesson1Items"
+
+        val unit4Lesson2Score = sharedPref?.getInt("unit4Quiz2Score", 0)!!
+        val unit4Lesson2Items = sharedPref?.getInt("unit4Quiz2NumQuestions", 15)!!
+        scoreTexts[1] = "$unit4Lesson2Score / $unit4Lesson2Items"
+
+        val unit4Lesson3Score = sharedPref?.getInt("unit4Quiz3Score", 0)!!
+        val unit4Lesson3Items = sharedPref?.getInt("unit4Quiz3NumQuestions", 15)!!
+        scoreTexts[2] = "$unit4Lesson3Score / $unit4Lesson3Items"
+
+        unit4LessonScoreText = scoreTexts
 
         clickableViews.forEach { it ->
             if (enableLock) {

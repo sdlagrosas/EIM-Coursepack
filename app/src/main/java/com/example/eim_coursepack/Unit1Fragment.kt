@@ -20,7 +20,11 @@ class Unit1Fragment : Fragment() {
     private val lesson3flag = "Unit1Lesson3"
 
     lateinit var unit1LessonScoreText : MutableList<String>
-    private val scoreTexts : MutableList<String> = mutableListOf()
+    private val scoreTexts : MutableList<String> = mutableListOf(
+        "0 / 15",
+        "0 / 15",
+        "0 / 15"
+    )
 
     private val passingScore = 8
     private val enableLock = false
@@ -41,22 +45,19 @@ class Unit1Fragment : Fragment() {
         val sharedPref = this.activity?.getSharedPreferences(
             getString(R.string.preference_key), Context.MODE_PRIVATE)
 
-
-
         val unit1Lesson1Score = sharedPref?.getInt("unit1Quiz1Score", 0)!!
         val unit1Lesson1Items = sharedPref?.getInt("unit1Quiz1NumQuestions", 15)!!
-        scoreTexts.add("$unit1Lesson1Score / $unit1Lesson1Items")
+        scoreTexts[0] = "$unit1Lesson1Score / $unit1Lesson1Items"
 
         val unit1Lesson2Score = sharedPref?.getInt("unit1Quiz2Score", 0)!!
         val unit1Lesson2Items = sharedPref?.getInt("unit1Quiz2NumQuestions", 15)!!
-        scoreTexts.add("$unit1Lesson2Score / $unit1Lesson2Items")
+        scoreTexts[1] = "$unit1Lesson2Score / $unit1Lesson2Items"
 
         val unit1Lesson3Score = sharedPref?.getInt("unit1Quiz3Score", 0)!!
         val unit1Lesson3Items = sharedPref?.getInt("unit1Quiz3NumQuestions", 15)!!
-        scoreTexts.add("$unit1Lesson3Score / $unit1Lesson3Items")
+        scoreTexts[2] = "$unit1Lesson3Score / $unit1Lesson3Items"
 
         unit1LessonScoreText = scoreTexts
-
 
         val clickableViews: List<View> = listOf(lesson1id,lesson2id,lesson3id)
         for (items in clickableViews) {

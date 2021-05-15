@@ -283,7 +283,7 @@ class Unit4Quiz2Fragment : Fragment() {
                     // Save score and number of questions in shared preferences
                     with (sharedPref.edit()) {
                         this?.putInt("unit4Quiz2Score", score)
-                        this?.putString("unit4Quiz2NumQuestions", numQuestions.toString())
+                        this?.putInt("unit4Quiz2NumQuestions", numQuestions)
                         this?.apply()
                     }
                 }
@@ -323,9 +323,9 @@ class Unit4Quiz2Fragment : Fragment() {
                 // answer matches, we have the correct answer.
                 currentMulChoQuestion.isCorrect = answerIndex == currentMulChoQuestion.correctIdx
 
-                if (currentMulChoQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
-                }
+//                if (currentMulChoQuestion.isCorrect) {
+//                    Toast.makeText(context, "CORRECT!", Toast.LENGTH_SHORT).show()
+//                }
 
                 currentMulChoQuestion.clickedIdx = answerIndex
                 binding.questionRadioGroup.clearCheck()
@@ -364,9 +364,9 @@ class Unit4Quiz2Fragment : Fragment() {
                     .replace("\\s+".toRegex()," ")
                     .trim() in currentIdenQuestion.answers
 
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
-                }
+//                if (currentIdenQuestion.isCorrect) {
+//                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+//                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 
