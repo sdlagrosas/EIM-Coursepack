@@ -184,7 +184,7 @@ class AllLessonFragment : Fragment() {
                 lessonNickname = LessonNickname("Lesson 6.4")
                 pdfAssetName = "unit6Lesson4.pdf"
                 quizFragment = AllLessonFragmentDirections
-                    .actionAllLessonFragmentToUnit6Quiz3Fragment()
+                    .actionAllLessonFragmentToUnit6Quiz4Fragment()
             }
         }
 
