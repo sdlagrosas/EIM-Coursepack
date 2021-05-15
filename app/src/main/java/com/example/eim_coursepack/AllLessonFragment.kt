@@ -78,19 +78,19 @@ class AllLessonFragment : Fragment() {
                 lessonNickname = LessonNickname("Lesson 2.2")
                 pdfAssetName = "unit2lesson2.pdf"
                 quizFragment = AllLessonFragmentDirections
-                    .actionAllLessonFragmentToUnit2Quiz1Fragment()
+                    .actionAllLessonFragmentToUnit2Quiz2Fragment()
             }
             "Unit2Lesson3" -> {
                 lessonNickname = LessonNickname("Lesson 2.3")
                 pdfAssetName = "unit2lesson3.pdf"
                 quizFragment = AllLessonFragmentDirections
-                    .actionAllLessonFragmentToUnit2Quiz1Fragment()
+                    .actionAllLessonFragmentToUnit2Quiz3Fragment()
             }
             "Unit2Lesson4" -> {
                 lessonNickname = LessonNickname("Lesson 2.4")
                 pdfAssetName = "unit2lesson4.pdf"
                 quizFragment = AllLessonFragmentDirections
-                    .actionAllLessonFragmentToUnit2Quiz1Fragment()
+                    .actionAllLessonFragmentToUnit2Quiz4Fragment()
             }
 
             //Unit 3

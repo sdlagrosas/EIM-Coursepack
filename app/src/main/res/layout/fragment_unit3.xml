@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Unit3Fragment">
 
+    <data>
+        <variable
+            name="unit"
+            type="com.example.eim_coursepack.Unit3Fragment" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -170,6 +175,58 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.80"
             app:layout_constraintGuide_begin="20dp" />
+
+        <TextView
+            android:id="@+id/unit3Lesson1Progress"
+            android:layout_width="109dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center|center_horizontal"
+            android:text="@{unit.unit3LessonScoreText[0]}"
+            app:layout_constraintBottom_toBottomOf="@+id/unit3Lesson1Button"
+            app:layout_constraintStart_toEndOf="@+id/unit3Lesson1Button"
+            app:layout_constraintTop_toBottomOf="@+id/lesson1title" />
+
+        <TextView
+            android:id="@+id/unit3Lesson2Progress"
+            android:layout_width="109dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center|center_horizontal"
+            android:text="@{unit.unit3LessonScoreText[1]}"
+            app:layout_constraintBottom_toBottomOf="@+id/unit3Lesson2Button"
+            app:layout_constraintStart_toEndOf="@+id/unit3Lesson2Button"
+            app:layout_constraintTop_toBottomOf="@+id/lesson2title" />
+
+        <TextView
+            android:id="@+id/unit3Lesson3Progress"
+            android:layout_width="109dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center|center_horizontal"
+            android:text="@{unit.unit3LessonScoreText[2]}"
+            app:layout_constraintBottom_toBottomOf="@+id/unit3Lesson3Button"
+            app:layout_constraintStart_toEndOf="@+id/unit3Lesson3Button"
+            app:layout_constraintTop_toBottomOf="@+id/lesson3title" />
+
+        <TextView
+            android:id="@+id/unit3Lesson4Progress"
+            android:layout_width="109dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center|center_horizontal"
+            android:text="@{unit.unit3LessonScoreText[3]}"
+            app:layout_constraintBottom_toBottomOf="@+id/unit3Lesson4Button"
+            app:layout_constraintStart_toEndOf="@+id/unit3Lesson4Button"
+            app:layout_constraintTop_toBottomOf="@+id/lesson4title" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

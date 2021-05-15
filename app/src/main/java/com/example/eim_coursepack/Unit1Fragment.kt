@@ -18,6 +18,10 @@ class Unit1Fragment : Fragment() {
     private val lesson1flag = "Unit1Lesson1"
     private val lesson2flag = "Unit1Lesson2"
     private val lesson3flag = "Unit1Lesson3"
+
+    lateinit var unit1LessonScoreText : MutableList<String>
+    private val scoreTexts : MutableList<String> = mutableListOf()
+
     private val passingScore = 8
     private val enableLock = false
 
@@ -27,6 +31,8 @@ class Unit1Fragment : Fragment() {
     ): View {
         val binding = DataBindingUtil.inflate<FragmentUnit1Binding>(inflater,R.layout.fragment_unit1,container,false)
 
+        binding.unit = this
+
         val lesson1id= binding.unit1Lesson1Button
         val lesson2id= binding.unit1Lesson2Button
         val lesson3id= binding.unit1Lesson3Button
@@ -34,6 +40,23 @@ class Unit1Fragment : Fragment() {
         // SharedPreference Object (for accessing data locally)
         val sharedPref = this.activity?.getSharedPreferences(
             getString(R.string.preference_key), Context.MODE_PRIVATE)
+
+
+
+        val unit1Lesson1Score = sharedPref?.getInt("unit1Quiz1Score", 0)!!
+        val unit1Lesson1Items = sharedPref?.getInt("unit1Quiz1NumQuestions", 15)!!
+        scoreTexts.add("$unit1Lesson1Score / $unit1Lesson1Items")
+
+        val unit1Lesson2Score = sharedPref?.getInt("unit1Quiz2Score", 0)!!
+        val unit1Lesson2Items = sharedPref?.getInt("unit1Quiz2NumQuestions", 15)!!
+        scoreTexts.add("$unit1Lesson2Score / $unit1Lesson2Items")
+
+        val unit1Lesson3Score = sharedPref?.getInt("unit1Quiz3Score", 0)!!
+        val unit1Lesson3Items = sharedPref?.getInt("unit1Quiz3NumQuestions", 15)!!
+        scoreTexts.add("$unit1Lesson3Score / $unit1Lesson3Items")
+
+        unit1LessonScoreText = scoreTexts
+
 
         val clickableViews: List<View> = listOf(lesson1id,lesson2id,lesson3id)
         for (items in clickableViews) {
@@ -44,8 +67,6 @@ class Unit1Fragment : Fragment() {
                 items.setOnClickListener{whatButtons(it)}
             }
         }
-
-
 
         return binding.root
     }

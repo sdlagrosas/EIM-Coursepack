@@ -255,7 +255,7 @@ class Unit1Quiz1Fragment : Fragment() {
                     // Save score and number of questions in shared preferences
                     with (sharedPref?.edit()) {
                         this?.putInt("unit1Quiz1Score", score)
-                        this?.putString("unit1Quiz1NumQuestions", numQuestions.toString())
+                        this?.putInt("unit1Quiz1NumQuestions", numQuestions)
                         this?.apply()
                     }
                 }
@@ -339,9 +339,9 @@ class Unit1Quiz1Fragment : Fragment() {
                     .replace("\\s+".toRegex(), " ")
                     .trim() in currentIdenQuestion.answers
 
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
-                }
+//                if (currentIdenQuestion.isCorrect) {
+//                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+//                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 

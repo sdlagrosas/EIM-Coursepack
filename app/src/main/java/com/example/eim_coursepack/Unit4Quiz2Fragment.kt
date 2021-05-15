@@ -281,7 +281,7 @@ class Unit4Quiz2Fragment : Fragment() {
                 val prevScore = sharedPref?.getInt("unit4Quiz2Score", 0)!!
                 if (prevScore < score) {
                     // Save score and number of questions in shared preferences
-                    with (sharedPref?.edit()) {
+                    with (sharedPref.edit()) {
                         this?.putInt("unit4Quiz2Score", score)
                         this?.putString("unit4Quiz2NumQuestions", numQuestions.toString())
                         this?.apply()

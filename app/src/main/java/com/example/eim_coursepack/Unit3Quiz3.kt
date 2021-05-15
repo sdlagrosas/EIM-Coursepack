@@ -276,7 +276,7 @@ class Unit3Quiz3 : Fragment() {
                     // Save score and number of questions in shared preferences
                     with (sharedPref?.edit()) {
                         this?.putInt("unit3Quiz3Score", score)
-                        this?.putString("unit3Quiz3NumQuestions", numQuestions.toString())
+                        this?.putInt("unit3Quiz3NumQuestions", numQuestions)
                         this?.apply()
                     }
                 }
@@ -358,9 +358,9 @@ class Unit3Quiz3 : Fragment() {
                 currentIdenQuestion.isCorrect = answerText
                     .toString().toLowerCase().trim() in currentIdenQuestion.answers
 
-                if (currentIdenQuestion.isCorrect) {
-                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
-                }
+//                if (currentIdenQuestion.isCorrect) {
+//                    Toast.makeText(context, "CORRECT! Score:", Toast.LENGTH_SHORT).show()
+//                }
 
                 currentIdenQuestion.enteredAns = answerText.toString()
 

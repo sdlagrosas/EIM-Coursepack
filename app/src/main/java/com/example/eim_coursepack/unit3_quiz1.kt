@@ -1,5 +1,6 @@
 package com.example.eim_coursepack
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -119,7 +120,6 @@ class Unit3_quiz1 : Fragment() {
     private var questionIndex = 0
     private val numQuestions = mulChoQuestions.size + idenQuestions.size
     private var score = 0
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -246,9 +246,9 @@ class Unit3_quiz1 : Fragment() {
                 val prevScore = sharedPref?.getInt("unit3Quiz1Score", 0)!!
                 if (prevScore < score) {
                     // Save score and number of questions in shared preferences
-                    with (sharedPref?.edit()) {
+                    with (sharedPref.edit()) {
                         this?.putInt("unit3Quiz1Score", score)
-                        this?.putString("unit3Quiz1NumQuestions", numQuestions.toString())
+                        this?.putInt("unit3Quiz1NumQuestions", numQuestions)
                         this?.apply()
                     }
                 }
