@@ -70,31 +70,31 @@ class Unit4Quiz2Fragment : Fragment() {
     private val idenQuestions : MutableList<IdenQuestion> = mutableListOf(
         IdenQuestion(
             text = "6. Identify the type of diagram illustrated above",
-            answers = mutableListOf("line diagram"),
+            answers = mutableListOf("pictorial", "pictorial diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "7. Identify the type of diagram illustrated above",
-            answers = mutableListOf("schematic diagram"),
+            answers = mutableListOf("schematic", "schematic diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "8. Identify the type of diagram illustrated above",
-            answers = mutableListOf("line diagram"),
+            answers = mutableListOf("wiring", "wiring diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "9. Identify the type of diagram illustrated above",
-            answers = mutableListOf("actual connection diagram"),
+            answers = mutableListOf("actual connection", "actual connection diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
         IdenQuestion(
             text = "10. Identify the type of diagram illustrated above",
-            answers = mutableListOf("line diagram"),
+            answers = mutableListOf("line", "line diagram"),
             isCorrect = false,
             enteredAns = ""
         ),
