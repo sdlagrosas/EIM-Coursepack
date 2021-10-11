@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.eim_coursepack.databinding.FragmentUnit4Quiz1Binding
 import com.example.eim_coursepack.databinding.FragmentUnit6Quiz1Binding
 
 class Unit6Quiz1Fragment : Fragment() {

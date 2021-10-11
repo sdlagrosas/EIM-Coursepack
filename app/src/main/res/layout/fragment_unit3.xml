@@ -185,6 +185,7 @@
             android:layout_marginTop="2dp"
             android:gravity="center|center_horizontal"
             android:text="@{unit.unit3LessonScoreText[0]}"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="@+id/unit3Lesson1Button"
             app:layout_constraintStart_toEndOf="@+id/unit3Lesson1Button"
             app:layout_constraintTop_toBottomOf="@+id/lesson1title" />
@@ -198,6 +199,7 @@
             android:layout_marginTop="2dp"
             android:gravity="center|center_horizontal"
             android:text="@{unit.unit3LessonScoreText[1]}"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="@+id/unit3Lesson2Button"
             app:layout_constraintStart_toEndOf="@+id/unit3Lesson2Button"
             app:layout_constraintTop_toBottomOf="@+id/lesson2title" />
@@ -211,6 +213,7 @@
             android:layout_marginTop="2dp"
             android:gravity="center|center_horizontal"
             android:text="@{unit.unit3LessonScoreText[2]}"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="@+id/unit3Lesson3Button"
             app:layout_constraintStart_toEndOf="@+id/unit3Lesson3Button"
             app:layout_constraintTop_toBottomOf="@+id/lesson3title" />
@@ -224,9 +227,21 @@
             android:layout_marginTop="2dp"
             android:gravity="center|center_horizontal"
             android:text="@{unit.unit3LessonScoreText[3]}"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="@+id/unit3Lesson4Button"
             app:layout_constraintStart_toEndOf="@+id/unit3Lesson4Button"
             app:layout_constraintTop_toBottomOf="@+id/lesson4title" />
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/objectives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Unit3objectives"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

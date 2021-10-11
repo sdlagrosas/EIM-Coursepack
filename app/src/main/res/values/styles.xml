@@ -67,4 +67,15 @@
         <item name="android:orientation">vertical</item>
         <item name="android:padding">@dimen/smallpadding</item>
     </style>
+
+    <style name="objectives">
+        <item name="android:layout_width">384dp</item>
+        <item name="android:layout_height">86dp</item>
+        <item name="android:paddingLeft">@dimen/largepadding</item>
+        <item name="android:paddingTop">@dimen/smallpadding</item>
+        <item name="android:paddingRight">@dimen/largepadding</item>
+        <item name="android:paddingBottom">@dimen/smallpadding</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">13sp</item>
+    </style>
 </resources>

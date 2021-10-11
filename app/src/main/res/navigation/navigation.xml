@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_mainMenuFragment_to_unit6Fragment"
             app:destination="@id/unit6Fragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_references2"
+            app:destination="@id/references2" />
     </fragment>
     <fragment
         android:id="@+id/unit1Fragment"
@@ -179,6 +182,9 @@
         <action
             android:id="@+id/action_allLessonFragment_to_unit6Quiz4Fragment"
             app:destination="@id/unit6Quiz4Fragment" />
+        <action
+            android:id="@+id/action_allLessonFragment_to_allVideos"
+            app:destination="@id/allVideos" />
     </fragment>
     <fragment
         android:id="@+id/quizScoreFragment"
@@ -195,29 +201,8 @@
             android:name="quizTitle"
             app:argType="string" />
         <action
-            android:id="@+id/action_quizScoreFragment_to_unit1Fragment"
-            app:destination="@id/unit1Fragment"
-            app:popUpTo="@id/mainMenuFragment" />
-        <action
-            android:id="@+id/action_quizScoreFragment_to_unit2Fragment"
-            app:destination="@id/unit2Fragment"
-            app:popUpTo="@id/mainMenuFragment" />
-        <action
-            android:id="@+id/action_quizScoreFragment_to_unit4Fragment"
-            app:destination="@id/unit4Fragment"
-            app:popUpTo="@id/mainMenuFragment" />
-        <action
-            android:id="@+id/action_quizScoreFragment_to_unit5Fragment"
-            app:destination="@id/unit5Fragment"
-            app:popUpTo="@id/mainMenuFragment" />
-        <action
-            android:id="@+id/action_quizScoreFragment_to_unit3Fragment"
-            app:destination="@id/unit3Fragment"
-            app:popUpTo="@id/mainMenuFragment" />
-        <action
-            android:id="@+id/action_quizScoreFragment_to_unit6Fragment"
-            app:destination="@id/unit6Fragment"
-            app:popUpTo="@id/mainMenuFragment" />
+            android:id="@+id/action_quizScoreFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/unit1Quiz3Fragment"
@@ -409,14 +394,31 @@
             app:popUpTo="@id/unit3Fragment" />
     </fragment>
     <fragment
+        android:id="@+id/allVideos"
+        android:name="com.example.eim_coursepack.AllVideos"
+        android:label="fragment_all_videos"
+        tools:layout="@layout/fragment_all_videos" >
+        <argument
+            android:name="videoFlag"
+            app:argType="string" />
+    </fragment>
+    <fragment
         android:id="@+id/unit6Quiz4Fragment"
         android:name="com.example.eim_coursepack.Unit6Quiz4Fragment"
         android:label="fragment_unit6_quiz4"
         tools:layout="@layout/fragment_unit6_quiz4" >
         <action
             android:id="@+id/action_unit6Quiz4Fragment_to_quizScoreFragment"
-            app:destination="@id/quizScoreFragment"
-            app:popUpTo="@id/unit6Fragment" />
+            app:destination="@id/quizScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/references2"
+        android:name="com.example.eim_coursepack.References"
+        android:label="fragment_references"
+        tools:layout="@layout/fragment_references" >
+        <action
+            android:id="@+id/action_references2_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
     </fragment>
 
 </navigation>

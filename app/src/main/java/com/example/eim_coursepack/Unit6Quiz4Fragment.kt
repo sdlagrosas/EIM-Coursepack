@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.eim_coursepack.databinding.FragmentUnit6Quiz3Binding
 import com.example.eim_coursepack.databinding.FragmentUnit6Quiz4Binding
 
 class Unit6Quiz4Fragment : Fragment() {

@@ -20,6 +20,7 @@
     <dimen name="vertical_images">200dp</dimen>
     <dimen name="largeImg">382dp</dimen>
     <dimen name="largeImg2">311dp</dimen>
+    <dimen name="largepadding">6dp</dimen>
 
 
 </resources>

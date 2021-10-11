@@ -15,7 +15,7 @@ import com.example.eim_coursepack.databinding.FragmentMainMenuBinding
 class MainMenuFragment : Fragment() {
 
     private val passingScore = 8
-    private val enableLock = false
+    private val enableLock = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -97,6 +97,9 @@ class MainMenuFragment : Fragment() {
             binding.unit6Button.setOnClickListener { view : View ->
                 view.findNavController().navigate(R.id.action_mainMenuFragment_to_unit6Fragment)
             }
+        }
+        binding.textView7.setOnClickListener { view : View ->
+            view.findNavController().navigate(R.id.action_mainMenuFragment_to_references2)
         }
 
         return binding.root

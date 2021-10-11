@@ -1,6 +1,7 @@
 package com.example.eim_coursepack
 
 import android.os.Bundle
+import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,17 @@ import com.example.eim_coursepack.databinding.FragmentAllLessonBinding
 
 class AllLessonFragment : Fragment() {
     lateinit var lessonNickname: LessonNickname
+    private val videoFlag: List<String> = listOf(
+        "FirstVid",
+        "SecondVid",
+        "ThirdVid",
+        "FourthVid",
+        "FifthVid",
+        "SixthVid",
+        "SeventhVid",
+        "EighthVid",
+        "NinthVid"
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,8 +42,10 @@ class AllLessonFragment : Fragment() {
 
         binding.lesson = this
 
+
         val args = AllLessonFragmentArgs.fromBundle(requireArguments())
         val unitLessonView = binding.unitLessonPDF
+
 
         // Default lesson nickname
         lessonNickname = LessonNickname("Lesson 1.1")
@@ -40,8 +54,11 @@ class AllLessonFragment : Fragment() {
         var pdfAssetName = "unit1lesson1.pdf"
 
         // Default quiz fragment is quiz 1
-        var quizFragment = AllLessonFragmentDirections.actionAllLessonFragmentToUnit1Quiz1MCFragment()
+        var quizFragment =
+            AllLessonFragmentDirections.actionAllLessonFragmentToUnit1Quiz1MCFragment()
 
+        var VideoFragment =
+            AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[0])
 
 
         // Otherwise, select another PDF asset and quiz fragment, and replace lesson name
@@ -53,12 +70,18 @@ class AllLessonFragment : Fragment() {
                 pdfAssetName = "unit1lesson1.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit1Quiz1MCFragment()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[0])
             }
             "Unit1Lesson2" -> {
                 lessonNickname = LessonNickname("Lesson 1.2")
                 pdfAssetName = "unit1lesson2.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit1Quiz2Fragment()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[1])
             }
             "Unit1Lesson3" -> {
                 lessonNickname = LessonNickname("Lesson 1.3")
@@ -79,12 +102,19 @@ class AllLessonFragment : Fragment() {
                 pdfAssetName = "unit2lesson2.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit2Quiz2Fragment()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[2])
             }
             "Unit2Lesson3" -> {
                 lessonNickname = LessonNickname("Lesson 2.3")
                 pdfAssetName = "unit2lesson3.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit2Quiz3Fragment()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[3])
+
             }
             "Unit2Lesson4" -> {
                 lessonNickname = LessonNickname("Lesson 2.4")
@@ -99,24 +129,34 @@ class AllLessonFragment : Fragment() {
                 pdfAssetName = "unit3lesson1.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit3Quiz12()
+
             }
             "Unit3Lesson2" -> {
                 lessonNickname = LessonNickname("Lesson 3.2")
                 pdfAssetName = "unit3lesson2.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit3Quiz2Fragment()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[4])
             }
             "Unit3Lesson3" -> {
                 lessonNickname = LessonNickname("Lesson 3.3")
                 pdfAssetName = "unit3lesson3.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit3Quiz3()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[5])
             }
             "Unit3Lesson4" -> {
                 lessonNickname = LessonNickname("Lesson 3.4")
                 pdfAssetName = "unit3lesson4.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit3Quiz4()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[6])
             }
 
             //Unit 4
@@ -138,6 +178,9 @@ class AllLessonFragment : Fragment() {
                 pdfAssetName = "unit4lesson3.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit4Quiz3Fragment()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[7])
             }
 
             //Unit 5
@@ -151,13 +194,13 @@ class AllLessonFragment : Fragment() {
                 lessonNickname = LessonNickname("Lesson 5.2")
                 pdfAssetName = "unit5Lesson2.pdf"
                 quizFragment = AllLessonFragmentDirections
-                    .actionAllLessonFragmentToUnit5Quiz2Fragment()
+                    .actionAllLessonFragmentToUnit4Quiz2Fragment()
             }
             "Unit5Lesson3" -> {
                 lessonNickname = LessonNickname("Lesson 5.3")
                 pdfAssetName = "unit5Lesson3.pdf"
                 quizFragment = AllLessonFragmentDirections
-                    .actionAllLessonFragmentToUnit5Quiz3Fragment()
+                    .actionAllLessonFragmentToUnit4Quiz3Fragment()
             }
 
             //Unit 6
@@ -185,7 +228,12 @@ class AllLessonFragment : Fragment() {
                 pdfAssetName = "unit6Lesson4.pdf"
                 quizFragment = AllLessonFragmentDirections
                     .actionAllLessonFragmentToUnit6Quiz4Fragment()
+                binding.seeVideo.visibility = View.VISIBLE
+                VideoFragment =
+                    AllLessonFragmentDirections.actionAllLessonFragmentToAllVideos(videoFlag[8])
+
             }
+
         }
 
         // Load pdf to PDFView
@@ -198,7 +246,7 @@ class AllLessonFragment : Fragment() {
 
 
         // Click listener for takeQuizButton
-        binding.takeQuizButton.setOnClickListener { view : View ->
+        binding.takeQuizButton.setOnClickListener { view: View ->
 
             this.activity?.actionBar?.show()
 //          Advance to quiz fragment
@@ -208,6 +256,13 @@ class AllLessonFragment : Fragment() {
 //            view.findNavController().navigate(
 //                AllLessonFragmentDirections.actionAllLessonFragmentToUnit4Quiz3Fragment()
 //            )
+        }
+        binding.seeVideo.setOnClickListener { view: View ->
+
+            this.activity?.actionBar?.show()
+
+            view.findNavController()
+                .navigate(VideoFragment)
         }
 
 

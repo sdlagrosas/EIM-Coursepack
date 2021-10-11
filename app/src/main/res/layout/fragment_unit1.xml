@@ -167,6 +167,17 @@
             app:layout_constraintGuide_begin="20dp" />
 
         <TextView
+            android:id="@+id/textView6"
+            style="@style/objectives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Unit1objectives"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+        <TextView
             android:id="@+id/unit1Lesson1Progress"
             android:layout_width="109dp"
             android:layout_height="20dp"
@@ -175,6 +186,7 @@
             android:layout_marginTop="2dp"
             android:gravity="center|center_horizontal"
             android:text="@{unit.unit1LessonScoreText[0]}"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="@+id/unit1Lesson1Button"
             app:layout_constraintStart_toEndOf="@+id/unit1Lesson1Button"
             app:layout_constraintTop_toBottomOf="@+id/lesson1title" />
@@ -188,6 +200,7 @@
             android:layout_marginTop="2dp"
             android:gravity="center|center_horizontal"
             android:text="@{unit.unit1LessonScoreText[1]}"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="@+id/unit1Lesson2Button"
             app:layout_constraintStart_toEndOf="@+id/unit1Lesson2Button"
             app:layout_constraintTop_toBottomOf="@+id/lesson2title" />
@@ -201,6 +214,7 @@
             android:layout_marginTop="2dp"
             android:gravity="center|center_horizontal"
             android:text="@{unit.unit1LessonScoreText[2]}"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="@+id/unit1Lesson3Button"
             app:layout_constraintStart_toEndOf="@+id/unit1Lesson3Button"
             app:layout_constraintTop_toBottomOf="@+id/lesson3title" />

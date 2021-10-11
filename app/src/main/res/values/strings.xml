@@ -5,7 +5,7 @@
     <string name="title1">EIM</string>
     <string name="title2">Coursepack</string>
     <string name="main_menu">UNITS</string>
-    <string name="teachername">By: (Insert name)</string>
+    <string name="teachername">By: Ma. Catalina Camille Vibal </string>
     <string name="contentdescription">To insert an image for design</string>
     <string name="Next">Next</string>
     <string name="an_image_in_quiz_fragment">an image in quiz fragment</string>
@@ -108,6 +108,37 @@
     <string name="unit6Quiz2Score">unit6Quiz2Score</string>
     <string name="unit6Quiz3Score">unit6Quiz3Score</string>
     <string name="unit6Quiz4Score">unit6Quiz4Score</string>
+    <string name="watchVid">Play Video</string>
+    <string name="eimtitle">Electrical Installation and Maintenance</string>
+    <string name="Playing">Atom and Ohms Law </string>
+    <string name="Rotate">Rotate your phone Horizontally to watch the video in full screen</string>
+    <string name="contentname">rotate symbol</string>
+    <string name="ObjectivesUnit2"><b>BEFORE you proceed to the Next Unit, have you fulfilled these objectives?  </b>\nPrepare electrical tools for specific task.\nRequest appropriate
+        electrical supplies, materials and tools applicable to a specific job.\nReceive and inspect electrical supplies, materials and tools.
+</string>
+    <string name="Unit1objectives"><b>BEFORE you proceed to the Next Unit, have you fulfilled these objectives?  </b>\n\n > Identify basic concepts and principles of Electricity\n
+        > Describe important
+        concepts and principle of Electricity\n > Demonstrate understanding about the fundamentals of Electricity</string>
+    <string name="Unit3objectives"><b>BEFORE you proceed to the Next Unit, have you fulfilled these objectives?</b> \n >Select appropriate electrical measuring tools and
+        instruments.\n > Describe the mensuration and calculation appropriate to apply in a specific job.\n > Carry out measurement and calculations for specific job.
+
+</string>
+    <string name="Unit4_objectives"><b>BEFORE you proceed to the Next Unit, have you fulfilled these objectives?  </b>\n\n > Analyze signs, electrical
+        symbols and data.\n > Interpret technical drawings and plans.\n > Create plans and diagrams for specific job.
+    </string>
+    <string name="Unit5objectives"><b>BEFORE you proceed to the Next Unit, have you fulfilled these objectives?  </b>
+        \n\n > Check condition of Tools and Equipment\n> Perform Basic Maintenance\n > Store Tools and Equipment
+    </string>
+    <string name="Unit6objectives"><b>BEFORE you proceed to the Next Unit, have you fulfilled these objectives?  </b>\n > Identify hazards and
+        risks\n > Control hazards and risks\n > Practice Occupational Health and Safety Procedure.
+    </string>
+    <string name="Resources">References: </string>
+    <string name="ResourcesBody">Department of Education- Competency Based Learning Material First Year\n\n
+Department of Education-K to 12 Basic Education Curriculum Technology and Livelihood Education Learning Module\n\n
+Department of Education- Curriculum Guide in Electrical Installation and Maintenance\n
+</string>
+    <string name="encourage">It is highly encouraged that you take the quiz for this lesson after watching this video</string>
+    <string name="Save">Save Score</string>
 
 
 </resources>

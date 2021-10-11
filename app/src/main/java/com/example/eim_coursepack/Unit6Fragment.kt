@@ -31,7 +31,7 @@ class Unit6Fragment : Fragment() {
     )
 
     private var passingScore = 8
-    private val enableLock = false
+    private val enableLock = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
