@@ -63,8 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
                     android:text="@{quiz.answers[0]}"
-                    android:textSize="@dimen/answer_text_size"
-                    tools:text="Edi don't" />
+                    android:textSize="@dimen/answer_text_size" />
 
                 <RadioButton
                     android:id="@+id/secondChoiceRadioButton"
